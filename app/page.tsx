@@ -1,7 +1,8 @@
 import BlueCampaign from "@/components/LandingSections/BlueCompaign";
+import BrandWallSection from "@/components/LandingSections/BrandGridSection";
 import CaseStudies from "@/components/LandingSections/CaseStudies";
 import CampaignScale from "@/components/LandingSections/CompaignScale";
-import CreatorStrip from "@/components/LandingSections/CreatedStrip";
+import CreatorCtaSection from "@/components/LandingSections/CreaterCTASection";
 import DiscoveryFeatures from "@/components/LandingSections/DiscoveryFeatures";
 import Disruption from "@/components/LandingSections/Disruption";
 import FaqSection from "@/components/LandingSections/Faqs";
@@ -14,6 +15,7 @@ import LogoWall from "@/components/LandingSections/LogoWall";
 import MosaicBrands from "@/components/LandingSections/MosaicBrand";
 import OldVsNew from "@/components/LandingSections/OldVsNew";
 import OrangeCTA from "@/components/LandingSections/OrangeCTA";
+import PaymentsAutoPilotSection from "@/components/LandingSections/PaymentAutoPilot";
 import ProofNumbers from "@/components/LandingSections/ProofNumbers";
 import PurpleDiscovery from "@/components/LandingSections/PurpleDiscovery";
 import StatsPlatforms from "@/components/LandingSections/StatsPlateform";
@@ -25,7 +27,6 @@ export default function Home() {
     <div>
       <Header />
       <Hero />
-      <CreatorStrip />
       <Disruption />
       <PurpleDiscovery />
       <BlueCampaign />
@@ -33,7 +34,7 @@ export default function Home() {
       <GreenAutopilot />
       <MosaicBrands />
       <OrangeCTA />
-      
+
       <Hero />
       <LogoWall />
       <StatsPlatforms />
@@ -43,7 +44,10 @@ export default function Home() {
       <Testimonials />
       <CaseStudies />
       <FinalCTA />
-      
+
+<PaymentsAutoPilotSection />
+      <BrandWallSection />
+      <CreatorCtaSection />
       <CaseStudies />
       <FaqSection />
       <Footer />

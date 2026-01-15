@@ -18,8 +18,6 @@ export default function IntercomTestimonialSection() {
               </span>
             </div>
           </div>
-
-          {/* Quote */}
           <p className="mt-[56px] max-w-[920px] px-6 text-center font-serif text-[34px] font-medium leading-[1.25] tracking-[-0.01em] text-[#111111]">
             &ldquo;Partnering with creators through Passionfroot has
             been a game-changer for Intercom&rsquo;s Startup program.

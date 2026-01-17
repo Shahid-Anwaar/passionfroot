@@ -13,7 +13,7 @@ export default function FinalCTA() {
           <div className="grid gap-6 rounded-3xl border border-white/10 bg-gradient-to-b from-orange-300 to-orange-400 p-8 md:grid-cols-12 md:items-center">
             <div className="md:col-span-7">
               <h3 className="font-serif text-4xl leading-tight text-black">
-                Let’s make creators your next growth channel
+                Let’s make creatorsssssssss your next growth channel
               </h3>
               <div className="mt-4 space-y-2 text-sm font-semibold text-black/90">
                 <div className="flex items-center gap-2">

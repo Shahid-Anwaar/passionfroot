@@ -40,12 +40,49 @@ html { scroll-behavior: smooth; }
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0); /* move one full set width */
+  }
 }
+
+/* viewport */
 .marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 18s linear infinite;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
-.marquee:hover { animation-play-state: paused; }
+
+/* moving track */
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--marquee-duration, 30s); /* default fallback */
+}
+
+/* row of logos */
+.marquee-row {
+  display: flex;
+  align-items: center;
+}
+
+/* spacing between logos */
+.marquee-row > * {
+  margin-right: 3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+

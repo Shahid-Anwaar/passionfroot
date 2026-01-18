@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-[#FBF7F0]">
+    <section className="w-full bg-[#FBF7F0] pt-16">
       <div className="mx-auto w-full max-w-[980px] px-6 pt-[110px] pb-[90px] text-center">
         {/* Eyebrow */}
         <div className="text-[12px] font-medium tracking-[0.14em] text-black/55">

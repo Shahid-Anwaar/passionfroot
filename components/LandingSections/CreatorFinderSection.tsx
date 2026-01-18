@@ -3,7 +3,80 @@
 import CircleProgress from "@/CustomComponents/CircularProgressCard";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import { ReactNode, useEffect, useMemo, useState } from "react";
+import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
+
+type MapTabKey = "newsletter" | "youtube" | "instagram" | "podcasts";
+
+type MapChip = {
+    name: string;
+    avatar: string;
+};
+
+type MapTab = {
+    key: MapTabKey;
+    label: string;
+    icon: string;          // iconify icon
+    activeText: string;    // active label color
+    activeBg: string;      // active pill bg
+    activeRing: string;    // active pill border/ring
+    chips: MapChip[];
+};
+
+export const MAP_TABS: MapTab[] = [
+    {
+        key: "newsletter",
+        label: "Newsletter",
+        icon: "mdi:file-document-outline",
+        activeText: "#FF7A00",
+        activeBg: "#FFF3E6",
+        activeRing: "rgba(255,122,0,0.18)",
+        chips: [
+            { name: "Houck", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+            { name: "Superhuman", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+            { name: "ByteByteGo", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+        ],
+    },
+    {
+        key: "youtube",
+        label: "Youtube",
+        icon: "mdi:youtube",
+        activeText: "#FF2D2D",
+        activeBg: "#FFECEC",
+        activeRing: "rgba(255,45,45,0.18)",
+        chips: [
+            { name: "Ali Abdaal", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+            { name: "Sarah Grace", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+            { name: "Graham Stephan", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+        ],
+    },
+    {
+        key: "instagram",
+        label: "Instagram",
+        icon: "mdi:instagram",
+        activeText: "#B06BFF",
+        activeBg: "#F3E9FF",
+        activeRing: "rgba(176,107,255,0.18)",
+        chips: [
+            { name: "Zach pogrob", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+            { name: "Marina Mogilko", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+            { name: "Scott Clary", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+        ],
+    },
+    {
+        key: "podcasts",
+        label: "Podcasts",
+        icon: "mdi:podcast",
+        activeText: "#FF4CCB",
+        activeBg: "#FFEAF7",
+        activeRing: "rgba(255,76,203,0.18)",
+        chips: [
+            { name: "Big Technology", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+            { name: "Economics Explained", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+            { name: "Dr Sheen Gurrib", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+        ],
+    },
+];
+
 
 type CreatorFinderItem = {
     image: string;
@@ -14,7 +87,7 @@ type CreatorFinderItem = {
 
 const ITEMS: CreatorFinderItem[] = [
     {
-        image: "/images/creator-01.png",
+        image: "/find1_1.png",
         title: "AI-powered creator search",
         description:
             "Our AI lets you search all platforms – not just one. Simply search and find the right creator ambassadors for your business in minutes.",
@@ -26,13 +99,13 @@ const ITEMS: CreatorFinderItem[] = [
             "The largest selection of creators across Newsletters, LinkedIn, Youtube, Instagram, Twitter, and more. All platforms & categories – in one place.",
     },
     {
-        image: "/images/creator-03.png",
+        image: "/find3_1.png",
         title: "Creator media kits",
         description:
             "Analyze creators with verified stats, product previews, rates, and much more.",
     },
     {
-        image: "/images/creator-04.png",
+        image: "/find4_1.png",
         title: "AI creator recommendations",
         description:
             "Tell us your goals – and our AI will build a campaign for you in seconds.",
@@ -102,13 +175,46 @@ export default function CreatorFinderSection() {
                 <div className="mt-10 space-y-6">
                     {/* Top row */}
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                        <FeatureCard item={ITEMS[0]} children={<div>Additional Content</div>} />
-                        <FeatureCard item={ITEMS[1]} />
+                        <FeatureCard item={ITEMS[0]} children={
+                            <div
+  className={[
+    "absolute inset-0 right-0 top-0 w-full h-full",
+    "translate-x-full opacity-0",
+    "transition-transform duration-1000 ease-out",
+    "group-hover:translate-x-0 group-hover:opacity-100",
+    "pointer-events-none", // so it doesn't block hover
+  ].join(" ")}
+>
+  <Image
+    src="/find1_2.png"
+    alt="any one"
+    width={1200}
+    height={650}
+    className="h-78 w-full rounded-[8px]"
+  />
+</div>
+
+                        } />
+                        <FeatureCard
+                            item={ITEMS[1]}
+                            children={<WorldMapTabsOverlay />}
+                        />
+
                     </div>
 
                     {/* Bottom row */}
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
-                        <FeatureCard item={ITEMS[2]} />
+                        <FeatureCard item={ITEMS[2]} children={
+                            <div className="hidden absolute group-hover:block right-0 top-0 left-0 bottom-0 w-full h-full">
+                                <Image
+                                    src={"/find3_2.png"}
+                                    alt={"any one"}
+                                    width={1200}
+                                    height={650}
+                                    className="h-78 w-full rounded-[8px]"
+                                />
+                            </div>
+                        } />
                         <FeatureCard item={ITEMS[3]} />
                         <FeatureCard item={ITEMS[4]} children={
                             <div onMouseEnter={() => {
@@ -160,10 +266,105 @@ export default function CreatorFinderSection() {
     );
 }
 
+
+function WorldMapTabsOverlay() {
+  const [active, setActive] =
+    useState<(typeof MAP_TABS)[number]["key"]>("instagram");
+
+  const activeIndex = useMemo(
+    () => Math.max(0, MAP_TABS.findIndex((t) => t.key === active)),
+    [active]
+  );
+
+  return (
+    <>
+      {/* Top tabs pill (CENTERED) */}
+      <div className="absolute left-1/2 top-4 z-10 -translate-x-1/2">
+        <div className="inline-flex w-max items-center gap-1 rounded-[14px] bg-white px-2 py-2 shadow-[0_10px_24px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
+          {MAP_TABS.map((t) => {
+            const isActive = t.key === active;
+
+            return (
+              <button
+                key={t.key}
+                type="button"
+                onMouseEnter={() => setActive(t.key)}
+                className={[
+                  "inline-flex items-center gap-2 rounded-[10px] px-3 py-2 text-[14px] font-semibold",
+                  "transition-colors",
+                  isActive ? "" : "text-[#7A7A7A] hover:text-[#222]",
+                ].join(" ")}
+                style={
+                  isActive
+                    ? {
+                        color: t.activeText,
+                        background: t.activeBg,
+                        boxShadow: `inset 0 0 0 1px ${t.activeRing}`,
+                      }
+                    : undefined
+                }
+              >
+                {t.label}
+                <Icon icon={t.icon} className="h-4 w-4 opacity-80" />
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Bottom chips (SLIDING PANELS) */}
+      <div className="absolute bottom-4 left-4 right-4 z-10">
+        {/* viewport */}
+        <div
+          className={[
+            "relative overflow-hidden",
+            // hide scrollbars (no scroll needed since we animate)
+            "[-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+          ].join(" ")}
+        >
+          {/* track */}
+          <div
+            className="flex transition-transform duration-500 ease-out will-change-transform"
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          >
+            {MAP_TABS.map((tab) => (
+              <div key={tab.key} className="w-full shrink-0">
+                <div className="flex items-center justify-center gap-2">
+                  {tab.chips.map((c) => (
+                    <span
+                      key={c.name}
+                      className="shrink-0 inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 text-[12px] font-medium text-[#3C3C3C] ring-1 ring-black/5 backdrop-blur"
+                    >
+                      <Image
+                        src={c.avatar}
+                        alt={c.name}
+                        width={18}
+                        height={18}
+                        className="rounded-full object-cover"
+                      />
+                      {c.name}
+                    </span>
+                  ))}
+
+                  <span className="shrink-0 ml-1 text-[12px] font-medium text-white/70">
+                    and more
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+
+
 function FeatureCard({ item, children }: { item: CreatorFinderItem, children?: ReactNode }) {
     return (
         <div className="rounded-[12px] bg-white p-5 shadow-[0_2px_0_rgba(0,0,0,0.06)] ring-1 ring-black/5">
-            <div className="relative overflow-hidden rounded-[10px] bg-[#c083f7] p-4 ring-1 ring-black/5">
+            <div className="relative group overflow-hidden rounded-[10px] bg-[#c083f7] ring-1 ring-black/5">
                 <Image
                     src={item.image}
                     alt={item.title}

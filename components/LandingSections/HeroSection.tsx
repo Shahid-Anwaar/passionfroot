@@ -6,22 +6,22 @@ import { Icon } from "@iconify/react";
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-[#FBF7F0] pt-16">
+    <section className="w-full bg-[#fdfdfb] pt-24">
       <div className="mx-auto w-full max-w-[980px] px-6 pt-[110px] pb-[90px] text-center">
         {/* Eyebrow */}
-        <div className="text-[12px] font-medium tracking-[0.14em] text-black/55">
+        <div className="text-[1.025rem] font-nunito font-medium tracking-[0.08em] text-[#737373]">
           THE LARGEST B2B INFLUENCER PLATFORM
         </div>
 
         {/* Title */}
-        <h1 className="mt-5 font-serif text-[56px] font-semibold leading-[1.05] tracking-[-0.015em] text-[#111] sm:text-[64px]">
+        <h1 className="mt-5 font-serif text-[3.5rem] font-medium leading-[115%] tracking-[-1.14px] text-[#111] sm:text-[64px]">
           Where B2B brands scale
           <br />
           influencer marketing
         </h1>
 
         {/* Subtitle */}
-        <p className="mx-auto mt-7 max-w-[740px] text-[16px] leading-[1.7] text-black/75">
+        <p className="mx-auto mt-7 max-w-[740px] font-medium text-[1.125rem] leading-[150%] text-[#4e4d46]">
           The fastest and easiest way to do influencer marketing at scale.
           <br />
           Find the right creators on all platforms, book, collaborate, and pay -
@@ -34,32 +34,32 @@ export default function HeroSection() {
             href="#"
             className={[
               "inline-flex items-center justify-center gap-2",
-              "h-[46px] w-[260px] rounded-[10px]",
-              "bg-gradient-to-b from-[#2A2A2A] to-[#111111]",
-              "text-[15px] font-semibold text-white",
+              "py-3 w-[260px] rounded-[10px]",
+              "bg-[#2e3030] hover:bg-[#191A1A] font-[700]",
+              "text-[1.125rem]  text-white",
               "shadow-[0_14px_22px_rgba(0,0,0,0.16)]",
               "active:translate-y-[1px]",
               "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40",
             ].join(" ")}
           >
-            Get access
-            <Icon icon="ep:right" className="h-4 w-4 text-white" />
+           Talk To Us
+            <Icon icon="ep:right" className="h-5 w-5 text-white" />
           </Link>
 
           <Link
             href="#"
             className={[
               "inline-flex items-center justify-center",
-              "h-[46px] w-[150px] rounded-[10px]",
+              "py-3 text-[1.125rem] w-[180px] rounded-[10px]",
               "border border-black/70 bg-white/70",
-              "text-[15px] font-semibold text-[#111]",
+              " font-[700] text-[#111]",
               "shadow-[0_10px_16px_rgba(0,0,0,0.06)]",
               "hover:bg-white",
               "active:translate-y-[1px]",
               "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/30",
             ].join(" ")}
           >
-            Talk to us
+           Contact Sale
           </Link>
         </div>
       </div>

@@ -132,15 +132,15 @@ export default function Header() {
 
   return (
     <header className={`${inter.className} fixed top-0 z-[200] w-full `}>
-      <div ref={headerRef} className="mx-auto max-w-[1400px] px-12 pt-6 pb-3">
+      <div ref={headerRef} className="mx-auto max-w-[1400px] px-2 pt-3 pb-3">
         <div className="relative flex items-start justify-between">
           {/* Left pill */}
           <div className="relative">
-            <div className="inline-flex items-center gap-3 rounded-2xl border border-black/10 bg-white px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,0.07)]">
+            <div className="inline-flex items-center gap-3 rounded-2xl border border-black/10 bg-white px-5 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
               {/* Logo */}
               <Link
                 href="/"
-                className="text-[26px] font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#000]"
+                className="text-[24px] font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#000]"
               >
                 passionfroot
               </Link>
@@ -178,31 +178,35 @@ export default function Header() {
           </div>
 
           {/* Right pill */}
-          <div className="inline-flex items-center rounded-2xl border border-black/10 bg-white px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,0.07)]">
-            <nav className="flex items-center gap-7">
-              <Link href="#" className="text-[13px] font-medium text-[#3A3A3A]">
+          <div className="inline-flex items-center rounded-2xl border border-black/10 bg-white px-5 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
+            <nav className="flex items-center gap-2">
+              <Link href="#" className="text-[16px] font-medium text-[#202020] rounded-lg px-3 py-2 hover:bg-[#F7F0E5]">
+                Pricing
+              </Link>
+
+              <Link href="#" className="text-[16px] font-medium text-[#202020] rounded-lg px-3 py-2 hover:bg-[#F7F0E5]">
                 About
               </Link>
+              {/* <Link href="#" className="text-[13px] font-medium text-[#202020]">
+                Stories
+              </Link> */}
 
-              <Link href="#" className="text-[13px] font-medium text-[#3A3A3A]">
-                Careers
-              </Link>
+              {/* <div className="mx-1 h-4 w-px bg-black/15" /> */}
+              <div className="h-5 w-px bg-black/15" />
 
-              <div className="mx-1 h-4 w-px bg-black/15" />
-
-              <button className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#3A3A3A]">
-                Login
-                <Icon icon="mdi:chevron-down" className="text-[16px] text-[#6B6B6B]" />
+              <button className="inline-flex items-center gap-1.5 text-[16px] font-medium rounded-lg px-3 py-2 text-[#202020] hover:bg-[#F7F0E5]">
+                Stories
+                {/* <Icon icon="mdi:chevron-down" className="text-[16px] text-[#6B6B6B]" /> */}
               </button>
             </nav>
 
             <Link
               href="#"
-              className="relative ml-5 inline-flex h-9 items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#2A2A2A] to-[#111111] px-4 text-[13px] font-semibold text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] ring-1 ring-white/10"
+              className="relative ml-5 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#2A2A2A] to-[#111111] px-4 py-2 text-[16px] font-semibold text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] ring-1 ring-white/10"
             >
               <span className="absolute inset-x-0 top-0 h-px bg-white/25" />
-              Get access
-              <Icon icon="ep:right" className="text-[16px] text-white" />
+              Talk to us
+              <Icon icon="ep:right" className="text-[20px] text-white" />
             </Link>
           </div>
         </div>
@@ -226,16 +230,16 @@ function TopTab({
       // onClick={onClick}
       className={[
         "inline-flex items-center gap-1.5",
-        "rounded-xl px-3 py-2",
-        "text-[18px] font-medium",
-        active ? "bg-[#F7F0E5] text-[#111]" : "text-[#3A3A3A] hover:bg-[#F7F0E5]",
+        "rounded-lg px-3 py-2",
+        "text-[16px] font-medium",
+        active ? "bg-[#F7F0E5] text-[#111]" : "text-[#202020] hover:bg-[#F7F0E5]",
       ].join(" ")}
     >
       {label}
       <Icon
         icon="mdi:chevron-down"
         className={[
-          "text-[16px] text-[#6B6B6B] transition",
+          "text-[24px] text-[#6B6B6B] transition",
           active ? "rotate-180" : "",
         ].join(" ")}
       />
@@ -253,7 +257,7 @@ function MegaPanel({
   isFirst: boolean;
 }) {
   return (
-    <div className="absolute left-0 top-[62px] z-[210] w-[980px]">
+    <div className="absolute left-0 top-[70px] z-[210] w-[980px]">
       <div className="rounded-2xl border border-black/10 bg-white shadow-[0_22px_44px_rgba(0,0,0,0.14)]">
         <div className="grid grid-cols-[1fr_360px] gap-8 p-6">
           {/* LEFT LIST */}

@@ -46,7 +46,7 @@ export default function CreatorCtaSection({
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="#"
-              className="relative inline-flex h-12 w-[160px] items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#2A2A2A] to-[#101010] text-[14px] font-semibold text-white shadow-[0_14px_30px_rgba(0,0,0,0.25)] ring-1 ring-white/10"
+              className="first-btn relative h-12 w-[160px] text-[14px] font-semibold"
             >
               <span className="absolute inset-x-0 top-0 h-px bg-white/20" />
               Get access

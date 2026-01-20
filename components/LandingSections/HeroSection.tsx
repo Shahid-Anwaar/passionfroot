@@ -33,13 +33,8 @@ export default function HeroSection() {
           <Link
             href="#"
             className={[
-              "inline-flex items-center justify-center gap-2",
-              "py-3 w-[260px] rounded-[10px]",
-              "bg-[#2e3030] hover:bg-[#191A1A] font-[700]",
-              "text-[1.125rem]  text-white",
-              "shadow-[0_14px_22px_rgba(0,0,0,0.16)]",
-              "active:translate-y-[1px]",
-              "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40",
+              "first-btn",
+              "py-3 w-[260px] ",
             ].join(" ")}
           >
            Talk To Us

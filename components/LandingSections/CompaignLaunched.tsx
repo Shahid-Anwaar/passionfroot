@@ -121,13 +121,8 @@ export default function CampaignsLaunchedSection() {
             <Link
               href="#"
               className={[
-                "inline-flex  items-center justify-center gap-2",
-                "rounded-[8px] px-7 py-3",
-                "bg-gradient-to-b from-[#2A2A2A] to-[#111111]",
-                "text-[16px] font-semibold text-white",
-                "shadow-[0_10px_18px_rgba(0,0,0,0.14)]",
-                "active:translate-y-[1px]",
-                "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40",
+                "first-btn px-7 py-3",
+                "text-[16px] font-semibold",
               ].join(" ")}
             >
               Get access

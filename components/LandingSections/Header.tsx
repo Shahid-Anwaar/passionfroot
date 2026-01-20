@@ -136,13 +136,19 @@ export default function Header() {
         <div className="relative flex items-start justify-between">
           {/* Left pill */}
           <div className="relative">
-            <div className="inline-flex items-center gap-3 rounded-2xl border border-black/10 bg-white px-5 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
+            <div className="inline-flex items-center gap-2 rounded-2xl border border-black/10 bg-white px-3 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
               {/* Logo */}
               <Link
                 href="/"
-                className="text-[24px] font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#000]"
+                className="text-[24px] font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#fc0707]"
               >
-                passionfroot
+                <Image
+                  src="/logo.svg"
+                  alt="passionfroot"
+                  width={121}
+                  height={30}
+                  priority
+                />
               </Link>
 
               {/* divider like screenshot */}
@@ -202,7 +208,7 @@ export default function Header() {
 
             <Link
               href="#"
-              className="relative ml-5 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#2A2A2A] to-[#111111] px-4 py-2 text-[16px] font-semibold text-white shadow-[0_10px_22px_rgba(0,0,0,0.18)] ring-1 ring-white/10"
+              className="relative ml-5 px-4 py-2 text-[16px] first-btn"
             >
               <span className="absolute inset-x-0 top-0 h-px bg-white/25" />
               Talk to us
@@ -230,8 +236,8 @@ function TopTab({
       // onClick={onClick}
       className={[
         "inline-flex items-center gap-1.5",
-        "rounded-lg px-3 py-2",
-        "text-[16px] font-medium",
+        "rounded-lg px-3 py-2 leading-[1.3]",
+        "text-[.95rem] font-medium",
         active ? "bg-[#F7F0E5] text-[#111]" : "text-[#202020] hover:bg-[#F7F0E5]",
       ].join(" ")}
     >
@@ -249,7 +255,7 @@ function TopTab({
 
 function MegaPanel({
   config,
-  isFirst= false,
+  isFirst = false,
   onClose,
 }: {
   config: MegaMenuConfig;

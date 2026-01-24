@@ -132,55 +132,13 @@ const TILES: Tile[] = [
 
 
 
-export default function Home() {
+export default function CreatorFeatures() {
   return (
     <div>
       <Header />
-      <HeroSection />
-      {/* <CampaignShowcaseSection /> */}
-
-      {/* <PlatformAccessSection />
-      <DisruptedMarketingSection /> */}
-
-      <ContextSection
-        heading={
-          <>
-            60% of work is lost in <span className="text-neutral-400">context</span>
-            <br />– and AI is lost without it.
-          </>
-        }
-        subheading="Work Sprawl is killing context and destroying productivity."
-        items={[
-          {
-            image: "/up1.png",
-            title: "Context Switching",
-            description: "Digital fatigue reduces employee performance by up to 32%",
-          },
-          {
-            image: "/up2.png",
-            title: "Context Missing",
-            description: "96% of companies fail in AI value & adoption",
-          },
-          {
-            image: "/up3.png",
-            title: "Context Stitching",
-            description: "2.5 hours daily wasted searching & stitching context",
-          },
-        ]}
-      />
-      <AllAppsAgentsSection features={FEATURES as any} tiles={TILES} />
-
-
-      <CreatorFinderSection />
-      <IntercomTestimonialSection />
-      <CampaignFeatureGridSection />
-      <CampaignsLaunchedSection />
-      <PaymentsAutoPilotSection />
+      
+      <div className="mt-8"></div>
       <BrandWallSection />
-      <CreatorCtaSection />
-      {/* <CaseStudies /> */}
-      <FaqSection />
-      {/* <Footer /> */}
       <ClickUpFooter />
     </div>
   );

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { EmptySkelton } from "@/CustomComponents/EmptySkeletons";
 
 const IMG_GRID =
   "https://images.unsplash.com/photo-1507572399997-724a4185f8b5?auto=format&fit=crop&w=1800&q=60";
@@ -88,17 +89,15 @@ export default function PaymentsAutoPilotSection() {
     <section className="bg-[#FAFAF7] py-14 sm:py-16">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         {/* Title with orange highlight */}
-        <h2 className="text-center font-serif text-[34px] sm:text-[44px] lg:text-[50px] font-semibold leading-[1.05] text-black">
-          <span className=" px-2 py-1 box-decoration-clone">
+        <h2 className="text-center font-serif font-semibold leading-[1.05] text-black text-[26px] sm:text-[44px] lg:text-[50px]">
+          <span className="px-2 py-1 box-decoration-clone">
             Put creator payments &amp;
           </span>
-          <br />
-          <span className=" px-2 py-1 box-decoration-clone">
+          <br className="hidden sm:block" />
+          <span className="px-2 py-1 box-decoration-clone">
             results on auto-pilot
           </span>
         </h2>
-
-        {/* Layout */}
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.18fr_1fr]">
           {/* LEFT: Pay quickly and safely */}
           <div className="rounded-[14px] border border-black/10 bg-white p-5 sm:p-6 shadow-[0_18px_40px_rgba(0,0,0,0.06)] flex flex-col">
@@ -110,8 +109,35 @@ export default function PaymentsAutoPilotSection() {
               seamless and secure transactions - your finance team will love you.
             </p>
 
+            <div className="relative h-full w-full mt-3 group overflow-hidden rounded-[10px] bg-[#64e293] ring-1 ring-black/5">
+              <div className="absolute w-full h-full bg-[#64e293]">
+                <EmptySkelton classes="top-0" />
+                <EmptySkelton classes="top-20" isReplaced={false} />
+                <EmptySkelton classes="top-40" />
+                <EmptySkelton classes="top-60" isReplaced={false} />
+                <EmptySkelton classes="top-80" />
+                <EmptySkelton classes="top-100" isReplaced={false} />
+                <EmptySkelton classes="top-120" />
+                <EmptySkelton classes="top-140" isReplaced={false} />
+                <EmptySkelton classes="top-160" />
+                <EmptySkelton classes="top-180" isReplaced={false} />
+              </div>
+              <div className="h-full w-full flex justify-center items-center">
+                <Image
+                  src={"https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67061c285f69a857cc8bab68_Frame%20427323439.png"}
+                  alt={"/44.png"}
+                  width={1200}
+                  height={650}
+                  className={[
+                    "w-full object-fill z-10 max-w-md sm:max-w-xs group-hover:scale-105 transition-all duration-200",
+                    "h-[140px] sm:h-[180px] md:h-[200px] my-12 rounded-lg",
+                  ].join(" ")}
+                />
+              </div>
+              {/* {children} */}
+            </div>
             {/* Map / globe card */}
-            <div className="relative mt-5 flex-1 min-h-[360px] sm:min-h-[400px] overflow-hidden rounded-[12px] ">
+            {/* <div className="relative mt-5 flex-1 min-h-[360px] sm:min-h-[400px] overflow-hidden rounded-[12px] ">
               <Image
                 src={"/44.png"}
                 alt=""
@@ -120,14 +146,14 @@ export default function PaymentsAutoPilotSection() {
                 className="object-fill"
                 priority={false}
               />
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT column */}
           <div className="flex flex-col gap-6">
             {/* Top: Measure returns effortlessly */}
             <div className="rounded-[14px] border border-black/10 bg-white p-5 sm:p-6 shadow-[0_18px_40px_rgba(0,0,0,0.06)]">
-              <div className="relative h-[250px] overflow-hidden rounded-[12px]">
+              {/* <div className="relative h-[250px] overflow-hidden rounded-[12px]">
                 <Image
                   src={"/33.png"}
                   alt=""
@@ -136,7 +162,34 @@ export default function PaymentsAutoPilotSection() {
                   className="object-fill"
                 />
 
+              </div> */}
+              <div className="relative h-full max-h-[250px] w-full mt-3 group overflow-hidden rounded-[10px] bg-[#64e293] ring-1 ring-black/5">
+                <div className="absolute w-full h-full bg-[#64e293]">
+                  <EmptySkelton classes="top-0" />
+                  <EmptySkelton classes="top-20" isReplaced={false} />
+                  <EmptySkelton classes="top-40" />
+                  <EmptySkelton classes="top-60" isReplaced={false} />
+                  <EmptySkelton classes="top-80" />
+                  <EmptySkelton classes="top-100" isReplaced={false} />
+                  <EmptySkelton classes="top-120" />
+                  <EmptySkelton classes="top-140" isReplaced={false} />
+                  <EmptySkelton classes="top-160" />
+                  <EmptySkelton classes="top-180" isReplaced={false} />
                 </div>
+                <div className="h-full w-full flex justify-center items-center">
+                  <Image
+                    src={"https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67061c285f69a857cc8bab68_Frame%20427323439.png"}
+                    alt={"/44.png"}
+                    width={1200}
+                    height={650}
+                    className={[
+                      "w-full object-fill z-10 max-w-md sm:max-w-xs group-hover:scale-105 transition-all duration-200",
+                      "h-[140px] sm:h-[180px] md:h-[200px] my-12 rounded-lg",
+                    ].join(" ")}
+                  />
+                </div>
+                {/* {children} */}
+              </div>
 
               <div className="mt-4 flex flex-wrap items-center gap-2">
                 <h3 className="text-[22px] font-semibold font-serif text-black">
@@ -157,27 +210,7 @@ export default function PaymentsAutoPilotSection() {
             <div className="overflow-hidden rounded-[14px] border border-black/10 bg-white shadow-[0_18px_40px_rgba(0,0,0,0.06)]">
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* Left green portrait panel */}
-                <div className="relative bg-[#63E294]">
-                  {/* doodle */}
-                  <svg
-                    className="absolute left-3 top-3 h-10 w-10 opacity-60"
-                    viewBox="0 0 64 64"
-                    fill="none"
-                  >
-                    <path
-                      d="M14 20c8-7 22-7 30 0M18 28c6-4 16-4 22 0M24 36c4-2 10-2 14 0"
-                      stroke="rgba(0,0,0,0.35)"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M38 14c2 6 7 9 12 10"
-                      stroke="rgba(0,0,0,0.35)"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-
+                {/* <div className="relative bg-[#63E294]">
                   <div className="relative h-[400px] sm:h-full min-h-[400px]">
                     <Image
                       src={"https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/6708d9b8608f63ed5f8c9642_testimonial-pic-item.avif"}
@@ -188,7 +221,34 @@ export default function PaymentsAutoPilotSection() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
                   </div>
+                </div> */}
+                <div className="relative h-full  w-full mt-3 group overflow-hidden rounded-[10px] bg-[#64e293] ring-1 ring-black/5">
+                <div className="absolute w-full h-full bg-[#64e293]">
+                  <EmptySkelton classes="top-0" />
+                  <EmptySkelton classes="top-20" isReplaced={false} />
+                  <EmptySkelton classes="top-40" />
+                  <EmptySkelton classes="top-60" isReplaced={false} />
+                  <EmptySkelton classes="top-80" />
+                  {/* <EmptySkelton classes="top-100" isReplaced={false} />
+                  <EmptySkelton classes="top-120" />
+                  <EmptySkelton classes="top-140" isReplaced={false} />
+                  <EmptySkelton classes="top-160" />
+                  <EmptySkelton classes="top-180" isReplaced={false} /> */}
                 </div>
+                <div className="h-full w-full flex justify-center items-center">
+                  <Image
+                    src={"https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67061c285f69a857cc8bab68_Frame%20427323439.png"}
+                    alt={"/44.png"}
+                    width={1200}
+                    height={650}
+                    className={[
+                      "w-full object-fill z-10 max-w-md sm:max-w-64 group-hover:scale-105 transition-all duration-200",
+                      "h-[140px] sm:h-[180px] md:h-[200px] my-12 rounded-lg",
+                    ].join(" ")}
+                  />
+                </div>
+                {/* {children} */}
+              </div>
 
                 {/* Right quote */}
                 <div className="p-5 sm:p-6 flex h-full flex-col">

@@ -95,14 +95,21 @@ export default function CampaignShowcaseSection() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="w-full bg-[#fbf8f2]">
+    <section className="w-full bg-[#f9f8f4]">
       <div className="mx-auto w-full max-w-[1440px] px-6 pb-14 pt-8">
         {/* Orange dashboard card */}
-        <div className="relative rounded-[18px] bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
-          <LottieOnce url={LOTTIE_URL} />
+        <div className="relative rounded-[18px] min-h-[300px] bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+          <Image
+            src="/hero1.png"
+            alt="Creators parade illustration"
+            fill
+            priority
+            sizes="100vw"
+            className="object-contain"
+          />
 
           {/* ✅ Play button overlay (same vibe as screenshot) */}
-          <button
+          {/* <button
             onClick={() => setOpen(true)}
             aria-label="Play video"
             className={[
@@ -125,7 +132,7 @@ export default function CampaignShowcaseSection() {
             >
               <Icon icon="mdi:play" className="ml-[3px] h-10 w-10 text-white" />
             </span>
-          </button>
+          </button> */}
         </div>
 
         {/* caption */}
@@ -135,15 +142,15 @@ export default function CampaignShowcaseSection() {
         </p>
 
         <TrustedLogosAnimation
-                logos={BRAND_IMAGES}
-                imageKey="imageSrc"
-                imgClass="h-12 md:h-16"
-                wrapperHeight="h-16 md:h-24 mt-8"
-              />
+          logos={BRAND_IMAGES}
+          imageKey="imageSrc"
+          imgClass="h-12 md:h-16"
+          wrapperHeight="h-16 md:h-24 mt-8"
+        />
       </div>
 
       {/* modal */}
-      <VideoModal open={open} onClose={() => setOpen(false)} vimeoUrl={VIMEO_URL} />
+      {/* <VideoModal open={open} onClose={() => setOpen(false)} vimeoUrl={VIMEO_URL} /> */}
     </section>
   );
 }
@@ -151,7 +158,7 @@ export default function CampaignShowcaseSection() {
 /** ✅ Plays ONE time only (no loop, no re-play on scroll) */
 function LottieOnce({
   url,
-  holdAt = 0.985, // ✅ hold at 98.5% (prevents “fade to nothing” endings)
+  holdAt = 0.385, // ✅ hold at 98.5% (prevents “fade to nothing” endings)
 }: {
   url: string;
   holdAt?: number;

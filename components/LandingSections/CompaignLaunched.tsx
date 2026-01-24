@@ -5,125 +5,72 @@ import React from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
-/**
- * Requires:
- *   npm i @iconify/react
- *
- * Pixel-match target: 1586×523 screenshot
- * Layout: absolute stickers (percent-based) + centered content
- */
 export default function CampaignsLaunchedSection() {
   return (
-    <section className="relative h-[523px] w-full overflow-hidden bg-[#FDFDFC]">
-      {/* Decorative stickers */}
-      <div className="pointer-events-none absolute inset-0">
-        {/* Top-left: black tile */}
-        <Sticker
-          style={{ left: "5.61%", top: "21.41%" }}
-          rotate={-12}
-          variant="black"
-        >
-          {/* closest vibe to the bars/smile mark */}
+    <section className="relative w-full overflow-hidden bg-[#FDFDFC] lg:h-[523px]">
+      {/* ✅ Decorative stickers (keep same on lg/xl, hide below lg) */}
+      <div className="pointer-events-none absolute inset-0 hidden lg:block">
+        <Sticker style={{ left: "5.61%", top: "21.41%" }} rotate={-12} variant="black">
           <Icon icon="lucide:bar-chart-3" className="h-6 w-6 text-white" />
         </Sticker>
 
-        {/* Top-left: figma */}
-        <Sticker
-          style={{ left: "17.65%", top: "23.13%" }}
-          rotate={10}
-          variant="white"
-        >
+        <Sticker style={{ left: "17.65%", top: "23.13%" }} rotate={10} variant="white">
           <Icon icon="logos:figma" className="h-7 w-7" />
         </Sticker>
 
-        {/* Left doodle */}
         <Doodle style={{ left: "12.8%", top: "37.28%" }} />
 
-        {/* Left: blue chevron */}
-        <Sticker
-          style={{ left: "6.24%", top: "52.77%" }}
-          rotate={-10}
-          variant="blue"
-        >
+        <Sticker style={{ left: "6.24%", top: "52.77%" }} rotate={-10} variant="blue">
           <Icon icon="tabler:chevron-right" className="h-8 w-8 text-white" />
         </Sticker>
 
-        {/* Bottom-left: gradient-ish icon */}
-        <Sticker
-          style={{ left: "13.30%", top: "67.68%" }}
-          rotate={-10}
-          variant="white"
-        >
-          {/* pick any multicolor logo you like; this keeps the same “decorative” feel */}
+        <Sticker style={{ left: "13.30%", top: "67.68%" }} rotate={-10} variant="white">
           <Icon icon="logos:clickup" className="h-7 w-7" />
         </Sticker>
 
-        {/* Top-right: black tile (Linear-ish) */}
-        <Sticker
-          style={{ left: "82.72%", top: "20.26%" }}
-          rotate={12}
-          variant="black"
-        >
+        <Sticker style={{ left: "82.72%", top: "20.26%" }} rotate={12} variant="black">
           <Icon icon="simple-icons:linear" className="h-6 w-6 text-white" />
         </Sticker>
 
-        {/* Right-top: blue mark */}
-        <Sticker
-          style={{ left: "92.18%", top: "29.63%" }}
-          rotate={12}
-          variant="white"
-        >
+        <Sticker style={{ left: "92.18%", top: "29.63%" }} rotate={12} variant="white">
           <Icon icon="tabler:bolt-filled" className="h-7 w-7 text-[#1E7BFF]" />
         </Sticker>
 
-        {/* Right doodle */}
         <DoodleRight style={{ left: "86.94%", top: "43.21%" }} />
 
-        {/* HubSpot */}
-        <Sticker
-          style={{ left: "79.88%", top: "68.06%" }}
-          rotate={10}
-          variant="orange"
-        >
+        <Sticker style={{ left: "79.88%", top: "68.06%" }} rotate={10} variant="orange">
           <Icon icon="logos:hubspot-icon" className="h-7 w-7" />
         </Sticker>
 
-        {/* Facebook */}
-        <Sticker
-          style={{ left: "92.05%", top: "65.58%" }}
-          rotate={10}
-          variant="white"
-        >
+        <Sticker style={{ left: "92.05%", top: "65.58%" }} rotate={10} variant="white">
           <Icon icon="logos:facebook" className="h-7 w-7" />
         </Sticker>
       </div>
 
       {/* Center content */}
-      <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <div className="-translate-y-[6px] text-center">
+      <div className="relative z-10 flex w-full items-center justify-center px-4 sm:px-6 py-12 sm:py-16 lg:py-0 lg:h-full">
+        <div className="text-center lg:-translate-y-[6px]">
           {/* Badge */}
-          <div className="inline-flex  items-center justify-center rounded-lg border border-[#29A36E] bg-[#ECFAF0] px-3 py-[8px] text-[14px] font-semibold leading-none text-[#29A36E]">
-            Live on Passionfroot <Icon icon="streamline:wifi-horizontal-remix" className="ms-2" />
+          <div className="inline-flex items-center justify-center rounded-lg border border-[#29A36E] bg-[#ECFAF0] px-3 py-[8px] text-[12px] sm:text-[14px] font-semibold leading-none text-[#29A36E]">
+            Live on Passionfroot
+            <Icon icon="streamline:wifi-horizontal-remix" className="ms-2" />
           </div>
 
-          {/* Title */}
-          <h2 className="mt-4 whitespace-pre-line font-serif text-[56px] font-medium leading-[1.03] tracking-[-0.02em] text-[#1A1A1A]">
+          {/* Title (keep exact on lg/xl, scale below lg) */}
+          <h2 className="mt-4 whitespace-pre-line font-serif font-medium leading-[1.03] tracking-[-0.02em] text-[#1A1A1A] text-[34px] sm:text-[44px] lg:text-[56px]">
             Thousands of campaigns{"\n"}launched to date
           </h2>
 
           {/* Subtitle */}
-          <p className="mt-3 text-[20px] font-[400] leading-[1.45] text-[#525252]">
+          <p className="mt-3 text-[16px] sm:text-[18px] lg:text-[20px] font-[400] leading-[1.45] text-[#525252]">
             with 60% lower CPC than Linkedin Ads*
           </p>
 
-          {/* CTAs */}
-          <div className="mt-7 flex items-center justify-center gap-3">
+          {/* CTAs (stack on mobile, keep same on lg) */}
+          <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
             <Link
               href="#"
-              className={[
-                "first-btn px-7 py-3",
-                "text-[16px] font-semibold",
-              ].join(" ")}
+              className={["first-btn px-7 py-3", "text-[16px] font-semibold", "w-full sm:w-auto"].join(" ")}
             >
               Get access
               <Icon icon="ep:right" className="ms-2 h-5 w-5" color="#ffffff" />
@@ -139,6 +86,7 @@ export default function CampaignsLaunchedSection() {
                 "shadow-[0_1px_0_rgba(0,0,0,0.03)]",
                 "active:translate-y-[1px]",
                 "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/30",
+                "w-full sm:w-auto",
               ].join(" ")}
             >
               Talk to us
@@ -163,17 +111,16 @@ function Sticker({
   variant: "white" | "black" | "blue" | "orange";
   style: React.CSSProperties;
 }) {
-  const base =
-    "absolute grid place-items-center w-[52px] h-[52px] rounded-[12px]";
+  const base = "absolute grid place-items-center w-[52px] h-[52px] rounded-[12px]";
 
   const skin =
     variant === "black"
       ? "bg-[#0F0F10] border border-black/80"
       : variant === "blue"
-      ? "bg-[#1566FF] border border-black/70"
-      : variant === "orange"
-      ? "bg-[#FF7A59] border border-black/60"
-      : "bg-white border border-black/40";
+        ? "bg-[#1566FF] border border-black/70"
+        : variant === "orange"
+          ? "bg-[#FF7A59] border border-black/60"
+          : "bg-white border border-black/40";
 
   return (
     <div
@@ -186,7 +133,6 @@ function Sticker({
   );
 }
 
-// Left doodle (simple sketch-y SVG to match the vibe)
 function Doodle({ style }: { style: React.CSSProperties }) {
   return (
     <svg
@@ -198,12 +144,7 @@ function Doodle({ style }: { style: React.CSSProperties }) {
       viewBox="0 0 54 54"
       fill="none"
     >
-      <g
-        stroke="#111"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <g stroke="#111" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 20c2-6 14-6 16 0" />
         <path d="M19 34c3 4 13 4 16 0" />
         <path d="M13 28c-2 1-3 3-2 5 1 2 3 2 5 1" />
@@ -228,12 +169,7 @@ function DoodleRight({ style }: { style: React.CSSProperties }) {
       viewBox="0 0 54 54"
       fill="none"
     >
-      <g
-        stroke="#111"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <g stroke="#111" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M16 22c4-5 18-5 22 2" />
         <path d="M18 36c5 4 15 3 18-2" />
         <path d="M18 31c6 0 12 6 18 8" />

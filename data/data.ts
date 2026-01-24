@@ -1,0 +1,848 @@
+import { AiProfileCard, CreatorFinderItem, FaqItem, FooterColumn, MapTab, MegaMenuConf, PlatformCard, Stat, Tile } from "./types";
+
+export const BRAND = {
+  name: "YourBrand",
+  tagline: "THE LARGEST B2B CREATOR PLATFORM",
+};
+
+export const LOGOS = [
+  "Notion", "Intercom", "HubSpot", "FreshBooks", "PostHog", "Replit", "Attio", "Gamma",
+  "Zapier", "Stripe", "Webflow", "Figma", "Linear", "Slack",
+];
+
+export const MENUS: MegaMenuConf[] = [
+  {
+    key: "brands",
+    label: "For Brands",
+    previewBg:
+      "linear-gradient(180deg,#FFB36B 0%, #FF9F45 70%, #FFB36B 100%)",
+    previewImage:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f52812e168c74898afd362_image%20(48)%20(1).avif",
+    // mainItems: [
+    //   {
+    //     title: "Features",
+    //     description:
+    //       "Find the right creators on all platforms, book & collaborate, pay quickly & safely - all in one place.",
+    //     href: "#",
+    //     icon: "tabler:sparkles",
+    //   },
+    //   {
+    //     title: "Customers",
+    //     description:
+    //       "Discover how forward-thinking companies use Passionfroot to reach their growth goals.",
+    //     href: "#",
+    //     icon: "tabler:users",
+    //   },
+    // ],
+    // resourceItems: [
+    //   { title: "Blog", href: "#", icon: "tabler:book-2" },
+    //   {
+    //     title: "Influencer Pricing Guide",
+    //     href: "#",
+    //     icon: "tabler:file-text",
+    //   },
+    // ],
+    mainItems: [
+      {
+        title: "Features",
+        description:
+          "Explore the all-in-one tool to help creators do more brand deals - easier, and faster.",
+        href: "/",
+        icon: "tabler:sparkles",
+      },
+      {
+        title: "Customers",
+        description:
+          "Learn how other creators are leveraging Passionfroot to monetize their content with brand partnerships.",
+        href: "/customers",
+        icon: "tabler:users",
+      },
+      {
+        title: "Pricing",
+        description: "Designed for every stage of your journey. Start today for free.",
+        href: "/pricing",
+        icon: "tabler:tag",
+      },
+    ],
+    resourceItems: [
+      { title: "Creator Gallery", href: "/creator-gallery", icon: "tabler:photo" },
+      { title: "Blog", href: "/blogs", icon: "tabler:book-2" },
+    ],
+  },
+  {
+    key: "creators",
+    label: "For Creators",
+    previewBg:
+      "linear-gradient(180deg,#C08BFF 0%, #B378FF 70%, #C08BFF 100%)",
+    previewImage:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcdbe5ac9f5bee12bbe_image%2080.avif",
+    mainItems: [
+      {
+        title: "Features",
+        description:
+          "Explore the all-in-one tool to help creators do more brand deals - easier, and faster.",
+        href: "/features",
+        icon: "tabler:sparkles",
+      },
+      {
+        title: "Customers",
+        description:
+          "Learn how other creators are leveraging Passionfroot to monetize their content with brand partnerships.",
+        href: "/customers",
+        icon: "tabler:users",
+      },
+      {
+        title: "Pricing",
+        description: "Designed for every stage of your journey. Start today for free.",
+        href: "/pricing",
+        icon: "tabler:tag",
+      },
+    ],
+    resourceItems: [
+      { title: "Creator Gallery", href: "/creator-gallery", icon: "tabler:photo" },
+      { title: "Blog", href: "/blogs", icon: "tabler:book-2" },
+    ],
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    quote:
+      "We cut campaign ops in half and finally have a single place to find, book, and manage creators end-to-end.",
+    name: "Ayesha Khan",
+    title: "Growth Lead",
+    metric1: "32",
+    metric1Label: "collabs",
+    metric2: "70%",
+    metric2Label: "time saved",
+  },
+  {
+    quote:
+      "The workflow feels like a cockpit: discovery, outreach, approvals, deliverables, and reporting — all in one.",
+    name: "Saad Ali",
+    title: "Head of Marketing",
+    metric1: "$14",
+    metric1Label: "avg. CPM",
+    metric2: "10x",
+    metric2Label: "scale up",
+  },
+  {
+    quote:
+      "Payments and procurement became frictionless. Finance stopped blocking campaigns and started supporting them.",
+    name: "Hira Noor",
+    title: "Marketing Manager",
+    metric1: "14",
+    metric1Label: "markets",
+    metric2: "24h",
+    metric2Label: "to book",
+  },
+];
+
+export const CASE_STUDIES = [
+  { label: "Customer Story", title: "From pilot to repeatable creator engine", desc: "How teams build a predictable pipeline with creator-led growth.", readMins: 4, href: "/case-studies/1" },
+  { label: "Customer Story", title: "Scaling partnerships across 3 channels", desc: "One workflow for newsletters, video, and social — without spreadsheets.", readMins: 5, href: "/case-studies/2" },
+  { label: "Customer Story", title: "Improving ROI with better creator matching", desc: "How better targeting reduced waste and improved lead quality.", readMins: 5, href: "/case-studies/3" },
+];
+
+export const FAQS = [
+  { q: "What is YourBrand?", a: "YourBrand is a creator partnership platform that helps teams discover creators, manage campaigns, and measure results in one place." },
+  { q: "Who is it for?", a: "B2B brands, startups, and teams running creator campaigns across newsletters, video, social, and podcasts." },
+  { q: "How does it work?", a: "Discover creators → collaborate and manage deliverables → track performance and consolidate reporting." },
+  { q: "Can I run multiple campaigns?", a: "Yes, the workflow is designed for managing multiple creators and campaigns at the same time." },
+  { q: "How do I get started?", a: "Start with access, then book a quick intro call if you want a guided setup." },
+];
+
+export const STATS: Stat[] = [
+  { value: "300 Million", label: "TARGET AUDIENCE" },
+  { value: "2 Billion", label: "MONTHLY IMPRESSIONS" },
+  { value: "60%", label: "LOWER CPC THAN LINKEDIN ADS*" },
+];
+
+export const COLUMNS: FooterColumn[] = [
+  {
+    title: "AI",
+    links: [
+      { label: "Brain", href: "#" },
+      { label: "Super Agents", href: "#" },
+      { label: "Ambient Agents", href: "#" },
+      { label: "Notetaker", href: "#" },
+      { label: "Enterprise Search", href: "#" },
+      { label: "Talk to Text", href: "#" },
+      { label: "Download", href: "#", badge: "" },
+      { label: "iOS & Android", href: "#" },
+      { label: "Mac & Windows", href: "#" },
+      { label: "BrainGPT", href: "#" },
+    ],
+  },
+  {
+    title: "Product",
+    links: [
+      { label: "Chat", href: "#" },
+      { label: "Projects", href: "#" },
+      { label: "Docs & Wikis", href: "#" },
+      { label: "Calendar", href: "#" },
+      { label: "Dashboards", href: "#" },
+      { label: "Time Tracking", href: "#" },
+      { label: "Gantt Charts", href: "#" },
+      { label: "Automations", href: "#" },
+      { label: "Whiteboards", href: "#" },
+      { label: "API", href: "#" },
+      { label: "Integrations", href: "#" },
+    ],
+  },
+  {
+    title: "Compare",
+    links: [
+      { label: "vs Monday", href: "#" },
+      { label: "vs Notion", href: "#" },
+      { label: "vs Asana", href: "#" },
+      { label: "vs Jira", href: "#" },
+      { label: "vs Trello", href: "#" },
+      { label: "vs Slack", href: "#" },
+      { label: "vs MS Project", href: "#" },
+      { label: "vs Smartsheet", href: "#" },
+      { label: "vs Airtable", href: "#" },
+      { label: "vs Basecamp", href: "#" },
+      { label: "vs Todoist", href: "#" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About Us", href: "#" },
+      { label: "Careers", href: "#", badge: "Hiring" },
+      { label: "Customers", href: "#" },
+      { label: "Affiliates", href: "#" },
+      { label: "Events", href: "#" },
+      { label: "Partners", href: "#" },
+      { label: "Consultants", href: "#" },
+      { label: "Reviews", href: "#" },
+      { label: "Press", href: "#" },
+      { label: "Brand", href: "#" },
+      { label: "Roadmap", href: "#" },
+    ],
+  },
+  {
+    title: "Help",
+    links: [
+      { label: "24/7 Support", href: "#" },
+      { label: "Contact Us", href: "#" },
+      { label: "Get a Demo", href: "#" },
+      { label: "Import", href: "#" },
+      { label: "Templates", href: "#" },
+      { label: "Community", href: "#" },
+      { label: "University", href: "#" },
+      { label: "Webinars", href: "#" },
+      { label: "Blog", href: "#" },
+    ],
+  },
+];
+
+export const SOCIAL = [
+  { icon: "mdi:twitter", href: "#", label: "X" },
+  { icon: "mdi:instagram", href: "#", label: "Instagram" },
+  { icon: "mdi:linkedin", href: "#", label: "LinkedIn" },
+  { icon: "mdi:youtube", href: "#", label: "YouTube" },
+];
+
+export const LEFT: FaqItem[] = [
+  {
+    id: "what-is",
+    question: "What is Passionfroot?",
+    answer:
+      "Passionfroot is a platform to help B2B brands find, manage, and scale creator partnerships across platforms.",
+  },
+  {
+    id: "who-can-use",
+    question: "What types of businesses can use Passionfroot?",
+    answer:
+      "B2B brands, SaaS companies, agencies, and teams running creator or influencer programs can use Passionfroot to manage the entire workflow end-to-end.",
+  },
+  {
+    id: "how-works",
+    question: "How does Passionfroot work?",
+    answer:
+      "Search creators across platforms, build a shortlist, collaborate, manage tasks, track outcomes, and handle payments from one place.",
+  },
+  {
+    id: "platforms",
+    question: "What platforms can I use Passionfroot for?",
+    answer:
+      "You can run campaigns across multiple creator platforms such as newsletters, YouTube, podcasts, social platforms, and more.",
+  },
+  {
+    id: "discover",
+    question: "How do I discover the right creators for my brand?",
+    answer:
+      "Use filters, categories, and search to find creators aligned with your audience, then review performance signals and shortlist quickly.",
+  },
+];
+
+export const RIGHT: FaqItem[] = [
+  {
+    id: "payments",
+    question: "How are payments managed?",
+    answer:
+      "Payments are handled through a centralized workflow to simplify payouts and tracking, with clear status and accountability.",
+  },
+  {
+    id: "multi-campaigns",
+    question: "Can I run multiple campaigns at once?",
+    answer:
+      "Yes, Passionfroot allows you to manage multiple campaigns across different creators and platforms simultaneously. Our intuitive dashboard makes it easy to track all campaigns, communications, and performance in one place.",
+  },
+  {
+    id: "get-started",
+    question: "How do I get started with Passionfroot?",
+    answer:
+      "Request access, complete onboarding, then start searching creators and launching campaigns from your dashboard.",
+  },
+];
+
+// ✅ Updated tiles with FULL detail data for each card (photo/quote)
+// ✅ Added `color` field on ALL logo tiles (tailwind bg class)
+// Note: You may need to extend your Tile type to allow `detail` + `stats`.
+
+// ✅ First 10 objects (exact structure you want)
+// ✅ Logo tiles: bg stays SAME on hover (color includes hover:bg-...)
+// ✅ Quote tiles: SAME structure as photo tiles (img/bg/companyIcon/company/quote/person/stats)
+
+export const tiles: Tile[] = [
+  {
+    id: "gamma",
+    type: "photo",
+    img: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=800&auto=format&fit=crop&q=60",
+    bg: "bg-[#FFB07B]",
+    companyIcon: "", // put your iconify key if you have
+    company: "Gamma",
+    quote:
+      "Passionfroot has been a game-changer for us at Gamma. Their platform has streamlined our entire creator marketing process, allowing us to collaborate with over 30 creators seamlessly, cutting down campaign management time by more than half. Since integrating Passionfroot, we've seen a significant boost in user engagement and signups, all while maintaining the same ad spend. It's rare to find a tool that makes such an immediate impact—Passionfroot has been instrumental in scaling our growth effortlessly.",
+    person: {
+      name: "Grant Lee",
+      title: "Founder & CEO",
+      company: "Gamma",
+    },
+    stats: [
+      { label: "Collabs", value: "30", icon: "lucide:handshake" },
+      { label: "New users in 3 months", value: "3 Million", icon: "lucide:users" },
+    ],
+  },
+
+  // 2) Figma (logo) — keep bg same on hover
+  {
+    id: "figma",
+    type: "logo",
+    icon: "logos:figma",
+    text: "Figma",
+    iconSize: 28,
+    color: "bg-white hover:bg-[#f2f1f1]",
+  },
+
+  // 3) Intercom (quote) — SAME structure as photo
+  {
+    id: "intercom-quote",
+    type: "quote",
+    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&auto=format&fit=crop&q=60", // replace with John Roche image
+    bg: "!bg-[#ffea62]",
+    colSpan: "col-span-2",
+    companyIcon: "logos:intercom-icon",
+    company: "Intercom",
+    quote:
+      "Partnering with creators through Passionfroot has been a game-changer for Intercom’s Startup program. By collaborating with top newsletters, we’ve reached thousands of founders",
+    person: {
+      name: "John Roche",
+      title: "Startups and VC Partnerships",
+      company: "Intercom",
+    },
+    stats: [
+      { label: "Time to booking", value: "< 24 hours", icon: "lucide:clock" },
+      { label: "Saved per campaign", value: "14 hours", icon: "lucide:timer" },
+    ],
+  },
+
+  // 4) HubSpot (logo) — light pink bg same on hover
+  {
+    id: "hubspot",
+    type: "logo",
+    icon: "logos:hubspot-icon",
+    text: "HubSpot",
+    iconSize: 26,
+    color: "bg-[#FCE9E8] hover:bg-[#FCE9E8]",
+  },
+
+  // 5) Munch (photo)
+  {
+    id: "munch",
+    type: "photo",
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1200&auto=format&fit=crop&q=60",
+    bg: "bg-[#8EEBFF]",
+    companyIcon: "", // add if you have
+    company: "Munch",
+    quote:
+      "Passionfroot has completely transformed the way we approach creator marketing at Munch. We went from struggling to get responses to locking in a month's worth of collaborations in under a week. The platform’s streamlined communication and vetted creators have saved us both time and budget, allowing us to focus on scaling. With Passionfroot, we've built stronger relationships with creators, and our brand visibility has skyrocketed.",
+    person: {
+      name: "Jonathan Maimon",
+      title: "Former VP of Marketing",
+      company: "Munch",
+    },
+    stats: [
+      { label: "Collabs", value: "33", icon: "lucide:handshake" },
+      { label: "Saved per campaign", value: "78 hours", icon: "lucide:timer" },
+    ],
+  },
+
+  // 6) FreshBooks (photo)
+  {
+    id: "freshbooks",
+    type: "photo",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1200&auto=format&fit=crop&q=60",
+    bg: "bg-[#63E38A]",
+    companyIcon: "logos:freshbooks",
+    company: "FreshBooks",
+    quote:
+      "Passionfroot has streamlined our multi-platform creator campaigns across YouTube, newsletters, podcasts and LinkedIn. With just a few clicks, we've connected with creators that perfectly align with our audience of small business owners and freelancers, driving significant engagement and customer growth. It's become a core part of our demand generation strategy.",
+    person: {
+      name: "Nolan Mikowski",
+      title: "Senior Demand Generation Manager",
+      company: "FreshBooks",
+    },
+    stats: [{ label: "Campaign launch time reduction", value: "70%", icon: "lucide:trending-down" }],
+  },
+
+  // 7) Intercom (logo) — dark bg same on hover
+  {
+    id: "intercom-logo",
+    type: "logo",
+    icon: "logos:intercom-ico",
+    text: "INTERCOM",
+    iconSize: 26,
+    color: "bg-[#1E1E1E] hover:bg-[#1E1E1E] hover:text-white",
+  },
+
+  // 8) Attio (quote) — SAME structure as photo
+  {
+    id: "attio-quote",
+    type: "quote",
+    img: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&fit=crop&q=60", // replace with Attio left image (office B/W)
+    bg: "!bg-[#B58BFF]",
+    colSpan: "col-span-2",
+    companyIcon: "", // add if you have
+    company: "Attio",
+    quote:
+      "Passionfroot really helped us level up our creator program into a strong growth channel. Instead of scouring the internet, their AI search enabled us to find and book the best creators in PLG.",
+    person: {
+      name: "Alex Vale",
+      title: "Head of Growth",
+      company: "Attio",
+    },
+    stats: [{ label: "Target customers reached", value: "3.2 Million", icon: "lucide:target" }],
+  },
+
+  // 9) Framer (logo) — light blue bg same on hover
+  {
+    id: "framer",
+    type: "logo",
+    icon: "logos:framer",
+    text: "Framer",
+    iconSize: 28,
+    color: "bg-[#EAF3FF] hover:bg-[#EAF3FF]",
+  },
+
+  // 10) Replit (photo)
+  {
+    id: "replit",
+    type: "photo",
+    img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1200&auto=format&fit=crop&q=60",
+    bg: "bg-[#8EEBFF]",
+    companyIcon: "", // add if you have
+    company: "Replit",
+    quote:
+      "Passionfroot has been essential in scaling Replit’s creator marketing. What started as a small test quickly 10x'd into a six-figure monthly program because the platform made it easy to discover, activate, and manage the right creators. Instead of juggling spreadsheets and scattered outreach, we were able to launch multi-channel campaigns in days, not weeks. Passionfroot has turned creator marketing into one of our most impactful growth engines, helping us amplify our story and reach new audiences in AI and no-code.",
+    person: {
+      name: "Alex Lin",
+      title: "GTM",
+      company: "Replit",
+    },
+    stats: [
+      { label: "CPM", value: "$14", icon: "lucide:dollar-sign" },
+      { label: "Initial spend", value: "10x", icon: "lucide:trending-up" },
+    ],
+  },
+  // ✅ Next 4 objects (11–14) — add these AFTER your first 10 items
+
+  {
+    id: "nebius",
+    type: "photo",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&h=900&w=900",
+    bg: "bg-[#58ADEF]",
+    companyIcon: "", // add iconify key if you have
+    company: "Nebius",
+    quote:
+      "Passionfroot has been instrumental in helping us reach engineers, founders, and researchers in the AI space. By leveraging top-tier creators across leading AI newsletters, we were able to precisely target and engage the right audience for Nebius. The platform made it easy to tap into high-quality creators, driving both visibility and impactful engagement in a way that truly accelerated our growth.",
+    person: {
+      name: "Olga Reger",
+      title: "Senior Digital Marketing Manager",
+      company: "Nebius",
+    },
+    stats: [
+      { label: "Collabs", value: "14", icon: "lucide:handshake" },
+      { label: "Target customers reached", value: "3.8 Million", icon: "lucide:users" },
+    ],
+  },
+
+  {
+    id: "pika",
+    type: "logo",
+    text: "Pika",
+    color: "bg-[#E9D7BD] hover:bg-[#E9D7BD]", // ✅ same bg on hover
+  },
+
+  {
+    id: "guidde",
+    type: "photo",
+    img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&auto=format&fit=crop&q=60",
+    bg: "bg-[#E05D6A]",
+    companyIcon: "", // add iconify key if you have
+    company: "guidde",
+    quote:
+      "Before using the platform, we spent countless hours trying to find the right creators for our niche — now, we’ve cut that time by over 50% while doubling the effectiveness of our campaigns. Passionfroot’s user-friendly interface made it easy for us to book, communicate, and track results seamlessly. Thanks to the platform, we’ve scaled our outreach, increased our brand visibility, and boosted signups in just six months. For marketers looking to maximize ROI and streamline creator partnerships, Passionfroot is an absolute game-changer.",
+    person: {
+      name: "Moran Altarac",
+      title: "VP Marketing",
+      company: "guidde.com",
+    },
+    stats: [
+      { label: "Collabs", value: "41", icon: "lucide:handshake" },
+      { label: "Average CPL", value: "$1.07", icon: "lucide:badge-dollar-sign" },
+    ],
+  },
+
+  {
+    id: "elevenlabs",
+    type: "logo",
+    text: "||ElevenLabs",
+    color: "bg-[#57ABEB] hover:bg-[#57ABEB]", // ✅ same bg on hover
+  },
+
+];
+
+
+
+export const MAP_TABS: MapTab[] = [
+  {
+    key: "newsletter",
+    label: "Newsletter",
+    icon: "mdi:file-document-outline",
+    activeText: "#FF7A00",
+    activeBg: "#FFF3E6",
+    activeRing: "rgba(255,122,0,0.18)",
+    chips: [
+      { name: "Houck", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+      { name: "Superhuman", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+      { name: "ByteByteGo", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+    ],
+  },
+  {
+    key: "youtube",
+    label: "Youtube",
+    icon: "mdi:youtube",
+    activeText: "#FF2D2D",
+    activeBg: "#FFECEC",
+    activeRing: "rgba(255,45,45,0.18)",
+    chips: [
+      { name: "Ali Abdaal", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+      { name: "Sarah Grace", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+      { name: "Graham Stephan", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+    ],
+  },
+  {
+    key: "instagram",
+    label: "Instagram",
+    icon: "mdi:instagram",
+    activeText: "#B06BFF",
+    activeBg: "#F3E9FF",
+    activeRing: "rgba(176,107,255,0.18)",
+    chips: [
+      { name: "Zach pogrob", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+      { name: "Marina Mogilko", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+      { name: "Scott Clary", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+    ],
+  },
+  {
+    key: "podcasts",
+    label: "Podcasts",
+    icon: "mdi:podcast",
+    activeText: "#FF4CCB",
+    activeBg: "#FFEAF7",
+    activeRing: "rgba(255,76,203,0.18)",
+    chips: [
+      { name: "Big Technology", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif" },
+      { name: "Economics Explained", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif" },
+      { name: "Dr Sheen Gurrib", avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif" },
+    ],
+  },
+];
+
+export const ITEMS: CreatorFinderItem[] = [
+  {
+    image: "/find1_1.png",
+    title: "AI-powered creator search",
+    description:
+      "Our AI lets you search all platforms – not just one. Simply search and find the right creator ambassadors for your business in minutes.",
+  },
+  {
+    image: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fcd0aeb86eefe0fdef1d43_World%20Map-1.avif",
+    title: "World’s largest B2B creator network",
+    description:
+      "The largest selection of creators across Newsletters, LinkedIn, Youtube, Instagram, Twitter, and more. All platforms & categories – in one place.",
+  },
+  {
+    image: "/find3_1.png",
+    title: "Creator media kits",
+    description:
+      "Analyze creators with verified stats, product previews, rates, and much more.",
+  },
+  {
+    image: "/find4_1.png",
+    title: "AI creator recommendations",
+    description:
+      "Tell us your goals – and our AI will build a campaign for you in seconds.",
+  },
+  {
+    image: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fcd0aeb86eefe0fdef1d43_World%20Map-1.avif",
+    title: "Evaluate a creator in seconds",
+    badge: "Coming Soon",
+    description:
+      "Our AI evaluates and summarizes their latest content – no more digging in their feeds.",
+  },
+];
+
+export const AI_PROFILE_CARDS: AiProfileCard[] = [
+  {
+    name: "Ali Abdaal",
+    matchLabel: "Great match",
+    score: 92,
+    summaryTitle: "AI profile summary",
+    summary:
+      "Ali is the most reputable voice in productivity and in line with your brand",
+    avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68d7f4fe6739014da4_avatar-1.avif",
+  },
+  {
+    name: "Brian Jung",
+    matchLabel: "Great match",
+    score: 88,
+    summaryTitle: "AI profile summary",
+    summary:
+      "Brian is popular on YouTube for creating content about cryptocurrency, finance, and investing.",
+    avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67037b68cadbea52c4302d82_avatar.avif",
+  },
+  {
+    name: "Marina Mogilko",
+    matchLabel: "Great match",
+    score: 95,
+    summaryTitle: "AI profile summary",
+    summary:
+      "Marina talks about entrepreneurship as an immigrant - great for Duolingo",
+    avatar: "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe69f899dc61d3a637ed38_avatar%20(4).avif",
+  },
+];
+
+
+export const PLATFORMS: PlatformCard[] = [
+  {
+    title: "TikTok",
+    icon: "ic:baseline-tiktok",
+    bg: "linear-gradient(180deg,#f7a2db 0%, #f09ad2 55%, #f7a2db 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0e10d20ecb690ddf5_Frame%20427323501.avif",
+  },
+  {
+    title: "Newsletter",
+    icon: "mdi:file-document-outline",
+    bg: "linear-gradient(180deg,#ffb36b 0%, #ff9f45 70%, #ffb36b 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0abdea1f85b137b33_Frame%20427323496.avif",
+  },
+  {
+    title: "YouTube",
+    icon: "mdi:youtube",
+    bg: "linear-gradient(180deg,#f07a86 0%, #ea5f6d 70%, #f07a86 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b539ef60c50fd9ee_Frame%20427323499.avif",
+  },
+  {
+    title: "LinkedIn",
+    icon: "mdi:linkedin",
+    bg: "linear-gradient(180deg,#7cc2ff 0%, #4aa6ff 70%, #7cc2ff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e05cfd941726113c8d_slide%202.avif",
+  },
+  {
+    title: "Podcast",
+    icon: "mdi:podcast",
+    bg: "linear-gradient(180deg,#76f0b2 0%, #4fe39a 70%, #76f0b2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b9158c4c2a423b86_slide-3.avif",
+  },
+  {
+    title: "Instagram",
+    icon: "mdi:instagram",
+    bg: "linear-gradient(180deg,#c08bff 0%, #b378ff 70%, #c08bff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0b539ef60c50fd99e_Frame%20427323500.avif",
+  },
+  {
+    title: "Twitter",
+    icon: "mdi:twitter",
+    bg: "linear-gradient(180deg,#77e2f2 0%, #4dd6ea 70%, #77e2f2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0c9b886eab0aed2c7_Frame%20427323502.avif",
+  },
+  {
+    title: "TikTok",
+    icon: "ic:baseline-tiktok",
+    bg: "linear-gradient(180deg,#f7a2db 0%, #f09ad2 55%, #f7a2db 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0e10d20ecb690ddf5_Frame%20427323501.avif",
+  },
+  {
+    title: "Newsletter",
+    icon: "mdi:file-document-outline",
+    bg: "linear-gradient(180deg,#ffb36b 0%, #ff9f45 70%, #ffb36b 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0abdea1f85b137b33_Frame%20427323496.avif",
+  },
+  {
+    title: "YouTube",
+    icon: "mdi:youtube",
+    bg: "linear-gradient(180deg,#f07a86 0%, #ea5f6d 70%, #f07a86 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b539ef60c50fd9ee_Frame%20427323499.avif",
+  },
+  {
+    title: "LinkedIn",
+    icon: "mdi:linkedin",
+    bg: "linear-gradient(180deg,#7cc2ff 0%, #4aa6ff 70%, #7cc2ff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e05cfd941726113c8d_slide%202.avif",
+  },
+  {
+    title: "Podcast",
+    icon: "mdi:podcast",
+    bg: "linear-gradient(180deg,#76f0b2 0%, #4fe39a 70%, #76f0b2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b9158c4c2a423b86_slide-3.avif",
+  },
+  {
+    title: "Instagram",
+    icon: "mdi:instagram",
+    bg: "linear-gradient(180deg,#c08bff 0%, #b378ff 70%, #c08bff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0b539ef60c50fd99e_Frame%20427323500.avif",
+  },
+  {
+    title: "Twitter",
+    icon: "mdi:twitter",
+    bg: "linear-gradient(180deg,#77e2f2 0%, #4dd6ea 70%, #77e2f2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0c9b886eab0aed2c7_Frame%20427323502.avif",
+  },
+  {
+    title: "TikTok",
+    icon: "ic:baseline-tiktok",
+    bg: "linear-gradient(180deg,#f7a2db 0%, #f09ad2 55%, #f7a2db 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0e10d20ecb690ddf5_Frame%20427323501.avif",
+  },
+  {
+    title: "Newsletter",
+    icon: "mdi:file-document-outline",
+    bg: "linear-gradient(180deg,#ffb36b 0%, #ff9f45 70%, #ffb36b 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0abdea1f85b137b33_Frame%20427323496.avif",
+  },
+  {
+    title: "YouTube",
+    icon: "mdi:youtube",
+    bg: "linear-gradient(180deg,#f07a86 0%, #ea5f6d 70%, #f07a86 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b539ef60c50fd9ee_Frame%20427323499.avif",
+  },
+  {
+    title: "LinkedIn",
+    icon: "mdi:linkedin",
+    bg: "linear-gradient(180deg,#7cc2ff 0%, #4aa6ff 70%, #7cc2ff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e05cfd941726113c8d_slide%202.avif",
+  },
+  {
+    title: "Podcast",
+    icon: "mdi:podcast",
+    bg: "linear-gradient(180deg,#76f0b2 0%, #4fe39a 70%, #76f0b2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b9158c4c2a423b86_slide-3.avif",
+  },
+  {
+    title: "Instagram",
+    icon: "mdi:instagram",
+    bg: "linear-gradient(180deg,#c08bff 0%, #b378ff 70%, #c08bff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0b539ef60c50fd99e_Frame%20427323500.avif",
+  },
+  {
+    title: "Twitter",
+    icon: "mdi:twitter",
+    bg: "linear-gradient(180deg,#77e2f2 0%, #4dd6ea 70%, #77e2f2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0c9b886eab0aed2c7_Frame%20427323502.avif",
+  },
+  {
+    title: "TikTok",
+    icon: "ic:baseline-tiktok",
+    bg: "linear-gradient(180deg,#f7a2db 0%, #f09ad2 55%, #f7a2db 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0e10d20ecb690ddf5_Frame%20427323501.avif",
+  },
+  {
+    title: "Newsletter",
+    icon: "mdi:file-document-outline",
+    bg: "linear-gradient(180deg,#ffb36b 0%, #ff9f45 70%, #ffb36b 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0abdea1f85b137b33_Frame%20427323496.avif",
+  },
+  {
+    title: "YouTube",
+    icon: "mdi:youtube",
+    bg: "linear-gradient(180deg,#f07a86 0%, #ea5f6d 70%, #f07a86 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b539ef60c50fd9ee_Frame%20427323499.avif",
+  },
+  {
+    title: "LinkedIn",
+    icon: "mdi:linkedin",
+    bg: "linear-gradient(180deg,#7cc2ff 0%, #4aa6ff 70%, #7cc2ff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e05cfd941726113c8d_slide%202.avif",
+  },
+  {
+    title: "Podcast",
+    icon: "mdi:podcast",
+    bg: "linear-gradient(180deg,#76f0b2 0%, #4fe39a 70%, #76f0b2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e1b9158c4c2a423b86_slide-3.avif",
+  },
+  {
+    title: "Instagram",
+    icon: "mdi:instagram",
+    bg: "linear-gradient(180deg,#c08bff 0%, #b378ff 70%, #c08bff 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0b539ef60c50fd99e_Frame%20427323500.avif",
+  },
+  {
+    title: "Twitter",
+    icon: "mdi:twitter",
+    bg: "linear-gradient(180deg,#77e2f2 0%, #4dd6ea 70%, #77e2f2 100%)",
+    image:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0c9b886eab0aed2c7_Frame%20427323502.avif",
+  },
+];

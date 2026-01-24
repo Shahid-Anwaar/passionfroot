@@ -67,7 +67,7 @@ const BRAND_IMAGES: { imageSrc: string }[] = [
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-[#fdfdfb] pt-20 sm:pt-24">
+    <section className="w-full bg-[#fdfdfb] pt-16 sm:pt-16">
       <div className="mx-auto w-full max-w-[980px] px-4 sm:px-6 pt-16 sm:pt-[110px] pb-5 sm:pb-14 text-center">
         {/* Eyebrow */}
         <div className="text-[0.85rem] sm:text-[1.025rem] font-nunito font-medium tracking-[0.08em] text-[#737373]">

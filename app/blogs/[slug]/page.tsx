@@ -1,0 +1,21 @@
+import BlogDetailSection from "@/components/BlogSections/BlogDetail";
+import ClickUpFooter from "@/components/LandingSections/ClickUpFooter";
+import Header from "@/components/LandingSections/Header";
+import { getPostBySlug, getRelatedPosts } from "@/data/data";
+import { notFound } from "next/navigation";
+
+export default async function BlogDetailPage({ params }: { params: any }) {
+  const { slug } = await params;
+  console.log(slug, "ttttttttttttttttwwwww");
+
+  const post = getPostBySlug(slug);
+  if (!post) return notFound();
+
+  const related = getRelatedPosts(params.slug, 3);
+
+  return <>
+    <Header />
+    <BlogDetailSection post={post} related={related} />
+    <ClickUpFooter />
+  </>;
+}

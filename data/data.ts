@@ -1,4 +1,4 @@
-import { AiProfileCard, CreatorFinderItem, FaqItem, FooterColumn, MapTab, MegaMenuConf, PlatformCard, Stat, Tile } from "./types";
+import { AiProfileCard, BlogBlock, BlogPost, CreatorFinderItem, FaqItem, FooterColumn, MapTab, MegaMenuConf, PlatformCard, Stat, Tile } from "./types";
 
 export const BRAND = {
   name: "YourBrand",
@@ -846,3 +846,161 @@ export const PLATFORMS: PlatformCard[] = [
       "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/670921e0c9b886eab0aed2c7_Frame%20427323502.avif",
   },
 ];
+
+const img = (id: number, w = 1400) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+
+const makeLongBlocks = (topic: string): BlogBlock[] => [
+  { type: "p", text: `This is a demo long-form article about ${topic}. The structure matches your screenshot: lots of sections, images, and spacing.` },
+  { type: "divider" },
+
+  { type: "h2", text: "Why this matters now" },
+  { type: "p", text: `Creator partnerships are no longer “nice to have”. For ${topic}, teams want repeatable growth, measurable outcomes, and clean workflows.` },
+  { type: "image", src: img(3184633), alt: "Office planning", caption: "A simple framework beats scattered execution." },
+
+  { type: "h2", text: "The current problem" },
+  { type: "p", text: "Most teams still run creator programs with spreadsheets, DMs, and fragmented reporting. That makes planning, approval, and scale painful." },
+  { type: "bullets", items: ["No visibility across campaigns", "Slow approvals", "Hard to replicate wins", "No consistent reporting"] },
+  { type: "callout", title: "Shortcut", text: "Build a single operating system for creator work: sourcing → briefs → approvals → deliverables → reporting." },
+
+  { type: "h2", text: "A simple model to rebuild" },
+  { type: "p", text: "Start with 3 pillars: discovery, execution, and measurement. Each pillar needs an owner, a dashboard, and a repeatable playbook." },
+  { type: "image", src: img(3183150), alt: "Startup desk", caption: "Keep workflows repeatable and lightweight." },
+
+  { type: "h2", text: "What great looks like" },
+  { type: "p", text: "High-performing teams ship faster, learn faster, and maintain brand consistency across creators." },
+  { type: "image", src: img(3861969), alt: "AI concept", caption: "Measure outcomes, not vibes." },
+
+  { type: "h2", text: "Execution checklist" },
+  { type: "bullets", items: ["Define campaign goal + KPI", "Creator shortlists by ICP", "Clear briefs + timelines", "Approval system", "Content distribution plan", "Post-campaign report"] },
+
+  { type: "h2", text: "Common mistakes" },
+  { type: "p", text: "The biggest mistake is treating creator marketing as a one-off channel. It needs operations, not luck." },
+  { type: "image", src: img(669615), alt: "Analytics", caption: "A single source of truth unlocks scale." },
+
+  { type: "h2", text: "Final thoughts" },
+  { type: "p", text: `If you're building a durable system for ${topic}, focus on repeatability. Small improvements compound quickly.` },
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "post-1",
+    slug: "implosions-and-explosions",
+    title: "Implosions and Explosions: Rebuilding Advertising for the Fragmented Media Era",
+    date: "JANUARY 12, 2026",
+    readTime: "10 MIN READ",
+    author: "Passionfroot Team",
+    category: "Strategy",
+    cover: img(3184633),
+    excerpt: "A long-form breakdown of why media is fragmenting—and how modern growth teams can rebuild their playbook.",
+    blocks: makeLongBlocks("fragmented media"),
+  },
+  {
+    id: "post-2",
+    slug: "creator-marketing-best-practices",
+    title: "2026 Creator Marketing Best Practices",
+    date: "JANUARY 5, 2026",
+    readTime: "8 MIN READ",
+    author: "Passionfroot Team",
+    category: "Creator Marketing",
+    cover: img(3184465),
+    excerpt: "What the best teams do differently: systems, brief quality, approvals, and reporting.",
+    blocks: makeLongBlocks("creator marketing"),
+  },
+  {
+    id: "post-3",
+    slug: "podcast-advertising-2024",
+    title: "The Ultimate Guide to Podcast Advertising in 2024",
+    date: "OCTOBER 3, 2024",
+    readTime: "7 MIN READ",
+    author: "Editorial",
+    category: "Audio",
+    cover: img(6476808),
+    excerpt: "Everything you need to plan, buy, measure, and improve podcast ads.",
+    blocks: makeLongBlocks("podcast advertising"),
+  },
+  {
+    id: "post-4",
+    slug: "youtube-influencer-marketing",
+    title: "Everything You Need To Know About YouTube Influencer Marketing",
+    date: "OCTOBER 18, 2024",
+    readTime: "6 MIN READ",
+    author: "Editorial",
+    category: "Influencer",
+    cover: img(4009402),
+    excerpt: "How to pick creators, write briefs, and measure real outcomes on YouTube.",
+    blocks: makeLongBlocks("YouTube influencer marketing"),
+  },
+  {
+    id: "post-5",
+    slug: "munch-case-study",
+    title: "How Munch uses Passionfroot to fuel Creator-Led Growth",
+    date: "SEPTEMBER 9, 2024",
+    readTime: "5 MIN READ",
+    author: "Case Studies",
+    category: "Case Study",
+    cover: img(3183150),
+    excerpt: "A practical look at how a team built creator-led growth with repeatable workflows.",
+    blocks: makeLongBlocks("creator-led growth"),
+  },
+  {
+    id: "post-6",
+    slug: "influencer-referral-programs",
+    title: "The Ultimate Guide to Influencer Referral Programs",
+    date: "AUGUST 27, 2024",
+    readTime: "9 MIN READ",
+    author: "Editorial",
+    category: "Growth",
+    cover: img(6476783),
+    excerpt: "How to structure a referral program that creators actually want to promote.",
+    blocks: makeLongBlocks("referral programs"),
+  },
+  {
+    id: "post-7",
+    slug: "attio-case-study",
+    title: "How Attio uses Passionfroot to discover creators and fuel product-led growth",
+    date: "AUGUST 21, 2024",
+    readTime: "6 MIN READ",
+    author: "Case Studies",
+    category: "Case Study",
+    cover: img(669615),
+    excerpt: "How a PLG team discovered creators, ran approvals, and tracked impact.",
+    blocks: makeLongBlocks("product-led growth"),
+  },
+  {
+    id: "post-8",
+    slug: "durable-case-study",
+    title: "How Durable leverages creators to stand out in the AI gold-rush",
+    date: "AUGUST 7, 2024",
+    readTime: "5 MIN READ",
+    author: "Case Studies",
+    category: "Case Study",
+    cover: img(3861969),
+    excerpt: "Standing out with creators when everyone is shipping AI.",
+    blocks: makeLongBlocks("AI positioning"),
+  },
+  {
+    id: "post-9",
+    slug: "wave-case-study",
+    title: "How Wave AI leveraged Passionfroot to make their brand launch a tsunami",
+    date: "AUGUST 1, 2024",
+    readTime: "6 MIN READ",
+    author: "Case Studies",
+    category: "Case Study",
+    cover: img(3184418),
+    excerpt: "From launch planning to creator execution and reporting—end to end.",
+    blocks: makeLongBlocks("brand launches"),
+  },
+];
+
+export function getAllPosts() {
+  return BLOG_POSTS;
+}
+
+export function getPostBySlug(slug: string) {
+  return BLOG_POSTS.find((p) => p.slug === slug) || null;
+}
+
+export function getRelatedPosts(slug: string, limit = 3) {
+  return BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, limit);
+}

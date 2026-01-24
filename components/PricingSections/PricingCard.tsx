@@ -273,7 +273,7 @@ export default function PricingTabsSection({
 
   return (
     <section className={["w-full bg-[#f7f4ee] py-14 sm:py-16 sm:pt-24", className].join(" ")}>
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
         <div className="mx-auto max-w-[820px] text-center">
           <h2 className="whitespace-pre-line font-serif text-[34px] leading-[1.05] tracking-[-0.03em] text-black sm:text-[52px]">
             {heading}

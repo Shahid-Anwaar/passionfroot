@@ -134,6 +134,28 @@ export type MegaMenuConf = {
   resourceItems: MenuItem[];
 };
 
+export type BlogBlock =
+  | { type: "p"; text: string }
+  | { type: "h2"; text: string }
+  | { type: "h3"; text: string }
+  | { type: "image"; src: string; alt: string; caption?: string }
+  | { type: "callout"; title?: string; text: string }
+  | { type: "bullets"; items: string[] }
+  | { type: "divider" };
+
+export type BlogPost = {
+  id: string;
+  slug: string;
+  title: string;
+  date: string; // e.g. "JANUARY 12, 2026"
+  readTime: string; // e.g. "10 MIN READ"
+  author: string;
+  category: string;
+  cover: string; // pexels
+  excerpt: string;
+  blocks: BlogBlock[];
+};
+
 export type HeaderConfig = {
   brandName: string;
   brandHref: string;

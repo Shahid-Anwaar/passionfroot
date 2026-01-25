@@ -154,6 +154,7 @@ export type BlogPost = {
   cover: string; // pexels
   excerpt: string;
   blocks: BlogBlock[];
+  subTitle?: string;
 };
 
 export type HeaderConfig = {
@@ -179,94 +180,23 @@ export type HeaderConfig = {
   };
 };
 
-export const headerConfig: HeaderConfig = {
-  brandName: "YourBrand",
-  brandHref: "/",
+export type CategoryTheme = {
+    cardFrom: string;  // e.g. "#D9F6FF"
+    cardTo: string;    // e.g. "#49D7EF"
+    innerBg: string;   // e.g. "#CFF3FF"
+};
 
-  menus: {
-    brands: {
-      trigger: "For Brands",
-      primary: [
-        {
-          label: "Features",
-          desc: "Find creators, manage campaigns, and pay — in one place.",
-          href: "/brands/features",
-          icon: "mdi:stars-outline",
-        },
-        {
-          label: "Customers",
-          desc: "See how teams scale partnerships and grow demand.",
-          href: "/brands/customers",
-          icon: "mdi:account-group-outline",
-        },
-        {
-          label: "Pricing",
-          desc: "Plans for every stage. Start simple, scale later.",
-          href: "/pricing/brands",
-          icon: "mdi:credit-card-outline",
-        },
-      ],
-      resourcesTitle: "Resources",
-      resources: [
-        { label: "Blog", href: "/blog" },
-        { label: "Pricing Guide", href: "/guides/pricing" },
-      ],
-      asideBadge: "Guide",
-      asideTitle: "Sponsorship pricing guide",
-      asideDesc: "Benchmarks + checklist to price and plan partnerships.",
-    },
+export type CreatorItem = {
+    id: string;
+    name: string;
+    avatar: string; // pexels or local url
+    href?: string;
+    about: string;
+};
 
-    creators: {
-      trigger: "For Creators",
-      primary: [
-        {
-          label: "Features",
-          desc: "Tools to close more brand deals, easier and faster.",
-          href: "/creators/features",
-          icon: "mdi:flash-outline",
-        },
-        {
-          label: "Customers",
-          desc: "Learn how creators monetize with partnerships.",
-          href: "/creators/customers",
-          icon: "mdi:account-heart-outline",
-        },
-        {
-          label: "Pricing",
-          desc: "Creator plans built for growth and consistency.",
-          href: "/pricing/creators",
-          icon: "mdi:tag-outline",
-        },
-      ],
-      resourcesTitle: "Resources",
-      resources: [
-        { label: "Creator Gallery", href: "/creator-gallery" },
-        { label: "Blog", href: "/blog" },
-        { label: "Podcasts", href: "/podcasts" },
-        { label: "Pricing Guide", href: "/guides/pricing" },
-      ],
-      asideBadge: "Resource",
-      asideTitle: "Creator kit",
-      asideDesc: "A simple kit to pitch brands + package your offers.",
-    },
-  },
-
-  topLinks: [
-    { label: "About", href: "/about" },
-    { label: "Careers", href: "/careers" },
-  ],
-
-  login: {
-    trigger: "Login",
-    subtitle: "Login as a",
-    options: [
-      { label: "Creator", href: "/login/creator" },
-      { label: "Brand", href: "/login/brand" },
-    ],
-  },
-
-  cta: {
-    label: "Get access",
-    href: "/get-access",
-  },
+export type CreatorCategorySectionProps = {
+    title: string;
+    theme: CategoryTheme;
+    creators: CreatorItem[];
+    className?: string; // optional extra spacing
 };

@@ -65,24 +65,25 @@ const BRAND_IMAGES: { imageSrc: string }[] = [
   },
 ];
 
-export default function HeroSection() {
+export default function HeroSection({
+  label= "THE LARGEST B2B INFLUENCER PLATFORM",
+  title= "Where B2B brands scale influencer marketing",
+  isShowImg = true,
+  companiesTitle = "Powering thousands of marketing teams at the fastest growing companies in tech",
+  subTitle= "The fastest and easiest way to do influencer marketing at scale. Find the right creators on all platforms, book, collaborate, and pay all in one place."
+}: {label?: string, title?: string, isShowImg?: boolean, companiesTitle?: string, subTitle?: string}) {
   return (
     <section className="w-full bg-[#fdfdfb] pt-16 sm:pt-16">
       <div className="mx-auto w-full max-w-[980px] px-4 sm:px-6 pt-16 sm:pt-[110px] pb-5 sm:pb-14 text-center">
         {/* Eyebrow */}
         <div className="text-[0.85rem] sm:text-[1.025rem] font-nunito font-medium tracking-[0.08em] text-[#737373]">
-          THE LARGEST B2B INFLUENCER PLATFORM
+          {label}
         </div>
         <h1 className="mt-4 sm:mt-5 font-serif text-[2.1rem] sm:text-[3.5rem] md:text-[64px] font-medium leading-[115%] tracking-[-1.14px] text-[#111]">
-          Where B2B brands scale
-          <br className="hidden sm:block" />
-          influencer marketing
+          {title}
         </h1>
         <p className="mx-auto mt-5 sm:mt-7 max-w-[740px] font-medium text-[1rem] sm:text-[1.125rem] leading-[150%] text-[#4e4d46]">
-          The fastest and easiest way to do influencer marketing at scale.
-          <br className="hidden sm:block" />
-          Find the right creators on all platforms, book, collaborate, and pay -
-          all in one place.
+          {subTitle}
         </p>
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
           <Link
@@ -111,7 +112,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="mx-auto w-full max-w-[1440px] px-6 pb-14">
-        <div className="relative rounded-[18px] min-h-[500px] pt-7 bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+        {isShowImg && <div className="relative rounded-[18px] min-h-[500px] pt-7 bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
           <Image
             src="https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66ffc856a3dea87d6283a0ca_Frame%20427323371%20(1).avif"
             alt="Creators parade illustration"
@@ -120,10 +121,9 @@ export default function HeroSection() {
             priority
             className="object-contain h-full w-auto min-h-[500px] mx-auto rounded-t-lg mt-8 overflow-hidden"
           />
-        </div>
+        </div>}
         <p className="mt-12 text-center text-[1rem] font-nunito leading-[1.4] text-[#4e4d46]">
-          Powering thousands of marketing teams at the fastest growing companies
-          in tech
+          {companiesTitle}
         </p>
         <TrustedLogosAnimation
           logos={BRAND_IMAGES}

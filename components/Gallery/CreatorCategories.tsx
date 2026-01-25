@@ -3,27 +3,8 @@
 
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { CategoryTheme, CreatorCategorySectionProps, CreatorItem } from "@/data/types";
 
-export type CategoryTheme = {
-    cardFrom: string;  // e.g. "#D9F6FF"
-    cardTo: string;    // e.g. "#49D7EF"
-    innerBg: string;   // e.g. "#CFF3FF"
-};
-
-export type CreatorItem = {
-    id: string;
-    name: string;
-    avatar: string; // pexels or local url
-    href?: string;
-    about: string;
-};
-
-export type CreatorCategorySectionProps = {
-    title: string;
-    theme: CategoryTheme;
-    creators: CreatorItem[];
-    className?: string; // optional extra spacing
-};
 
 function CreatorCard({ c, theme }: { c: CreatorItem; theme: CategoryTheme }) {
     return (

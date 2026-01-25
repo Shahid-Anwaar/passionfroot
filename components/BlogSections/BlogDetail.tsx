@@ -60,7 +60,7 @@ function renderBlock(block: BlogBlock, idx: number) {
       return (
         <figure key={idx} className="mt-8">
           <div className="relative overflow-hidden rounded-2xl shadow-[0_14px_40px_rgba(0,0,0,0.08)]">
-            <div className="relative aspect-[16/9] w-full">
+            <div className="relative aspect-video w-full">
               <Image src={block.src} alt={block.alt} fill className="object-cover" />
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function BlogDetailSection({
 
         {/* cover */}
         <div className="mt-8 overflow-hidden rounded-2xl shadow-[0_16px_55px_rgba(0,0,0,0.12)]">
-          <div className="relative aspect-[16/7] w-full">
+          <div className="relative aspect-16/7 w-full">
             <Image src={post.cover} alt={post.title} fill className="object-cover" />
           </div>
         </div>
@@ -178,13 +178,13 @@ export default function BlogDetailSection({
             {related.map((p) => (
               <Link key={p.id} href={`${path}/${p.slug}`} className="group block">
                 <div className="overflow-hidden rounded-2xl shadow-[0_14px_40px_rgba(0,0,0,0.08)] transition-transform group-hover:-translate-y-1">
-                  <div className="relative aspect-[16/10] w-full">
+                  <div className="relative aspect-16/10 w-full">
                     <Image src={p.cover} alt={p.title} fill className="object-cover" />
                   </div>
                 </div>
 
                 <div className="mt-4">
-                  <div className="text-[10px] font-semibold tracking-[0.18em] text-neutral-700">
+                  <div className="text-2.5 font-semibold tracking-[0.18em] text-neutral-700">
                     {p.date} <span className="text-neutral-500">· {p.readTime}</span>
                   </div>
                   <div className="mt-2 font-serif text-lg text-neutral-900 group-hover:underline">

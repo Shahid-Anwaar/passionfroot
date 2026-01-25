@@ -25,12 +25,12 @@ export default function ContextSection({
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="tracking-[-0.02em] text-center font-serif text-[26px] sm:text-[34px] md:text-[40px] font-semibold leading-[1.12] text-[#111] sm:leading-[1.12]">
+          <h2 className="tracking-[-0.02em] text-center font-serif text-[26px] sm:text-[34px] md:text-10 font-semibold leading-[1.12] text-[#111] sm:leading-[1.12]">
             {heading}
           </h2>
 
           {subheading ? (
-            <p className="mt-3 sm:mt-4 text-[14px] sm:text-[18px] font-medium text-neutral-500">
+            <p className="mt-3 sm:mt-4 text-[14px] sm:text-4.5 font-medium text-neutral-500">
               {subheading}
             </p>
           ) : null}
@@ -41,7 +41,7 @@ export default function ContextSection({
           {items.map((item, idx) => (
             <div key={idx} className="relative">
               {/* ✅ Image (full, not icon) */}
-              <div className="relative mx-auto h-[160px] w-full max-w-[360px] sm:h-[190px] md:h-[210px]">
+              <div className="relative mx-auto h-40 w-full max-w-[360px] sm:h-47.5 md:h-52.5">
                 <Image
                   src={item.image}
                   alt={`${item.title} illustration`}
@@ -60,7 +60,7 @@ export default function ContextSection({
                 <span className="absolute left-3 -top-10 h-px w-12 -rotate-45 origin-left bg-neutral-200 sm:-top-12 sm:w-14" />
                 <span className="absolute left-3 top-0 bottom-0 w-px bg-neutral-200/80" />
 
-                <h3 className="text-[20px] sm:text-[22px] font-semibold tracking-[-0.01em] text-neutral-900">
+                <h3 className="text-5 sm:text-[22px] font-semibold tracking-[-0.01em] text-neutral-900">
                   {item.title}
                 </h3>
 

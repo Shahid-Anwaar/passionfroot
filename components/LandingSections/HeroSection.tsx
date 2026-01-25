@@ -74,7 +74,7 @@ export default function HeroSection({
 }: {label?: string, title?: string, isShowImg?: boolean, companiesTitle?: string, subTitle?: string}) {
   return (
     <section className="w-full bg-[#fdfdfb] pt-16 sm:pt-16">
-      <div className="mx-auto w-full max-w-[980px] px-4 sm:px-6 pt-16 sm:pt-[110px] pb-5 sm:pb-14 text-center">
+      <div className="mx-auto w-full max-w-245 px-4 sm:px-6 pt-16 sm:pt-27.5 pb-5 sm:pb-14 text-center">
         {/* Eyebrow */}
         <div className="text-[0.85rem] sm:text-[1.025rem] font-nunito font-medium tracking-[0.08em] text-[#737373]">
           {label}
@@ -82,13 +82,13 @@ export default function HeroSection({
         <h1 className="mt-4 sm:mt-5 font-serif text-[2.1rem] sm:text-[3.5rem] md:text-[64px] font-medium leading-[115%] tracking-[-1.14px] text-[#111]">
           {title}
         </h1>
-        <p className="mx-auto mt-5 sm:mt-7 max-w-[740px] font-medium text-[1rem] sm:text-[1.125rem] leading-[150%] text-[#4e4d46]">
+        <p className="mx-auto mt-5 sm:mt-7 max-w-185 font-medium text-[1rem] sm:text-[1.125rem] leading-[150%] text-[#4e4d46]">
           {subTitle}
         </p>
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
           <Link
             href="#"
-            className={["first-btn", "py-3 w-full sm:w-[260px]"].join(" ")}
+            className={["first-btn", "py-3 w-full sm:w-65"].join(" ")}
           >
             Talk To Us
             <Icon icon="ep:right" className="h-5 w-5 text-white" />
@@ -98,12 +98,12 @@ export default function HeroSection({
             href="#"
             className={[
               "inline-flex items-center justify-center",
-              "py-3 text-[1.05rem] sm:text-[1.125rem] w-full sm:w-[180px] rounded-[10px]",
+              "py-3 text-[1.05rem] sm:text-[1.125rem] w-full sm:w-45 rounded-[10px]",
               "border border-black/70 bg-white/70",
-              "font-[700] text-[#111]",
+              "font-bold text-[#111]",
               "shadow-[0_10px_16px_rgba(0,0,0,0.06)]",
               "hover:bg-white",
-              "active:translate-y-[1px]",
+              "active:translate-y-",
               "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/30",
             ].join(" ")}
           >
@@ -111,15 +111,15 @@ export default function HeroSection({
           </Link>
         </div>
       </div>
-      <div className="mx-auto w-full max-w-[1440px] px-6 pb-14">
-        {isShowImg && <div className="relative rounded-[18px] min-h-[500px] pt-7 bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+      <div className="mx-auto w-full max-w-360 px-6 pb-14">
+        {isShowImg && <div className="relative rounded-[18px] min-h-125 pt-7 bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
           <Image
             src="https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66ffc856a3dea87d6283a0ca_Frame%20427323371%20(1).avif"
             alt="Creators parade illustration"
             width={500}
             height={400}
             priority
-            className="object-contain h-full w-auto min-h-[500px] mx-auto rounded-t-lg mt-8 overflow-hidden"
+            className="object-contain h-full w-auto min-h-125 mx-auto rounded-t-lg mt-8 overflow-hidden"
           />
         </div>}
         <p className="mt-12 text-center text-[1rem] font-nunito leading-[1.4] text-[#4e4d46]">

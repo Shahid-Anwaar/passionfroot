@@ -190,7 +190,7 @@ export default function MeetTheTeamSection() {
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-14 md:px-10 md:py-20">
+      <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 md:py-20">
         <h2 className="text-center font-serif text-3xl tracking-tight text-neutral-900 md:text-5xl">
           Meet the team
         </h2>
@@ -220,7 +220,7 @@ export default function MeetTheTeamSection() {
               </div>
 
               {/* pill */}
-              <div className="mt-5 inline-flex rounded-md bg-sky-400 px-2 py-1 text-[10px] font-semibold tracking-wide text-neutral-900">
+              <div className="mt-5 inline-flex rounded-md bg-sky-400 px-2 py-1 text-2.5 font-semibold tracking-wide text-neutral-900">
                 {m.roleTag}
               </div>
 
@@ -271,7 +271,7 @@ export default function MeetTheTeamSection() {
                 </div>
 
                 <div className="min-w-0 flex-1">
-                  <div className="inline-flex rounded-md bg-sky-400 px-2 py-1 text-[10px] font-semibold tracking-wide text-neutral-900">
+                  <div className="inline-flex rounded-md bg-sky-400 px-2 py-1 text-2.5 font-semibold tracking-wide text-neutral-900">
                     {active.roleTag}
                   </div>
 

@@ -42,7 +42,7 @@ export default function Header() {
     <header className={`${inter.className} fixed top-0 z-30 w-full`}>
       <div
         ref={headerRef}
-        className="mx-auto max-w-[1400px] px-2 sm:px-4 pt-3 pb-3"
+        className="mx-auto max-w-350 px-2 sm:px-4 pt-3 pb-3"
       >
         <div className="relative">
           {/* ✅ SINGLE WRAPPER PILL (up to xl) */}
@@ -52,7 +52,7 @@ export default function Header() {
               <div className="flex flex-wrap items-center gap-2 px-3 py-2">
                 <Link
                   href="/"
-                  className="text-[24px] font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#fc0707]"
+                  className="text-6 font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#fc0707]"
                 >
                   <Image
                     src="/logo.svg"
@@ -111,7 +111,7 @@ export default function Header() {
                 >
                   <span className="absolute inset-x-0 top-0 h-px bg-white/25" />
                   Talk to us
-                  <Icon icon="ep:right" className="text-[18px] text-white" />
+                  <Icon icon="ep:right" className="text-4.5 text-white" />
                 </Link>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function Header() {
               <div className="inline-flex items-center gap-2 rounded-2xl border border-black/10 bg-white px-3 py-2 shadow-[0_4px_20px_rgba(0,0,0,0.07)]">
                 <Link
                   href="/"
-                  className="text-[24px] font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#fc0707]"
+                  className="text-6 font-serif font-stretch-ultra-condensed font-extrabold tracking-tighter text-[#fc0707]"
                 >
                   <Image
                     src="/logo.svg"
@@ -193,7 +193,7 @@ export default function Header() {
               >
                 <span className="absolute inset-x-0 top-0 h-px bg-white/25" />
                 Talk to us
-                <Icon icon="ep:right" className="text-[20px] text-white" />
+                <Icon icon="ep:right" className="text-5 text-white" />
               </Link>
             </div>
           </div>
@@ -247,7 +247,7 @@ function TopTab({
       <Icon
         icon="mdi:chevron-down"
         className={[
-          "text-[18px] sm:text-[24px] text-[#6B6B6B] transition",
+          "text-4.5 sm:text-6 text-[#6B6B6B] transition",
           active ? "rotate-180" : "",
         ].join(" ")}
       />
@@ -266,7 +266,7 @@ function MegaPanel({
   isFirst: boolean;
 }) {
   return (
-    <div className="absolute left-0 top-[70px] z-30 w-[min(840px,calc(100vw-16px))]">
+    <div className="absolute left-0 top-17.5 z-30 w-[min(840px,calc(100vw-16px))]">
       <div className="rounded-2xl border border-black/10 bg-white shadow-[0_22px_44px_rgba(0,0,0,0.14)]">
         <div className="grid grid-cols-[410px_340px] gap-8 p-6">
           {/* LEFT LIST */}
@@ -274,7 +274,7 @@ function MegaPanel({
             <div className="space-y-2">
               {config.mainItems.map((it) => (
                 <Link key={it.title} href={it.href} className="flex gap-1 rounded-lg hover:bg-[#F7F0E5] p-2">
-                  <div className="mt-[2px] h-6 w-6 text-[#4A4A4A]">
+                  <div className="mt-0.5 h-6 w-6 text-[#4A4A4A]">
                     <Icon icon={it.icon} className="h-5 w-5" />
                   </div>
 
@@ -283,7 +283,7 @@ function MegaPanel({
                       {it.title}
                     </div>
                     {it.description && (
-                      <div className="mt-1 max-w-[520px] text-[13px] leading-[1.55] text-black/70">
+                      <div className="mt-1 max-w-130 text-[13px] leading-[1.55] text-black/70">
                         {it.description}
                       </div>
                     )}
@@ -320,7 +320,7 @@ function MegaPanel({
           {/* RIGHT PREVIEW CARD */}
           <div className="flex justify-end">
             <div
-              className="relative h-[380px] w-[340px] overflow-hidden rounded-[14px] border border-black/10 shadow-[0_18px_28px_rgba(0,0,0,0.12)]"
+              className="relative h-95 w-85 overflow-hidden rounded-[14px] border border-black/10 shadow-[0_18px_28px_rgba(0,0,0,0.12)]"
               style={{
                 background: !isFirst
                   ? "linear-gradient(180deg,#C08BFF 0%, #B378FF 70%, #C08BFF 100%)"
@@ -363,7 +363,7 @@ function MegaPanelMobile({
           <div className="space-y-6">
             {config.mainItems.map((it) => (
               <Link key={it.title} href={it.href} className="flex gap-3">
-                <div className="mt-[2px] h-6 w-6 text-[#4A4A4A]">
+                <div className="mt-0.5 h-6 w-6 text-[#4A4A4A]">
                   <Icon icon={it.icon} className="h-5 w-5" />
                 </div>
 
@@ -403,7 +403,7 @@ function MegaPanelMobile({
 
           <div className="mt-6">
             <div
-              className="relative h-[220px] w-full overflow-hidden rounded-[14px] border border-black/10 shadow-[0_18px_28px_rgba(0,0,0,0.12)]"
+              className="relative h-55 w-full overflow-hidden rounded-[14px] border border-black/10 shadow-[0_18px_28px_rgba(0,0,0,0.12)]"
               style={{
                 background: !isFirst
                   ? "linear-gradient(180deg,#C08BFF 0%, #B378FF 70%, #C08BFF 100%)"

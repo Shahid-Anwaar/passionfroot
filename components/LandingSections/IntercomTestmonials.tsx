@@ -5,13 +5,13 @@ export default function IntercomTestimonialSection() {
   return (
     <section className="w-full bg-[#FCFCFB]">
       {/* ✅ Keep EXACT on lg/xl, responsive below lg */}
-      <div className="mx-auto w-full max-w-[1575px] lg:h-[501px]">
+      <div className="mx-auto w-full max-w-393.75 lg:h-125.25">
         <div className="flex h-full flex-col items-center px-4 sm:px-6">
           {/* Top logo row */}
-          <div className="pt-12 sm:pt-16 lg:pt-[110px]">
-            <div className="flex items-center justify-center gap-[10px]">
-              <div className="grid h-[30px] w-[30px] place-items-center rounded-[6px] bg-[#111111]">
-                <IntercomMark className="h-[24px] w-[24px]" />
+          <div className="pt-12 sm:pt-16 lg:pt27.5">
+            <div className="flex items-center justify-center gap-2.5">
+              <div className="grid h-7.5 w-7.5 place-items-center rounded-md bg-[#111111]">
+                <IntercomMark className="h-6 w-6" />
               </div>
               <span className="text-[15px] font-semibold tracking-[0.16em] text-[#111111]">
                 INTERCOM
@@ -19,20 +19,20 @@ export default function IntercomTestimonialSection() {
             </div>
           </div>
 
-          <p className="mt-8 sm:mt-10 lg:mt-[56px] max-w-[920px] text-center font-serif font-medium leading-[1.25] tracking-[-0.01em] text-[#111111] text-[22px] sm:text-[28px] lg:text-[34px]">
+          <p className="mt-8 sm:mt-10 lg:mt-14 max-w-230 text-center font-serif font-medium leading-tight tracking-[-0.01em] text-[#111111] text-[22px] sm:text-7ext-[34px]">
             &ldquo;Partnering with creators through Passionfroot has been a
             game-changer for Intercom&rsquo;s Startup program. By collaborating
             with top newsletters, we&rsquo;ve reached thousands of founders.&rdquo;
           </p>
 
           {/* Author */}
-          <div className="mt-6 sm:mt-8 lg:mt-[38px] flex items-center justify-center gap-[12px]">
+          <div className="mt-6 sm:mt-8 lg:mt-9.5 flex items-center justify-center gap-3">
             <Avatar />
             <div className="text-left">
               <div className="text-[15px] sm:text-[16px] font-semibold leading-[1.2] text-[#111111]">
                 John Roche
               </div>
-              <div className="mt-[3px] text-[12px] sm:text-[14px] leading-[1.2] text-[#111111]/90">
+              <div className="mt-0.75 text-3 sm:text-[14px] leading-[1.2] text-[#111111]/90">
                 Startups and VC Partnerships at Intercom
               </div>
             </div>
@@ -65,9 +65,9 @@ function IntercomMark({ className = "" }: { className?: string }) {
 
 function Avatar() {
   return (
-    <div className="relative h-[40px] w-[40px] overflow-hidden rounded-full ring-1 ring-black/10">
+    <div className="relative h-10 w-10 overflow-hidden rounded-full ring-1 ring-black/10">
       <div className="absolute inset-0 bg-[conic-gradient(from_210deg,#FF9A4A_0_48%,#111111_48%_100%)]" />
-      <div className="absolute inset-[3px] rounded-full bg-white/95" />
+      <div className="absolute inset-0.75 rounded-full bg-white/95" />
       <div className="absolute inset-0">
         <Image
           src="https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66fe19a50d7885244b82e491_Frame%2010123293.avif"

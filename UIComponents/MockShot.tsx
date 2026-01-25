@@ -13,7 +13,7 @@ export default function MockShot({
   };
 
   return (
-    <div className={`rounded-2xl border border-black/10 bg-gradient-to-b ${map[tone]} p-4 ${className}`}>
+    <div className={`rounded-2xl border border-black/10 bg-linear-to-b ${map[tone]} p-4 ${className}`}>
       <div className="flex items-center justify-between">
         <div className="h-3 w-28 rounded bg-black/10" />
         <div className="flex gap-1.5">

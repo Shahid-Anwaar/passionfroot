@@ -157,6 +157,14 @@ export type BlogPost = {
   subTitle?: string;
 };
 
+export type TileCard = {
+  label?: string;      // empty means blank cell
+  icon?: string;       // iconify name e.g. "lucide:search"
+  faded?: boolean;     // lighter like edges in screenshot
+  type?: "icon" | "image" | "spacer"
+  image?: string
+};
+
 export type HeaderConfig = {
   brandName: string;
   brandHref: string;

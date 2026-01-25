@@ -59,9 +59,9 @@ export default function PlatformAccessSection() {
 
     return (
         <section className="w-full bg-white py-12 sm:py-16">
-            <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6">
+            <div className="mx-auto w-full max-w-300 px-4 sm:px-6">
                 {/* Heading */}
-                <h2 className="text-center font-serif text-[26px] sm:text-[36px] md:text-[42px] font-semibold leading-[1.18] text-[#111]">
+                <h2 className="text-center font-serif text-[26px] sm:text-9 md:text-[42px] font-semibold leading-[1.18] text-[#111]">
                     Get direct access to the top B2B creators
                     <br className="hidden sm:block" />
                     in the world - on all platforms
@@ -72,9 +72,9 @@ export default function PlatformAccessSection() {
                     {STATS.map((s, i) => (
                         <div
                             key={i}
-                            className="w-full rounded-[6px] bg-[#fafaf6] px-5 sm:px-6 py-4 text-center shadow-[0_2px_0_rgba(0,0,0,0.06)] ring-1 ring-black/5"
+                            className="w-full rounded-md bg-[#fafaf6] px-5 sm:px-6 py-4 text-center shadow-[0_2px_0_rgba(0,0,0,0.06)] ring-1 ring-black/5"
                         >
-                            <div className="font-mono text-[28px] sm:text-[32px] leading-none text-[#111]">
+                            <div className="font-mono text-7 sm:text-8 leading-none text-[#111]">
                                 {s.value}
                             </div>
                             <div className="mt-2 text-[14px] sm:text-[16px] font-semibold tracking-[0.02em] text-[#4e4d46]">
@@ -125,9 +125,9 @@ function PlatformShowcaseCard({ item }: { item: PlatformCard }) {
                 className={[
                     "relative",
                     // ✅ responsive sizes
-                    "h-[240px] w-[160px]",
-                    "sm:h-[285px] sm:w-[190px]",
-                    "md:h-[300px] md:w-[205px]",
+                    "h-60 w-40",
+                    "sm:h-71.25 sm:w-47.5",
+                    "md:h-75 md:w-51.25",
                     "overflow-hidden rounded-[10px]",
                     "shadow-[0_18px_28px_rgba(0,0,0,0.10)]",
                 ].join(" ")}
@@ -135,15 +135,15 @@ function PlatformShowcaseCard({ item }: { item: PlatformCard }) {
             >
                 {/* top row */}
                 <div className="absolute left-0 right-0 top-0 flex items-start justify-between px-4 sm:px-5 pt-4">
-                    <div className="font-serif text-[18px] sm:text-[20px] font-semibold text-[#111]">
+                    <div className="font-serif text-4.5 sm:text-5 font-semibold text-[#111]">
                         {item.title}
                     </div>
-                    <Icon icon={item.icon} className="mt-[2px] h-5 w-5 text-[#111]" />
+                    <Icon icon={item.icon} className="mt-0.5 h-5 w-5 text-[#111]" />
                 </div>
 
                 {/* image preview */}
                 <div className="absolute inset-x-0 -bottom-3 flex justify-center">
-                    <div className="relative h-[150px] sm:h-[170px] w-full">
+                    <div className="relative h-37.5 sm:h-42.5 w-full">
                         <Image
                             src={item.image}
                             alt={item.title}
@@ -156,7 +156,7 @@ function PlatformShowcaseCard({ item }: { item: PlatformCard }) {
                 </div>
 
                 {/* subtle bottom fade */}
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[70px] bg-gradient-to-t from-black/10 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-17.5 bg-linear-to-t from-black/10 to-transparent" />
             </div>
         </div>
     );

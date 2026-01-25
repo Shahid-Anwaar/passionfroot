@@ -165,7 +165,7 @@ function Chip({ text }: { text: string }) {
 
 function Check() {
   return (
-    <span className="mt-[2px] inline-flex h-5 w-5 items-center justify-center rounded-full bg-black text-white">
+    <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-black text-white">
       <Icon icon="lucide:check" className="text-[14px]" />
     </span>
   );
@@ -197,7 +197,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 
       <div className="relative flex flex-col h-full overflow-hidden rounded-[18px] bg-white p-6 shadow-[0_18px_50px_rgba(0,0,0,0.10)] ring-1 ring-black/10">
         {plan.badge ? (
-          <div className="mb-4 text-center text-[12px] font-bold tracking-[0.18em] text-orange-600">
+          <div className="mb-4 text-center text-3 font-bold tracking-[0.18em] text-orange-600">
             {plan.badge}
           </div>
         ) : null}
@@ -206,7 +206,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
           <div>
             <div className="text-[16px] font-semibold text-black">{plan.name}</div>
             {plan.helper ? (
-              <div className="mt-1 text-[12px] font-medium text-black/55">{plan.helper}</div>
+              <div className="mt-1 text-3 font-medium text-black/55">{plan.helper}</div>
             ) : null}
           </div>
 
@@ -230,7 +230,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 
                 {f.replaces?.length ? (
                   <div className="mt-1.5 flex flex-wrap items-center gap-2">
-                    <span className="text-[12px] font-medium text-black/45">Replaces</span>
+                    <span className="text-3 font-medium text-black/45">Replaces</span>
                     {f.replaces.map((r, i) => (
                       <Chip key={i} text={r.text} />
                     ))}
@@ -243,13 +243,13 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 
         <button
           type="button"
-          className="mt-auto w-full rounded-[10px] bg-gradient-to-b from-black to-black/90 px-4 py-3 text-[14px] font-semibold text-white shadow-[0_12px_20px_rgba(0,0,0,0.22)] hover:from-black/95 hover:to-black"
+          className="first-btn mt-auto w-full px-4 py-3 text-[14px] font-semibold"
         >
           {plan.cta}
         </button>
 
         {plan.ctaHint ? (
-          <div className="mt-3 text-center text-[12px] font-medium text-black/45">
+          <div className="mt-3 text-center text-3 font-medium text-black/45">
             {plan.ctaHint}
           </div>
         ) : null}
@@ -273,12 +273,12 @@ export default function PricingTabsSection({
 
   return (
     <section className={["w-full bg-[#f7f4ee] py-14 sm:py-16 sm:pt-24", className].join(" ")}>
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6">
-        <div className="mx-auto max-w-[820px] text-center">
+      <div className="mx-auto w-full max-w-360 px-4 sm:px-6">
+        <div className="mx-auto max-w-205 text-center">
           <h2 className="whitespace-pre-line font-serif text-[34px] leading-[1.05] tracking-[-0.03em] text-black sm:text-[52px]">
             {heading}
           </h2>
-          <p className="mx-auto mt-4 max-w-[680px] text-[13px] font-medium leading-relaxed text-black/60 sm:text-[14px]">
+          <p className="mx-auto mt-4 max-w-170 text-[13px] font-medium leading-relaxed text-black/60 sm:text-[14px]">
             {subheading}
           </p>
 

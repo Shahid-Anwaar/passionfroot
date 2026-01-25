@@ -27,8 +27,8 @@ fueling modern brand growth`,
       <div className="mx-auto max-w-8xl px-4 md:px-10">
         <div className="relative overflow-hidden rounded-2xl bg-[#FF9E74] px-6 py-10 md:px-12 md:py-14">
           {/* “hand-drawn” top/bottom edge */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-3 bg-[radial-gradient(circle_at_10px_0px,rgba(246,242,232,1)_0_7px,transparent_8px)] [background-size:18px_18px] opacity-70" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3 bg-[radial-gradient(circle_at_10px_18px,rgba(246,242,232,1)_0_7px,transparent_8px)] [background-size:18px_18px] opacity-70" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-3 bg-[radial-gradient(circle_at_10px_0px,rgba(246,242,232,1)_0_7px,transparent_8px)] bg-size-[18px_18px] opacity-70" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3 bg-[radial-gradient(circle_at_10px_18px,rgba(246,242,232,1)_0_7px,transparent_8px)] bg-size-[18px_18px] opacity-70" />
 
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
             {/* Left */}
@@ -39,7 +39,7 @@ fueling modern brand growth`,
 
               {/* Illustration */}
               <div className="mt-8 flex items-end gap-4">
-                <div className="relative h-[92px] w-[160px] sm:h-[110px] sm:w-[190px]">
+                <div className="relative h-23 w-40 sm:h27.5 sm:w-47.5">
                   <Image
                     src={imageSrc}
                     alt="Mission illustration"

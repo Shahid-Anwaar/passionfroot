@@ -42,7 +42,7 @@ const studies: CaseStudy[] = [
         mediaLogo: (
             <div className="flex items-center gap-3 text-black">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-black/10">
-                    <Icon icon="simple-icons:intercom" className="text-[20px]" />
+                    <Icon icon="simple-icons:intercom" className="text-5" />
                 </span>
                 <span className="text-[14px] font-semibold tracking-[0.08em]">
                     INTERCOM
@@ -101,7 +101,7 @@ function Card({
                         "relative overflow-hidden",
                         study.mediaBg,
                         study.variant === "featured"
-                            ? "h-[240px] lg:h-full rounded-2xl"
+                            ? "h-60 lg:h-full rounded-2xl"
                             : "h-[220px] sm:h-auto rounded-2xl",
                     ].join(" ")}
                 >
@@ -127,15 +127,15 @@ function Card({
                         className={[
                             "mt-5 whitespace-pre-line font-serif text-[#141414] tracking-[-0.01em]",
                             study.variant === "featured"
-                                ? "text-[32px] leading-[1.1]"
-                                : "text-[24px] leading-[1.12]",
+                                ? "text-8 leading-[1.1]"
+                                : "text-6 leading-[1.12]",
                         ].join(" ")}
                     >
                         {study.title}
                     </h3>
 
                     {study.desc && (
-                        <p className="mt-4 max-w-[520px] text-[16px] leading-[1.7] text-black/60">
+                        <p className="mt-4 max-w-130 text-[16px] leading-[1.7] text-black/60">
                             {study.desc}
                         </p>
                     )}
@@ -143,7 +143,7 @@ function Card({
                     <div className="mt-auto flex items-end justify-between pt-32">
                         <div className="text-[15px] text-black/45">{study.readTime}</div>
 
-                        <span className="inline-flex h-9 items-center gap-2 rounded-lg bg-[#1A1A1A] px-4 text-[12px] font-semibold text-white shadow-[0_10px_20px_rgba(0,0,0,0.18)]">
+                        <span className="inline-flex h-9 items-center gap-2 rounded-lg bg-[#1A1A1A] px-4 text-3 font-semibold text-white shadow-[0_10px_20px_rgba(0,0,0,0.18)]">
                             Read more
                             <Icon icon="mdi:arrow-right" className="text-[16px]" />
                         </span>
@@ -160,7 +160,7 @@ export default function CaseStudies() {
 
     return (
         <section className="bg-[#FCFCFA]">
-            <div className="mx-auto max-w-[1400px] px-6 sm:px-10 py-12 lg:py-16">
+            <div className="mx-auto max-w-350 px-6 sm:px-10 py-12 lg:py-16">
                 <h2 className="text-center font-serif text-[44px] font-semibold leading-[1.05] tracking-[-0.01em] text-[#141414]">
                     Case Studies
                 </h2>

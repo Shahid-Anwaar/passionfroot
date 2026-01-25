@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 
 export default function CampaignsLaunchedSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#FDFDFC] lg:h-[523px]">
+    <section className="relative w-full overflow-hidden bg-[#FDFDFC] lg:h-130.75">
       {/* ✅ Decorative stickers (keep same on lg/xl, hide below lg) */}
       <div className="pointer-events-none absolute inset-0 hidden lg:block">
         <Sticker style={{ left: "5.61%", top: "21.41%" }} rotate={-12} variant="black">
@@ -49,20 +49,20 @@ export default function CampaignsLaunchedSection() {
 
       {/* Center content */}
       <div className="relative z-10 flex w-full items-center justify-center px-4 sm:px-6 py-12 sm:py-16 lg:py-0 lg:h-full">
-        <div className="text-center lg:-translate-y-[6px]">
+        <div className="text-center lg:-translate-y-1.5">
           {/* Badge */}
-          <div className="inline-flex items-center justify-center rounded-lg border border-[#29A36E] bg-[#ECFAF0] px-3 py-[8px] text-[12px] sm:text-[14px] font-semibold leading-none text-[#29A36E]">
+          <div className="inline-flex items-center justify-center rounded-lg border border-[#29A36E] bg-[#ECFAF0] px-3 py-2 text-3 sm:text-[14px] font-semibold leading-none text-[#29A36E]">
             Live on Passionfroot
             <Icon icon="streamline:wifi-horizontal-remix" className="ms-2" />
           </div>
 
           {/* Title (keep exact on lg/xl, scale below lg) */}
-          <h2 className="mt-4 whitespace-pre-line font-serif font-medium leading-[1.03] tracking-[-0.02em] text-[#1A1A1A] text-[34px] sm:text-[44px] lg:text-[56px]">
+          <h2 className="mt-4 whitespace-pre-line font-serif font-medium leading-[1.03] tracking-[-0.02em] text-[#1A1A1A] text-[34px] sm:text-[44px] lg:text-14">
             Thousands of campaigns{"\n"}launched to date
           </h2>
 
           {/* Subtitle */}
-          <p className="mt-3 text-[16px] sm:text-[18px] lg:text-[20px] font-[400] leading-[1.45] text-[#525252]">
+          <p className="mt-3 text-[16px] sm:text-4.5 lg:text-5 font-normal leading-[1.45] text-[#525252]">
             with 60% lower CPC than Linkedin Ads*
           </p>
 
@@ -80,11 +80,11 @@ export default function CampaignsLaunchedSection() {
               href="#"
               className={[
                 "inline-flex items-center justify-center",
-                "rounded-[8px] px-7 py-3",
+                "rounded-lg px-7 py-3",
                 "border border-[#E5E5E5] bg-[#fafaf7] hover:bg-[#f5f5ee]",
                 "text-[16px] font-semibold text-[#111111]",
                 "shadow-[0_1px_0_rgba(0,0,0,0.03)]",
-                "active:translate-y-[1px]",
+                "active:translate-y-",
                 "focus:outline-none focus-visible:ring-2 focus-visible:ring-black/30",
                 "w-full sm:w-auto",
               ].join(" ")}
@@ -111,7 +111,7 @@ function Sticker({
   variant: "white" | "black" | "blue" | "orange";
   style: React.CSSProperties;
 }) {
-  const base = "absolute grid place-items-center w-[52px] h-[52px] rounded-[12px]";
+  const base = "absolute grid place-items-center w-[52px] h-[52px] rounded-xl";
 
   const skin =
     variant === "black"

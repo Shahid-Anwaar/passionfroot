@@ -11,7 +11,7 @@ export default function ClickUpFooter() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_600px_at_100%_20%,rgba(255,169,80,0.12)_0%,rgba(0,0,0,0)_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(0,0,0,0)_18%,rgba(0,0,0,0.55)_100%)]" />
 
-      <div className="relative mx-auto w-full max-w-[1200px] px-4 sm:px-6 py-12 sm:py-16">
+      <div className="relative mx-auto w-full max-w-300 px-4 sm:px-6 py-12 sm:py-16">
         {/* Top brand */}
         <div className="mb-8 sm:mb-10">
           <Link
@@ -26,7 +26,7 @@ export default function ClickUpFooter() {
         <div className="grid grid-cols-2 gap-x-8 sm:gap-x-14 gap-y-8 sm:gap-y-10 md:grid-cols-3 lg:grid-cols-5">
           {COLUMNS.map((col) => (
             <div key={col.title} className="min-w-0">
-              <div className="font-serif text-[16px] sm:text-[18px] font-semibold text-white">
+              <div className="font-serif text-[16px] sm:text-4.5 font-semibold text-white">
                 {col.title}
               </div>
 
@@ -36,7 +36,7 @@ export default function ClickUpFooter() {
                   if (isSectionLabel) {
                     return (
                       <li key={l.label} className="pt-3 sm:pt-4">
-                        <div className="text-[12px] sm:text-[13px] font-semibold text-white/90">
+                        <div className="text-3 sm:text-[13px] font-semibold text-white/90">
                           Download
                         </div>
                       </li>
@@ -52,7 +52,7 @@ export default function ClickUpFooter() {
                         <span className="truncate">{l.label}</span>
 
                         {l.badge ? (
-                          <span className="ml-1 inline-flex shrink-0 items-center gap-1 rounded-full bg-white/10 px-2 py-[2px] text-[10px] sm:text-[11px] font-semibold text-white/80 ring-1 ring-white/10">
+                          <span className="ml-1 inline-flex shrink-0 items-center gap-1 rounded-full bg-white/10 px-2 py-0.5 text-2.5 sm:text-[11px] font-semibold text-white/80 ring-1 ring-white/10">
                             <span className="h-1.5 w-1.5 rounded-full bg-[#FFB36B]" />
                             {l.badge}
                           </span>
@@ -81,7 +81,7 @@ export default function ClickUpFooter() {
             ))}
           </div>
 
-          <p className="max-w-[820px] text-[13px] sm:text-[14px] leading-[1.7] text-white/55">
+          <p className="max-w-205 text-[13px] sm:text-[14px] leading-[1.7] text-white/55">
             Passionfroot helps marketers to scale their go to market with content
             partnerships and creators to run and manage their brand partnerships
             in one place.
@@ -90,7 +90,7 @@ export default function ClickUpFooter() {
 
         {/* Bottom thin line + meta */}
         <div className="mt-8 sm:mt-10 border-t border-white/10 pt-5 sm:pt-6">
-          <div className="flex flex-col gap-3 text-[12px] sm:text-[13px] text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 text-3 sm:text-[13px] text-white/50 sm:flex-row sm:items-center sm:justify-between">
             <div>© {new Date().getFullYear()} Passionfroot</div>
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6">

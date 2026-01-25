@@ -96,9 +96,9 @@ export default function CampaignShowcaseSection() {
 
   return (
     <section className="w-full bg-[#f9f8f4]">
-      <div className="mx-auto w-full max-w-[1440px] px-6 pb-14 pt-8">
+      <div className="mx-auto w-full max-w-360 px-6 pb-14 pt-8">
         {/* Orange dashboard card */}
-        <div className="relative rounded-[18px] min-h-[300px] bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+        <div className="relative rounded-[18px] min-h-75 bg-[#ff9855] shadow-[0_18px_35px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
           <Image
             src="/hero1.png"
             alt="Creators parade illustration"
@@ -120,17 +120,17 @@ export default function CampaignShowcaseSection() {
           >
             <span
               className={[
-                "grid h-[78px] w-[78px] place-items-center rounded-full",
+                "grid h-19.5 w-19.5 place-items-center rounded-full",
                 "bg-[#8A8A8A]/90",
                 "shadow-[0_18px_30px_rgba(0,0,0,0.25)]",
                 "ring-1 ring-white/25",
-                "backdrop-blur-[2px]",
+                "backdrop-blur-0.5",
                 "transition",
                 "group-hover:scale-[1.02]",
                 "group-active:scale-[0.98]",
               ].join(" ")}
             >
-              <Icon icon="mdi:play" className="ml-[3px] h-10 w-10 text-white" />
+              <Icon icon="mdi:play" className="ml-0.75 h-10 w-10 text-white" />
             </span>
           </button> */}
         </div>
@@ -213,8 +213,8 @@ function LottieOnce({
   }, [url, holdAt]);
 
   return (
-    <div className="relative overflow-hidden rounded-[12px]">
-      <div ref={containerRef} className="aspect-[1400/520] w-full" />
+    <div className="relative overflow-hidden rounded-xl">
+      <div ref={containerRef} className="aspect-1400/520 w-full" />
     </div>
   );
 }
@@ -254,13 +254,13 @@ function VideoModal({
   const embedSrc = toVimeoEmbed(vimeoUrl);
 
   return (
-    <div className="fixed inset-0 z-[300]">
+    <div className="fixed inset-0 z-300">
       <div className="absolute inset-0 bg-black/55" onMouseDown={onClose} />
 
       <div className="absolute inset-0 flex items-center justify-center px-6">
         <div
           className={[
-            "relative w-full max-w-[980px]",
+            "relative w-full max-w-245",
             "rounded-[14px] bg-[#fbf8f2]",
             "shadow-[0_40px_90px_rgba(0,0,0,0.35)]",
             "ring-1 ring-black/10",
@@ -281,7 +281,7 @@ function VideoModal({
           </button>
 
           <div className="overflow-hidden rounded-[14px]">
-            <div className="aspect-[16/9] w-full overflow-hidden rounded-[12px] bg-black">
+            <div className="aspect-video w-full overflow-hidden rounded-xl bg-black">
               <iframe
                 key={embedSrc}
                 src={embedSrc}
@@ -314,13 +314,13 @@ function LogoMarquee({
   const doubled = useMemo(() => [...items, ...items], [items]);
 
   return (
-    <div className="relative mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+    <div className="relative mt-6 overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
       <div
         className="marqueeTrack flex w-max items-center gap-12 py-4"
         style={{ ["--marquee-duration" as any]: `${durationSec}s` }}
       >
         {doubled.map((it, idx) => (
-          <div key={`${it.imageSrc}-${idx}`} className="relative h-7 w-[120px] shrink-0 opacity-70">
+          <div key={`${it.imageSrc}-${idx}`} className="relative h-7 w-30 shrink-0 opacity-70">
             <Image src={it.imageSrc} alt="" fill sizes="120px" className="object-contain" />
           </div>
         ))}

@@ -31,14 +31,14 @@ function AccordionRow({
                 {/* Circle icon */}
                 <span
                     className={cx(
-                        "inline-flex h-6 w-6 items-center justify-center rounded-full shrink-0 mt-[2px] sm:mt-0",
+                        "inline-flex h-6 w-6 items-center justify-center rounded-full shrink-0 mt-0.5 sm:mt-0",
                         isOpen ? "bg-[#ff9650]" : "bg-[#151515]"
                     )}
                 >
                     <Icon
                         icon="mdi:chevron-down"
                         className={cx(
-                            "text-[18px] text-white transition-transform duration-300",
+                            "text-4.5 text-white transition-transform duration-300",
                             isOpen ? "rotate-180" : "rotate-0"
                         )}
                     />
@@ -48,7 +48,7 @@ function AccordionRow({
                 <span
                     className={cx(
                         "font-semibold text-[#424141] leading-[1.35]",
-                        "text-[16px] sm:text-[18px] lg:text-[20px]"
+                        "text-[16px] sm:text-4.5 lg:text-5"
                     )}
                 >
                     {item.question}
@@ -81,8 +81,8 @@ export default function FaqSection() {
 
     return (
         <section className="bg-[#FCFCFA]">
-            <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20">
-                <h2 className="font-serif text-[#141414] font-semibold leading-[1.08] tracking-[-0.01em] text-[30px] sm:text-[40px] lg:text-[52px]">
+            <div className="mx-auto max-w-360 px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20">
+                <h2 className="font-serif text-[#141414] font-semibold leading-[1.08] tracking-[-0.01em] text-7.5 sm:text-10 lg:text-[52px]">
                     Frequently Asked Questions
                 </h2>
 

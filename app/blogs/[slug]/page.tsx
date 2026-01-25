@@ -6,13 +6,10 @@ import { notFound } from "next/navigation";
 
 export default async function BlogDetailPage({ params }: { params: any }) {
   const { slug } = await params;
-  console.log(slug, "ttttttttttttttttwwwww");
-
   const post = getPostBySlug(slug);
   if (!post) return notFound();
 
   const related = getRelatedPosts(params.slug, 3);
-
   return <>
     <Header />
     <BlogDetailSection post={post} related={related} />

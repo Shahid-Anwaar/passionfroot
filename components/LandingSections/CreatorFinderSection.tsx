@@ -12,7 +12,7 @@ export default function CreatorFinderSection() {
 
     return (
         <section className="w-full bg-[#F6F2E9] py-12 sm:py-14">
-            <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6">
+            <div className="mx-auto w-full max-w-350 px-4 sm:px-6">
                 <h2 className="text-center font-serif text-[26px] sm:text-[34px] font-semibold leading-[1.12] text-[#111] sm:leading-[1.12]">
                     Find the best creators for <br className="hidden sm:block" />
                     your brand - fast.
@@ -38,7 +38,7 @@ export default function CreatorFinderSection() {
                                         alt="any one"
                                         width={1200}
                                         height={650}
-                                        className="w-full rounded-[8px] object-cover"
+                                        className="w-full rounded-lg object-cover"
                                     />
                                 </div>
                             }
@@ -58,7 +58,7 @@ export default function CreatorFinderSection() {
                                         alt={"any one"}
                                         width={1200}
                                         height={650}
-                                        className="w-full rounded-[8px] object-cover"
+                                        className="w-full rounded-lg object-cover"
                                     />
                                 </div>
                             }
@@ -86,7 +86,7 @@ export default function CreatorFinderSection() {
                                         <EmptySkelton />
                                     </div>
 
-                                    {/* <div className="relative z-10 bg-white shadow-lg w-full max-w-[320px] mx-auto rounded-lg p-3">
+                                    {/* <div className="relative z-10 bg-white shadow-lg w-full max-w-80 mx-auto rounded-lg p-3">
                                         <div className="absolute rounded-full bg-[#58df8c] border-8 border-white text-white h-16 w-16 sm:h-20 sm:w-20 p-2 flex items-center justify-center -top-7 sm:-top-8 -right-5 sm:-right-6 shadow-md text-xl font-bold">
                                             <CircleProgress value={AI_PROFILE_CARDS[hoveredCount].score} />
                                         </div>
@@ -103,18 +103,18 @@ export default function CreatorFinderSection() {
                                                 <p className="text-[14px] sm:text-[15px] leading-[1.55] text-gray-700">
                                                     {AI_PROFILE_CARDS[hoveredCount].name}
                                                 </p>
-                                                <span className="text-[10px] border border-[#447759] text-[#4aa047] py-0.5 px-2 mt-1 rounded-md bg-[#e3f1fa]">
+                                                <span className="text-2.5 border border-[#447759] text-[#4aa047] py-0.5 px-2 mt-1 rounded-md bg-[#e3f1fa]">
                                                     {AI_PROFILE_CARDS[hoveredCount].matchLabel}
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div className="mt-3 rounded-lg border border-[#ff9147] bg-white/60 p-2 shadow-[0_2px_0_rgba(0,0,0,0.06)] ring-1 ring-black/5">
-                                            <div className="text-[#ff9147] flex items-center gap-2 text-[12px] font-semibold">
+                                            <div className="text-[#ff9147] flex items-center gap-2 text-3 font-semibold">
                                                 <Icon icon="humbleicons:ai" className="h-4 w-4 " />
                                                 {AI_PROFILE_CARDS[hoveredCount].summaryTitle}
                                             </div>
-                                            <div className="mt-1 text-[12px] leading-[1.55] text-[#111]/80">
+                                            <div className="mt-1 text-3 leading-[1.55] text-[#111]/80">
                                                 {AI_PROFILE_CARDS[hoveredCount].summary}
                                             </div>
                                         </div>
@@ -161,7 +161,7 @@ function WorldMapTabsOverlay() {
                                 onMouseEnter={() => setActive(t.key)}
                                 onClick={() => setActive(t.key)} // ✅ touch devices
                                 className={[
-                                    "inline-flex items-center gap-2 rounded-[10px] px-3 py-2 text-[12px] sm:text-[14px] font-semibold whitespace-nowrap",
+                                    "inline-flex items-center gap-2 rounded-[10px] px-3 py-2 text-3 sm:text-[14px] font-semibold whitespace-nowrap",
                                     "transition-colors",
                                     isActive ? "" : "text-[#7A7A7A] hover:text-[#222]",
                                 ].join(" ")}
@@ -201,7 +201,7 @@ function WorldMapTabsOverlay() {
                                     {tab.chips.map((c) => (
                                         <span
                                             key={c.name}
-                                            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 text-[11px] sm:text-[12px] font-medium text-[#3C3C3C] ring-1 ring-black/5 backdrop-blur whitespace-nowrap"
+                                            className="shrink-0 inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1.5 text-[11px] sm:text-3 font-medium text-[#3C3C3C] ring-1 ring-black/5 backdrop-blur whitespace-nowrap"
                                         >
                                             <Image
                                                 src={c.avatar}
@@ -214,7 +214,7 @@ function WorldMapTabsOverlay() {
                                         </span>
                                     ))}
 
-                                    <span className="shrink-0 ml-1 text-[11px] sm:text-[12px] font-medium text-white/70 whitespace-nowrap">
+                                    <span className="shrink-0 ml-1 text-[11px] sm:text-3 font-medium text-white/70 whitespace-nowrap">
                                         and more
                                     </span>
                                 </div>
@@ -229,7 +229,7 @@ function WorldMapTabsOverlay() {
 
 function FeatureCard({ item, children }: { item: CreatorFinderItem; children?: ReactNode }) {
     return (
-        <div className="rounded-[12px] relative bg-white p-4 sm:p-5 shadow-[0_2px_0_rgba(0,0,0,0.06)] ring-1 ring-black/5">
+        <div className="rounded-xl relative bg-white p-4 sm:p-5 shadow-[0_2px_0_rgba(0,0,0,0.06)] ring-1 ring-black/5">
 
             <div className="relative group overflow-hidden rounded-[10px] bg-[#c083f7] ring-1 ring-black/5">
                 <div className="absolute w-full h-full bg-[#c083f7]">
@@ -248,7 +248,7 @@ function FeatureCard({ item, children }: { item: CreatorFinderItem; children?: R
                         height={650}
                         className={[
                             "w-full object-fill z-10 max-w-md sm:max-w-xs group-hover:scale-105 transition-all duration-200",
-                            "h-[140px] sm:h-[180px] md:h-[200px] my-12 rounded-lg",
+                            "h-35 sm:h-45 md:h-50 my-12 rounded-lg",
                         ].join(" ")}
                     />
                 </div>
@@ -262,12 +262,12 @@ function FeatureCard({ item, children }: { item: CreatorFinderItem; children?: R
             </div>
 
             {item.badge ? (
-                <span className="rounded-full bg-[#EAF7EE] px-2 py-[2px] text-[10px] font-semibold text-[#1E8E4A] ring-1 ring-[#1E8E4A]/15">
+                <span className="rounded-full bg-[#EAF7EE] px-2 py-0.5 text-2.5 font-semibold text-[#1E8E4A] ring-1 ring-[#1E8E4A]/15">
                     {item.badge}
                 </span>
             ) : null}
 
-            <p className="mt-2 text-[12px] sm:text-[12.5px] leading-[1.55] text-[#111]/70">
+            <p className="mt-2 text-3 sm:text-[12.5px] leading-[1.55] text-[#111]/70">
                 {item.description}
             </p>
         </div>

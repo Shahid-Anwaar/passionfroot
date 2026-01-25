@@ -9,7 +9,7 @@ import { CategoryTheme, CreatorCategorySectionProps, CreatorItem } from "@/data/
 function CreatorCard({ c, theme }: { c: CreatorItem; theme: CategoryTheme }) {
     return (
         <div
-            className="w-[180px] flex flex-col rounded-2xl p-3 hover:-translate-y-3 transition-all duration-150 shadow-[0_14px_40px_rgba(0,0,0,0.06)]"
+            className="w-45 flex flex-col rounded-2xl p-3 hover:-translate-y-3 transition-all duration-150 shadow-[0_14px_40px_rgba(0,0,0,0.06)]"
             style={{
                 background: `linear-gradient(to bottom, ${theme.cardFrom}, ${theme.cardTo})`,
             }}
@@ -56,7 +56,7 @@ function CreatorCard({ c, theme }: { c: CreatorItem; theme: CategoryTheme }) {
                     <Icon icon="mdi:book-open-outline" width="14" height="14" />
                     About
                 </div>
-                <p className="mt-2 text-[9px] md:text-[10px] leading-relaxed text-neutral-900/90">
+                <p className="mt-2 text-[9px] md:text-2.5 leading-relaxed text-neutral-900/90">
                     {c.about}
                 </p>
             </div>

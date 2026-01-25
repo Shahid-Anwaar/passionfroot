@@ -7,7 +7,6 @@ import Header from "@/components/LandingSections/Header";
 import { AI_CREATORS, FROOT_SALAD, Galleries_POSTS, GOLD_STANDARD, MARKETING_DESIGN, PRODUCTIVITY, TECH_BUSINESS } from "@/data/data";
 import { CategoryTheme } from "@/data/types";
 
-
 const CYAN: CategoryTheme = { cardFrom: "#D9F6FF", cardTo: "#49D7EF", innerBg: "#CFF3FF" };
 const PURPLE: CategoryTheme = { cardFrom: "#E9D6FF", cardTo: "#B57BFF", innerBg: "#E6D2FF" };
 const PINK: CategoryTheme = { cardFrom: "#FFD9D9", cardTo: "#F26B6B", innerBg: "#FFD0D0" };
@@ -15,14 +14,10 @@ const GREEN: CategoryTheme = { cardFrom: "#DFF8E8", cardTo: "#59DA8A", innerBg: 
 const BLUE: CategoryTheme = { cardFrom: "#D7ECFF", cardTo: "#61B3FF", innerBg: "#CFE6FF" };
 const ORANGE: CategoryTheme = { cardFrom: "#FFE0CC", cardTo: "#FF8B3D", innerBg: "#FFD6BD" };
 
-
-
-
 export default function Home() {
     return (
         <div className="bg-[#F6F2E8]">
             <Header />
-
             <CreatorGalleryStatsSection />
 
             {/* ✅ Category blocks (call your custom section multiple times) */}
@@ -38,11 +33,11 @@ export default function Home() {
                 </div>
             </div>
             <div className="bg-white py-16">
-                <div className=" grid max-w-[1400px] w-full px-5 mx-auto gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {Galleries_POSTS.map((post) => (
-                    <PostCard key={post.id} post={post} path="" />
-                ))}
-            </div>
+                <div className=" grid max-w-350 w-full px-5 mx-auto gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {Galleries_POSTS.map((post) => (
+                        <PostCard key={post.id} post={post} path="" />
+                    ))}
+                </div>
             </div>
             {/* <FaqSection /> */}
             <ClickUpFooter />

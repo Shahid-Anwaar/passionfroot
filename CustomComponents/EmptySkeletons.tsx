@@ -46,7 +46,7 @@ export const EmptySkelton = ({
 
   const item = (wClass: string) => (
     <div
-      className={`flex justify-start items-center p-2 rounded-lg border shadow-sm backdrop-blur-[2px] ${wClass}`}
+      className={`flex justify-start items-center p-2 rounded-lg border shadow-sm backdrop-blur-0.5 ${wClass}`}
       style={wrapStyle}
     >
       <div className="h-11 w-11 rounded-md" style={blockStyle} />

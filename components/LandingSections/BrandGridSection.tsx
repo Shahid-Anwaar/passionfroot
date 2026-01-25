@@ -15,7 +15,7 @@ function PlusDot({ isDark }: { isDark?: boolean }) {
                 : "bg-gray-100 shadow-[0_10px_18px_rgba(0,0,0,0.18)] ring-1 ring-white/10"
                 }`}
         >
-            <Icon icon="mdi:plus" className={`text-[16px] ${isDark ? "text-white" : "text-gray-900"}`} />
+            <Icon icon="mdi:plus" className={`text-[20px] ${isDark ? "text-white" : "text-gray-900"} group-hover:rotate-300 transition-all duration-300`} />
         </span>
     );
 }
@@ -70,7 +70,7 @@ function DetailModal({
           - scrolls internally if content overflows
       */}
             <div className="fixed inset-0 top-32 sm:top-24 flex items-start justify-center px-3 sm:px-6 py-6 sm:py-10 ">
-                <div className="relative w-full max-w-[1120px]">
+                <div className="relative w-full max-w-280">
                     <div className="relative  overflow-y-auto max-h-[calc(100vh-140px)] rounded-[18px] shadow-[0_30px_80px_rgba(0,0,0,0.45)] bg-white">
                         {/* Close */}
                         <button
@@ -79,7 +79,7 @@ function DetailModal({
                             className="absolute right-4 top-4 z-30 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/70 ring-1 ring-white/20 hover:bg-black/80"
                             aria-label="Close"
                         >
-                            <Icon icon="mdi:close" className="text-[18px] text-white" />
+                            <Icon icon="mdi:close" className="text-4.5 text-white" />
                         </button>
 
                         {/* Layout */}
@@ -90,7 +90,7 @@ function DetailModal({
                     - mobile: fixed-ish height
                     - desktop: match right panel height
                 */}
-                                <div className="relative h-[240px] sm:h-[320px] md:h-full md:min-h-[500px]">
+                                <div className="relative h-60 sm:h-80 md:h-full md:min-h-125">
                                     {tile.img ? (
                                         <>
                                             <Image
@@ -102,14 +102,14 @@ function DetailModal({
                                             />
                                             <div
                                                 className={`absolute inset-0 ${isDark
-                                                    ? "bg-gradient-to-t from-black/45 via-black/0 to-black/0"
-                                                    : "bg-gradient-to-t from-black/30 via-black/0 to-black/0"
+                                                    ? "bg-linear-to-t from-black/45 via-black/0 to-black/0"
+                                                    : "bg-linear-to-t from-black/30 via-black/0 to-black/0"
                                                     }`}
                                             />
                                             <div className="pointer-events-none absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
                                                 <div
                                                     className={[
-                                                        "inline-flex items-center gap-2 rounded-[12px]",
+                                                        "inline-flex items-center gap-2 rounded-xl",
                                                         "px-3 py-2 sm:px-4 sm:py-2",
                                                         "backdrop-blur-md ring-1",
                                                         isDark ? "bg-white/10 ring-white/15" : "bg-white/25 ring-black/10",
@@ -118,10 +118,10 @@ function DetailModal({
                                                     {tile.companyIcon ? (
                                                         <Icon
                                                             icon={tile.companyIcon}
-                                                            className={`${isDark ? "text-white" : "text-black"} text-[18px] sm:text-[20px]`}
+                                                            className={`${isDark ? "text-white" : "text-black"} text-4.5 sm:text-5`}
                                                         />
                                                     ) : null}
-                                                    <div className={`${isDark ? "text-white" : "text-black"} text-[16px] sm:text-[18px] font-bold`}>
+                                                    <div className={`${isDark ? "text-white" : "text-black"} text-[16px] sm:text-4.5 font-bold`}>
                                                         {tile.company}
                                                     </div>
                                                 </div>
@@ -139,7 +139,7 @@ function DetailModal({
                                     "relative",
                                     rightBg,
                                     // ✅ desktop height feel like Passionfroot, mobile grows naturally
-                                    "md:min-h-[500px] flex flex-col h-[100%]",
+                                    "md:min-h-125 flex flex-col h-full",
                                     // ✅ padding responsive
                                     "px-3 py-5 sm:px-4 sm:py-7 md:px-5 md:py-6",
                                     // ✅ give space for bottom bar on small screens too
@@ -152,10 +152,10 @@ function DetailModal({
                                 <p
                                     className={[
                                         "mt-4 mb-3",
-                                        "max-w-[560px]",
+                                        "max-w-140",
                                         "font-medium",
                                         "leading-[1.2] sm:leading-[1.3] md:leading-[1.3]",
-                                        "text-[14px] sm:text-[15px] md:text-[17px] lg:text-[20px]",
+                                        "text-[14px] sm:text-[15px] md:text-[17px] lg:text-5",
                                         isDark ? "text-white/85" : "text-black/80",
                                         // ✅ clamp only on mobile so layout stays clean; desktop shows full
                                         "line-clamp-7 sm:line-clamp-8 md:line-clamp-none",
@@ -181,7 +181,7 @@ function DetailModal({
                                             <div
                                                 className={[
                                                     "font-medium",
-                                                    "text-[12px] sm:text-[13px] md:text-[14px]",
+                                                    "text-3 sm:text-[13px] md:text-[14px]",
                                                     isDark ? "text-white/65" : "text-black/55",
                                                 ].join(" ")}
                                             >
@@ -197,14 +197,14 @@ function DetailModal({
                                                     {s.icon ? (
                                                         <Icon
                                                             icon={s.icon}
-                                                            className={isDark ? "text-white/80 text-[18px]" : "text-black/60 text-[18px]"}
+                                                            className={isDark ? "text-white/80 text-4.5" : "text-black/60 text-4.5"}
                                                         />
                                                     ) : null}
                                                     <div className="flex flex-col leading-tight">
                                                         <span
                                                             className={[
                                                                 "uppercase tracking-wide font-semibold",
-                                                                "text-[10px] md:text-[11px]",
+                                                                "text-2.5 md:text-[11px]",
                                                                 isDark ? "text-white/55" : "text-black/45",
                                                             ].join(" ")}
                                                         >
@@ -213,7 +213,7 @@ function DetailModal({
                                                         <span
                                                             className={[
                                                                 "font-semibold",
-                                                                "text-[16px] md:text-[18px]",
+                                                                "text-[16px] md:text-4.5",
                                                                 isDark ? "text-white/90" : "text-black/80",
                                                             ].join(" ")}
                                                         >
@@ -252,14 +252,14 @@ function DetailModal({
 
 function TileCard({ tile, onOpen }: { tile: Tile; onOpen: (t: Tile) => void }) {
     const base =
-        "relative overflow-hidden rounded-[12px] border border-black/20 bg-white shadow-[0_12px_26px_rgba(0,0,0,0.08)]";
+        "relative overflow-hidden rounded-xl border border-black/20 bg-white shadow-[0_12px_26px_rgba(0,0,0,0.08)]";
 
     // ✅ Responsive tile height (closer to your sample)
-    const height = "h-[170px] sm:h-[210px] lg:h-[230px]";
+    const height = "h-42.5 sm:h-52.5 lg:h-[230px]";
 
     if (tile.type === "logo") {
         return (
-            <div className={`${base} ${height} flex items-center justify-center text-[#141414] ${tile.color} ${tile.colSpan ?? ""}`}>
+            <div className={`${base} ${height} border-gray-950 border-2 flex items-center justify-center text-[#141414] ${tile.color} ${tile.colSpan ?? ""}`}>
                 <div className="flex items-center gap-2">
                     {tile.icon ? (
                         <Icon icon={tile.icon} style={{ fontSize: tile.iconSize ?? 26 }} />
@@ -268,8 +268,8 @@ function TileCard({ tile, onOpen }: { tile: Tile; onOpen: (t: Tile) => void }) {
                         <span
                             className={
                                 tile.text === "Pika"
-                                    ? "text-[36px] sm:text-[44px] font-semibold tracking-[-0.02em]"
-                                    : "text-[26px] sm:text-[32px] font-semibold tracking-[-0.01em]"
+                                    ? "text-9 sm:text-[44px] font-semibold tracking-[-0.02em]"
+                                    : "text-[26px] sm:text-8 font-semibold tracking-[-0.01em]"
                             }
                         >
                             {tile.text}
@@ -287,7 +287,7 @@ function TileCard({ tile, onOpen }: { tile: Tile; onOpen: (t: Tile) => void }) {
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => (e.key === "Enter" ? onOpen(tile) : null)}
-                className={`${base} ${height} ${tile.bg ?? ""} ${tile.colSpan ?? ""} w-full`}
+                className={`${base} ${height} ${tile.bg ?? ""} ${tile.colSpan ?? ""} w-full group`}
             >
                 <Image
                     src={tile.img}
@@ -296,8 +296,8 @@ function TileCard({ tile, onOpen }: { tile: Tile; onOpen: (t: Tile) => void }) {
                     sizes="(min-width: 1024px) 320px, (min-width: 640px) 240px, 50vw"
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0" />
-                <div className="absolute bottom-3 left-3 text-[12px] font-semibold text-white drop-shadow">
+                <div className="absolute inset-0 bg-linear-to-t from-black/35 via-black/0 to-black/0" />
+                <div className="absolute bottom-3 left-3 text-3 font-semibold text-white drop-shadow">
                     {tile.company}
                 </div>
                 <PlusDot isDark={false} />
@@ -312,14 +312,14 @@ function TileCard({ tile, onOpen }: { tile: Tile; onOpen: (t: Tile) => void }) {
             role="button"
             tabIndex={0}
             onKeyDown={(e) => (e.key === "Enter" ? onOpen(tile) : null)}
-            className={`${base} ${height} ${tile.bg} ${tile.colSpan ?? ""} px-4 py-4 sm:px-5 sm:py-4`}
+            className={`${base} ${height} ${tile.bg} ${tile.colSpan ?? ""} px-4 py-4 sm:px-5 sm:py-4 group`}
         >
-            <div className="font-serif text-[40px] sm:text-[44px] leading-none text-[#141414]">“</div>
-            <p className="mt-1 text-[16px] sm:text-[18px] lg:text-[19px] font-semibold leading-[1.55] text-[#141414]/80 line-clamp-3">
+            <div className="font-serif text-10 sm:text-[44px] leading-none text-[#141414]">“</div>
+            <p className="mt-1 text-[16px] sm:text-4.5 lg:text-[19px] font-semibold leading-[1.55] text-[#141414]/80 line-clamp-3">
                 {tile.quote}
             </p>
             <div className="mt-3 text-[14px] sm:text-[16px] text-[#141414]">{tile.person?.name ?? ""}</div>
-            <div className="text-[11px] sm:text-[12px] font-semibold text-[#141414]/70">
+            <div className="text-[11px] sm:text-3 font-semibold text-[#141414]/70">
                 {(tile.person?.title ?? "").trim()}
                 {tile.person?.company ? ` · ${tile.person.company}` : ""}
             </div>
@@ -354,8 +354,8 @@ export default function BrandWallSection() {
 
     return (
         <section className="bg-white">
-            <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10 py-14 sm:py-16">
-                <h2 className="text-center font-serif text-[22px] sm:text-[30px] lg:text-[44px] font-semibold leading-[1.15] text-[#141414]">
+            <div className="mx-auto max-w-350 px-4 sm:px-6 lg:px-10 py-14 sm:py-16">
+                <h2 className="text-center font-serif text-[22px] sm:text-7.5 lg:text-[44px] font-semibold leading-[1.15] text-[#141414]">
                     Powering the people building
                     <br />
                     category-defining brands

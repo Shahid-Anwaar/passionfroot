@@ -15,7 +15,7 @@ export default function AboutIntroSection({
   return (
     <section className="bg-[#F6F2E8]">
       <div className="mx-auto flex max-w-5xl flex-col items-center px-6 py-16 text-center md:py-24">
-        <div className="relative mb-10 h-[110px] w-[180px] md:h-[140px] md:w-[220px]">
+        <div className="relative mb-10 h27.5 w-45 md:h-35 md:w-[220px]">
           <Image
             src={imageSrc}
             alt="Creators and brands illustration"

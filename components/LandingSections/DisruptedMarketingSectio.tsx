@@ -13,7 +13,7 @@ export default function DisruptedMarketingSection() {
             className={[
                 "relative isolate w-full overflow-hidden bg-[#1e1f1f]",
                 // ✅ keep your exact large-screen height
-                "lg:h-[870px]",
+                "lg:h-217.5",
                 // ✅ make it responsive below lg
                 "py-12 sm:py-14 lg:py-0",
             ].join(" ")}
@@ -36,9 +36,9 @@ export default function DisruptedMarketingSection() {
             {/* Content */}
             <div
                 className={[
-                    "relative z-10 mx-auto w-full max-w-[1300px]",
+                    "relative z-10 mx-auto w-full max-w-325",
                     // ✅ keep your exact large-screen padding
-                    "lg:px-6 lg:pt-[62px]",
+                    "lg:px-6 lg:pt-15.5",
                     // ✅ responsive below lg
                     "px-4 sm:px-6 pt-6 sm:pt-10",
                 ].join(" ")}
@@ -51,7 +51,7 @@ export default function DisruptedMarketingSection() {
                             // ✅ keep your exact large-screen size
                             "lg:text-[48px]",
                             // ✅ responsive below lg
-                            "text-[28px] sm:text-[36px] md:text-[42px]",
+                            "text-7 md:text-[42px]",
                         ].join(" ")}
                     >
                         Traditional marketing is
@@ -63,9 +63,9 @@ export default function DisruptedMarketingSection() {
                         className={[
                             "font-medium text-white/85",
                             // ✅ keep your exact large-screen size
-                            "lg:mt-4 lg:text-[20px]",
+                            "lg:mt-4 lg:text-5",
                             // ✅ responsive below lg
-                            "mt-3 text-[15px] sm:text-[17px] md:text-[18px]",
+                            "mt-3 text-[15px] sm:text-[17px] md:text-4.5",
                         ].join(" ")}
                     >
                         We&apos;re entering a new era of personality-led growth.
@@ -76,19 +76,19 @@ export default function DisruptedMarketingSection() {
                 <div
                     className={[
                         // ✅ keep your exact large-screen layout
-                        "lg:mt-[78px] lg:grid lg:grid-cols-2 lg:gap-x-[180px]",
+                        "lg:mt-19.5 lg:grid lg:grid-cols-2 lg:gap-x-45",
                         // ✅ responsive below lg (stack)
                         "mt-8 sm:mt-10 grid grid-cols-1 gap-8 md:gap-10 lg:gap-0",
                     ].join(" ")}
                 >
-                    <div className="max-w-[520px] lg:max-w-[420px] mx-auto lg:mx-0">
+                    <div className="max-w-130 lg:max-w-105 mx-auto lg:mx-0">
                         <h3
                             className={[
                                 "font-serif font-semibold text-white",
                                 // ✅ keep your exact large-screen size
                                 "lg:text-[26px]",
                                 // ✅ responsive below lg
-                                "text-[20px] sm:text-[22px] md:text-[24px]",
+                                "text-5 sm:text-[22px] md:text-6",
                             ].join(" ")}
                         >
                             The Old Way
@@ -98,7 +98,7 @@ export default function DisruptedMarketingSection() {
                             className={[
                                 "text-white/85 leading-[1.65]",
                                 // ✅ keep your exact large-screen size
-                                "lg:mt-3 lg:text-[18px]",
+                                "lg:mt-3 lg:text-4.5",
                                 // ✅ responsive below lg
                                 "mt-2 text-[14px] sm:text-[16px] md:text-[17px]",
                             ].join(" ")}
@@ -108,12 +108,12 @@ export default function DisruptedMarketingSection() {
                         </p>
                     </div>
 
-                    <div className="max-w-[520px] lg:max-w-[440px] mx-auto lg:mx-0">
+                    <div className="max-w-130 lg:max-w-110 mx-auto lg:mx-0">
                         <h3
                             className={[
                                 "font-serif font-semibold text-white",
                                 "lg:text-[26px]",
-                                "text-[20px] sm:text-[22px] md:text-[24px]",
+                                "text-5 sm:text-[22px] md:text-6",
                             ].join(" ")}
                         >
                             The New Way
@@ -122,7 +122,7 @@ export default function DisruptedMarketingSection() {
                         <p
                             className={[
                                 "text-white/85 leading-[1.65]",
-                                "lg:mt-3 lg:text-[18px]",
+                                "lg:mt-3 lg:text-4.5",
                                 "mt-2 text-[14px] sm:text-[16px] md:text-[17px]",
                             ].join(" ")}
                         >
@@ -150,10 +150,10 @@ export default function DisruptedMarketingSection() {
                     className={[
                         "object-contain object-bottom",
                         // ✅ keep your exact large-screen styling (unchanged)
-                        "lg:ms-14 lg:mt-5 lg:translate-x-[210px] lg:translate-y-[32px] lg:scale-[1.12]",
-                        "lg:lg:translate-x-[250px] lg:translate-y-[36px] lg:scale-[1.14]",
+                        "lg:ms-14 lg:mt-5 lg:translate-x-52.5 lg:translate-y-8 lg:scale-[1.12]",
+                        "lg:lg:translate-x-62.5 lg:translate-y-9 lg:scale-[1.14]",
                         // ✅ below lg: simple responsive behavior
-                        "w-[92%] max-w-[520px] translate-x-0 translate-y-0 scale-100",
+                        "w-[92%] max-w-130 translate-x-0 translate-y-0 scale-100",
                     ].join(" ")}
                 />
             </div>

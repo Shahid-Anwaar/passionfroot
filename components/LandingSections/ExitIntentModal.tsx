@@ -27,8 +27,8 @@ export default function ExitIntentModal() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-5">
-      <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-zinc-950 p-6 shadow-[0_40px_120px_rgba(0,0,0,0.7)]">
+    <div className="fixed inset-0 z-60 flex items-center justify-center bg-black/70 p-5">
+      <div className="w-full max-w-lg rounded-xl border border-white/10 bg-zinc-950 p-6 shadow-[0_40px_120px_rgba(0,0,0,0.7)]">
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="text-sm font-semibold text-orange-200">Free guide</div>

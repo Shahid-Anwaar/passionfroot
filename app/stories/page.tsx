@@ -3,6 +3,7 @@ import ClickUpFooter from "@/components/LandingSections/ClickUpFooter";
 import AboutIntroSection from "@/components/AboutSections/AboutIntro";
 import AllPostsSection from "@/components/BlogSections/AllBlogs";
 import { getAllPosts } from "@/data/data";
+import FaqSection from "@/components/LandingSections/Faqs";
 
 export default function StoriesPage() {
   const posts = getAllPosts();
@@ -14,8 +15,8 @@ export default function StoriesPage() {
         title={"Stories that help you grow"}
         subtitle="Real lessons for creators and brands—smart campaigns, stronger partnerships, and better monetization."
       />
-
       <AllPostsSection path="/stories/" title="All Stories" posts={posts} />
+      <FaqSection />
       <ClickUpFooter />
     </div>
   );

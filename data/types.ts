@@ -165,29 +165,6 @@ export type TileCard = {
   image?: string
 };
 
-export type HeaderConfig = {
-  brandName: string;
-  brandHref: string;
-
-  menus: {
-    brands: MegaMenuConfig;
-    creators: MegaMenuConfig;
-  };
-
-  topLinks: NavLinkItem[]; // About, Careers
-
-  login: {
-    trigger: string; // Login
-    subtitle: string; // "Login as a"
-    options: NavLinkItem[]; // Creator, Brand
-  };
-
-  cta: {
-    label: string; // Get access
-    href: string;
-  };
-};
-
 export type CategoryTheme = {
     cardFrom: string;  // e.g. "#D9F6FF"
     cardTo: string;    // e.g. "#49D7EF"

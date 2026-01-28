@@ -1,4 +1,4 @@
-import { AiProfileCard, BlogBlock, BlogPost, CreatorFinderItem, CreatorItem, FaqItem, FooterColumn, HeaderConfig, MapTab, MegaMenuConf, PlatformCard, Stat, Tile, TileCard } from "./types";
+import { AiProfileCard, BlogBlock, BlogPost, CreatorFinderItem, CreatorItem, FaqItem, FooterColumn, MapTab, MegaMenuConf, PlatformCard, Stat, Tile, TileCard } from "./types";
 
 export const BRAND = {
   name: "YourBrand",
@@ -81,7 +81,7 @@ export const MENUS: MegaMenuConf[] = [
         title: "Features",
         description:
           "Explore the all-in-one tool to help creators do more brand deals - easier, and faster.",
-        href: "/features",
+        href: "/",
         icon: "tabler:sparkles",
       },
       {
@@ -1374,98 +1374,6 @@ export const GOLD_STANDARD: CreatorItem[] = [
       "📹 YouTuber + 🎙️ Podcaster + 👨‍⚕️ ex-Doctor + ✍️ Author",
   },
 ];
-
-export const headerConfig: HeaderConfig = {
-  brandName: "YourBrand",
-  brandHref: "/",
-
-  menus: {
-    brands: {
-      trigger: "For Brands",
-      primary: [
-        {
-          label: "Features",
-          desc: "Find creators, manage campaigns, and pay — in one place.",
-          href: "/brands/features",
-          icon: "mdi:stars-outline",
-        },
-        {
-          label: "Customers",
-          desc: "See how teams scale partnerships and grow demand.",
-          href: "/brands/customers",
-          icon: "mdi:account-group-outline",
-        },
-        {
-          label: "Pricing",
-          desc: "Plans for every stage. Start simple, scale later.",
-          href: "/pricing/brands",
-          icon: "mdi:credit-card-outline",
-        },
-      ],
-      resourcesTitle: "Resources",
-      resources: [
-        { label: "Blog", href: "/blog" },
-        { label: "Pricing Guide", href: "/guides/pricing" },
-      ],
-      asideBadge: "Guide",
-      asideTitle: "Sponsorship pricing guide",
-      asideDesc: "Benchmarks + checklist to price and plan partnerships.",
-    },
-
-    creators: {
-      trigger: "For Creators",
-      primary: [
-        {
-          label: "Features",
-          desc: "Tools to close more brand deals, easier and faster.",
-          href: "/creators/features",
-          icon: "mdi:flash-outline",
-        },
-        {
-          label: "Customers",
-          desc: "Learn how creators monetize with partnerships.",
-          href: "/creators/customers",
-          icon: "mdi:account-heart-outline",
-        },
-        {
-          label: "Pricing",
-          desc: "Creator plans built for growth and consistency.",
-          href: "/pricing/creators",
-          icon: "mdi:tag-outline",
-        },
-      ],
-      resourcesTitle: "Resources",
-      resources: [
-        { label: "Creator Gallery", href: "/creator-gallery" },
-        { label: "Blog", href: "/blog" },
-        { label: "Podcasts", href: "/podcasts" },
-        { label: "Pricing Guide", href: "/guides/pricing" },
-      ],
-      asideBadge: "Resource",
-      asideTitle: "Creator kit",
-      asideDesc: "A simple kit to pitch brands + package your offers.",
-    },
-  },
-
-  topLinks: [
-    { label: "About", href: "/about" },
-    { label: "Careers", href: "/careers" },
-  ],
-
-  login: {
-    trigger: "Login",
-    subtitle: "Login as a",
-    options: [
-      { label: "Creator", href: "/login/creator" },
-      { label: "Brand", href: "/login/brand" },
-    ],
-  },
-
-  cta: {
-    label: "Get access",
-    href: "/get-access",
-  },
-};
 
 export const Galleries_POSTS: BlogPost[] = [
   {

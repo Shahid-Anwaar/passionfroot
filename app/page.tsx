@@ -7,18 +7,19 @@ import Header from "@/components/LandingSections/Header";
 import PaymentsAutoPilotSection from "@/components/LandingSections/PaymentAutoPilot";
 import IntercomTestimonialSection from "@/components/LandingSections/IntercomTestmonials";
 import CreatorFinderSection from "@/components/LandingSections/CreatorFinderSection";
-import HeroSection from "@/components/LandingSections/HeroSection";
 import ClickUpFooter from "@/components/LandingSections/ClickUpFooter";
 import ContextSection from "@/components/LandingSections/ContextSection";
 import AllAppsAgentsSection from "@/components/LandingSections/AllAppGridSection";
 import { FEATURES, TILES } from "@/data/data";
+import ClickUpHeroSection from "@/components/LandingSections/ClickUpHero";
 
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <HeroSection />
+      <ClickUpHeroSection />
+      {/* <HeroSection /> */}
       {/* <CampaignShowcaseSection /> */}
 
       {/* <PlatformAccessSection />

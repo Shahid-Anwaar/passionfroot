@@ -14,7 +14,8 @@
 
 @layer components {
   .first-btn {
-    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40 inline-flex active:translate-y-px items-center justify-center gap-2 rounded-[10px] bg-[#2e3030] hover:bg-[#191A1A] text-white font-bold text-[1.125rem] shadow-[0_14px_22px_rgba(0,0,0,0.16)];
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40 inline-flex active:translate-y-px items-center justify-center gap-2 rounded-[10px] bg-[#2e3030] hover:bg-[#191A1A] text-white font-bold text-[1.125rem];
+    box-shadow: 0 14px 22px rgba(0, 0, 0, 0.16);
   }
 }
 
@@ -32,16 +33,20 @@ body {
 }
 
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /* beige page base like the screenshot */
-.bg-beige { background: #f6f2ea; }
+.bg-beige {
+  background: #f6f2ea;
+}
 
 /* subtle paper grain feel */
 .paper {
   background:
-    radial-gradient(1200px 500px at 20% 0%, rgba(0,0,0,0.04), transparent 60%),
-    radial-gradient(900px 600px at 100% 10%, rgba(0,0,0,0.03), transparent 60%),
+    radial-gradient(1200px 500px at 20% 0%, rgba(0, 0, 0, 0.04), transparent 60%),
+    radial-gradient(900px 600px at 100% 10%, rgba(0, 0, 0, 0.03), transparent 60%),
     #f6f2ea;
 }
 
@@ -49,8 +54,10 @@ html { scroll-behavior: smooth; }
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
-    transform: translate3d(-50%, 0, 0); /* move one full set width */
+    transform: translate3d(-50%, 0, 0);
+    /* move one full set width */
   }
 }
 
@@ -72,7 +79,8 @@ html { scroll-behavior: smooth; }
   animation-name: marquee;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: var(--marquee-duration, 30s); /* default fallback */
+  animation-duration: var(--marquee-duration, 30s);
+  /* default fallback */
 }
 
 /* row of logos */
@@ -82,7 +90,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* spacing between logos */
-.marquee-row > * {
+.marquee-row>* {
   margin-right: 3rem;
 }
 
@@ -91,4 +99,3 @@ html { scroll-behavior: smooth; }
     animation: none;
   }
 }
-

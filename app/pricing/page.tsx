@@ -5,6 +5,7 @@ import PricingTabsSection from "@/components/PricingSections/PricingCard";
 import { GOLD_STANDARD } from "@/data/data";
 import { CategoryTheme } from "@/data/types";
 import CreatorCategorySection from "@/components/Gallery/CreatorCategories";
+import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 
 
 const ORANGE: CategoryTheme = { cardFrom: "#FFE0CC", cardTo: "#FF8B3D", innerBg: "#FFD6BD" };
@@ -21,7 +22,8 @@ export default function PricingPage() {
         </div>
       </div>
       <FaqSection />
-      <ClickUpFooter />
+      {/* <ClickUpFooter /> */}
+      <FooterLikeSupreme />
     </div>
   );
 }

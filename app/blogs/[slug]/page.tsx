@@ -1,5 +1,6 @@
 import BlogDetailSection from "@/components/BlogSections/BlogDetail";
 import ClickUpFooter from "@/components/LandingSections/ClickUpFooter";
+import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 import Header from "@/components/LandingSections/Header";
 import { getPostBySlug, getRelatedPosts } from "@/data/data";
 import { notFound } from "next/navigation";
@@ -13,6 +14,7 @@ export default async function BlogDetailPage({ params }: { params: any }) {
   return <>
     <Header />
     <BlogDetailSection post={post} related={related} />
-    <ClickUpFooter />
+    {/* <ClickUpFooter /> */}
+    <FooterLikeSupreme />
   </>;
 }

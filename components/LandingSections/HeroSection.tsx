@@ -66,35 +66,36 @@ const BRAND_IMAGES: { imageSrc: string }[] = [
 ];
 
 export default function HeroSection({
-  label= "THE LARGEST B2B INFLUENCER PLATFORM",
-  title= "Where B2B brands scale influencer marketing",
+  label = "THE LARGEST B2B INFLUENCER PLATFORM",
+  title = "Where B2B brands scale influencer marketing",
   isShowImg = true,
   companiesTitle = "Powering thousands of marketing teams at the fastest growing companies in tech",
-  subTitle= "The fastest and easiest way to do influencer marketing at scale. Find the right creators on all platforms, book, collaborate, and pay all in one place."
-}: {label?: string, title?: string, isShowImg?: boolean, companiesTitle?: string, subTitle?: string}) {
+  subTitle = "The fastest and easiest way to do influencer marketing at scale. Find the right creators on all platforms, book, collaborate, and pay all in one place.",
+  isShowSecondBtn = true
+}: { label?: string, title?: string, isShowImg?: boolean, companiesTitle?: string, subTitle?: string, isShowSecondBtn?: boolean }) {
   return (
-    <section className="w-full bg-[#fdfdfb] pt-16 sm:pt-16">
-      <div className="mx-auto w-full max-w-245 px-4 sm:px-6 pt-16 sm:pt-27.5 pb-5 sm:pb-14 text-center">
+    <section className="w-full bg-[#fdfdfb]">
+      <div className="mx-auto w-full max-w-245 px-4 sm:px-6 pt-16 sm:pt-27.5 pb-3 sm:pb-3 text-center">
         {/* Eyebrow */}
-        <div className="text-[0.85rem] sm:text-[1.025rem] font-nunito font-medium tracking-[0.08em] text-[#737373]">
+        {label && <div className="text-[0.85rem] sm:text-[1.025rem] font-nunito font-medium tracking-[0.08em] text-[#737373]">
           {label}
-        </div>
-        <h1 className="mt-4 sm:mt-5 font-serif text-[2.1rem] sm:text-[3.5rem] md:text-[64px] font-medium leading-[115%] tracking-[-1.14px] text-[#111]">
+        </div>}
+        <h1 className="mt-4 sm:mt-5 max-w-170 mx-auto font-serif text-[2rem] sm:text-[3rem] md:text-[60px] font-medium leading-[115%] tracking-[-1.14px] text-[#111]">
           {title}
         </h1>
-        <p className="mx-auto mt-5 sm:mt-7 max-w-185 font-medium text-[1rem] sm:text-[1.125rem] leading-[150%] text-[#4e4d46]">
+        {subTitle && <p className="mx-auto mt-3 sm:mt-4 max-w-110 font-medium text-[1rem] sm:text-[1.125rem] leading-[150%] text-[#4e4d46]">
           {subTitle}
-        </p>
-        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+        </p>}
+        <div className="mt-3 sm:mt-5 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
           <Link
             href="#"
             className={["first-btn", "py-3 w-full sm:w-65"].join(" ")}
           >
-            Talk To Us
+            Start For Free
             <Icon icon="ep:right" className="h-5 w-5 text-white" />
           </Link>
 
-          <Link
+          {isShowSecondBtn && <Link
             href="#"
             className={[
               "inline-flex items-center justify-center",
@@ -108,7 +109,7 @@ export default function HeroSection({
             ].join(" ")}
           >
             Contact Sale
-          </Link>
+          </Link>}
         </div>
       </div>
       <div className="mx-auto w-full max-w-360 px-6 pb-14">
@@ -129,7 +130,7 @@ export default function HeroSection({
           logos={BRAND_IMAGES}
           imageKey="imageSrc"
           imgClass="h-10 md:h-12"
-          wrapperHeight="h-14 md:h-20 mt-8"
+          wrapperHeight="h-14 md:h-20 mt-3"
         />
       </div>
     </section>

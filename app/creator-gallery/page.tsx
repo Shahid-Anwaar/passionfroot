@@ -3,6 +3,7 @@ import CreatorCategorySection from "@/components/Gallery/CreatorCategories";
 import CreatorGalleryStatsSection from "@/components/Gallery/CreatorStats";
 import ClickUpFooter from "@/components/LandingSections/ClickUpFooter";
 import FaqSection from "@/components/LandingSections/Faqs";
+import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 import Header from "@/components/LandingSections/Header";
 import { AI_CREATORS, FROOT_SALAD, Galleries_POSTS, GOLD_STANDARD, MARKETING_DESIGN, PRODUCTIVITY, TECH_BUSINESS } from "@/data/data";
 import { CategoryTheme } from "@/data/types";
@@ -40,7 +41,8 @@ export default function Home() {
                 </div>
             </div>
             {/* <FaqSection /> */}
-            <ClickUpFooter />
+            {/* <ClickUpFooter /> */}
+            <FooterLikeSupreme />
         </div>
     );
 }

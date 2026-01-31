@@ -36,7 +36,7 @@ const FEATURES: FeatureItem[] = [
   },
 ];
 
-export default function CampaignFeatureGridSection() {
+export default function CampaignFeatureGridSection({ imgBackColorClass = "bg-[#68bbfc]" }: { imgBackColorClass?: string }) {
   return (
     <section className="w-full bg-linear-to-b from-[#f5f3ea] to-[#FAFAF7] py-14">
       <div className="mx-auto w-full max-w-350 px-6">
@@ -73,29 +73,29 @@ export default function CampaignFeatureGridSection() {
                   <EmptySkelton classes="top-100" isReplaced={false} />
                 </div>
               </div> */}
-              <div className="relative group overflow-hidden rounded-[10px] bg-[#68bbfc] ring-1 ring-black/5">
-                              <div className="absolute w-full h-full bg-[#68bbfc]">
-                                  <EmptySkelton classes="top-0" />
-                                  <EmptySkelton classes="top-20" isReplaced={false} />
-                                  <EmptySkelton classes="top-40" />
-                                  <EmptySkelton classes="top-60" isReplaced={false} />
-                                  <EmptySkelton classes="top-80" />
-                                  <EmptySkelton classes="top-100" isReplaced={false} />
-                              </div>
-                              <div className="h-full w-full flex justify-center items-center">
-                                  <Image
-                                      src={"https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67061c285f69a857cc8bab68_Frame%20427323439.png"}
-                                      alt={item.title}
-                                      width={1200}
-                                      height={650}
-                                      className={[
-                                          "w-full object-fill z-10 max-w-md sm:max-w-xs group-hover:scale-105 transition-all duration-200",
-                                          "h-40 sm:h-52.5 md:h-62.5 my-12 rounded-lg",
-                                      ].join(" ")}
-                                  />
-                              </div>
-                              {/* {children} */}
-                          </div>
+              <div className={`relative group overflow-hidden rounded-[10px] ${imgBackColorClass} ring-1 ring-black/5`}>
+                <div className={`absolute w-full h-full ${imgBackColorClass}`}>
+                  <EmptySkelton classes="top-0" />
+                  <EmptySkelton classes="top-20" isReplaced={false} />
+                  <EmptySkelton classes="top-40" />
+                  <EmptySkelton classes="top-60" isReplaced={false} />
+                  <EmptySkelton classes="top-80" />
+                  <EmptySkelton classes="top-100" isReplaced={false} />
+                </div>
+                <div className="h-full w-full flex justify-center items-center">
+                  <Image
+                    src={"https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67061c285f69a857cc8bab68_Frame%20427323439.png"}
+                    alt={item.title}
+                    width={1200}
+                    height={650}
+                    className={[
+                      "w-full object-fill z-10 max-w-md sm:max-w-xs group-hover:scale-105 transition-all duration-200",
+                      "h-40 sm:h-52.5 md:h-62.5 my-12 rounded-lg",
+                    ].join(" ")}
+                  />
+                </div>
+                {/* {children} */}
+              </div>
 
               <h3 className="mt-5 text-[16px] font-semibold leading-snug text-[#111]">
                 {item.title}

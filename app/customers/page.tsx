@@ -3,6 +3,7 @@ import CreatorCtaSection from "@/components/LandingSections/CreaterCTASection";
 import Header from "@/components/LandingSections/Header";
 import HeroSection from "@/components/LandingSections/HeroSection";
 import ClickUpFooter from "@/components/LandingSections/ClickUpFooter";
+import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 
 export default function CreatorFeatures() {
   return (
@@ -18,7 +19,8 @@ export default function CreatorFeatures() {
       <div className="mt-8"></div>
       <BrandWallSection />
       <CreatorCtaSection />
-      <ClickUpFooter />
+      {/* <ClickUpFooter /> */}
+      <FooterLikeSupreme />
     </div>
   );
 }

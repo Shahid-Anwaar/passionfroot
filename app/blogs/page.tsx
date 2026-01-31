@@ -4,6 +4,7 @@ import AboutIntroSection from "@/components/AboutSections/AboutIntro";
 import AllPostsSection from "@/components/BlogSections/AllBlogs";
 import { getAllPosts } from "@/data/data";
 import FaqSection from "@/components/LandingSections/Faqs";
+import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 
 export default function AllBlogPage() {
   const posts = getAllPosts();
@@ -17,7 +18,8 @@ export default function AllBlogPage() {
       />
       <AllPostsSection posts={posts} />
       <FaqSection />
-      <ClickUpFooter />
+      {/* <ClickUpFooter /> */}
+      <FooterLikeSupreme />
     </div>
   );
 }

@@ -81,14 +81,14 @@ export const MENUS: MegaMenuConf[] = [
         title: "Features",
         description:
           "Explore the all-in-one tool to help creators do more brand deals - easier, and faster.",
-        href: "/",
+        href: "/features",
         icon: "tabler:sparkles",
       },
       {
         title: "Customers",
         description:
           "Learn how other creators are leveraging Passionfroot to monetize their content with brand partnerships.",
-        href: "/customers",
+        href: "/creator-stories",
         icon: "tabler:users",
       },
       {

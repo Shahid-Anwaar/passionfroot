@@ -15,7 +15,7 @@ import ClickUpHeroSection from "@/components/LandingSections/ClickUpHero";
 import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 
 
-export default function Home() {
+export default function CreatorStoriesPage() {
   return (
     <div>
       <Header />

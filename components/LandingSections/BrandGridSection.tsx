@@ -146,7 +146,7 @@ function DetailModal({
                                     "",
                                 ].join(" ")}
                             >
-                               
+
 
                                 {/* Quote text */}
                                 <p
@@ -255,7 +255,7 @@ function TileCard({ tile, onOpen }: { tile: Tile; onOpen: (t: Tile) => void }) {
         "relative overflow-hidden rounded-xl border border-black/20 bg-white shadow-[0_12px_26px_rgba(0,0,0,0.08)]";
 
     // ✅ Responsive tile height (closer to your sample)
-    const height = "h-42.5 sm:h-52.5 lg:h-[230px]";
+    const height = "h-42.5 sm:h-52.5 lg:h-[290px]";
 
     if (tile.type === "logo") {
         return (
@@ -312,14 +312,14 @@ function TileCard({ tile, onOpen }: { tile: Tile; onOpen: (t: Tile) => void }) {
             role="button"
             tabIndex={0}
             onKeyDown={(e) => (e.key === "Enter" ? onOpen(tile) : null)}
-            className={`${base} ${height} ${tile.bg} ${tile.colSpan ?? ""} px-4 py-4 sm:px-5 sm:py-4 group`}
+            className={`${base} ${height} ${tile.bg} ${tile.colSpan ?? ""} flex flex-col px-4 py-4 sm:px-5 sm:py-4 group`}
         >
             <div className="font-serif text-10 sm:text-[44px] leading-none text-[#141414]">“</div>
-            <p className="mt-1 text-[16px] sm:text-4.5 lg:text-[19px] font-semibold leading-[1.55] text-[#141414]/80 line-clamp-3">
+            <p className="mt-1 mb-auto text-[16px] sm:text-4.5 lg:text-[19px] font-semibold leading-[1.55] text-[#141414]/80 line-clamp-3">
                 {tile.quote}
             </p>
-            <div className="mt-3 text-[14px] sm:text-[16px] text-[#141414]">{tile.person?.name ?? ""}</div>
-            <div className="text-[11px] sm:text-3 font-semibold text-[#141414]/70">
+            <div className="mt-3 text-[16px] sm:text-[18px] font-semibold text-[#141414]">{tile.person?.name ?? ""}</div>
+            <div className="text-[11px] sm:text-[13px] font-semibold text-[#141414]/70">
                 {(tile.person?.title ?? "").trim()}
                 {tile.person?.company ? ` · ${tile.person.company}` : ""}
             </div>

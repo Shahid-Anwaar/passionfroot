@@ -183,5 +183,5 @@ export type CreatorCategorySectionProps = {
     title: string;
     theme: CategoryTheme;
     creators: CreatorItem[];
-    className?: string; // optional extra spacing
+    className?: string;
 };

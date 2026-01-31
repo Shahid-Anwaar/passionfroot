@@ -5,6 +5,7 @@ import PeopleBackingSection from "@/components/AboutSections/BackingPeople";
 import AboutIntroSection from "@/components/AboutSections/AboutIntro";
 import MeetTheTeamSection from "@/components/AboutSections/MeetTheTeam";
 import AboutMissionSection from "@/components/AboutSections/AboutMission";
+import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 
 export default function AboutPage() {
   return (
@@ -15,7 +16,8 @@ export default function AboutPage() {
       <MeetTheTeamSection />
       <PeopleBackingSection />
       <FaqSection />
-      <ClickUpFooter />
+      {/* <ClickUpFooter /> */}
+      <FooterLikeSupreme />
     </div>
   );
 }

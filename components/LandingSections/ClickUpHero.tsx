@@ -199,7 +199,7 @@ export default function ClickupHero() {
     };
 
     return (
-        <section className="bg-white pt-14">
+        <section className="bg-[#fdfdfb] pt-14">
             <style jsx global>{`
         @keyframes mcBorderShift {
           0% {

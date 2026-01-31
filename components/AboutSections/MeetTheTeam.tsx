@@ -1,9 +1,9 @@
 // components/MeetTheTeamSection.tsx
 "use client";
 
+import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
 
 type FastFacts = {
   passionateAbout: string;
@@ -30,7 +30,7 @@ const TEAM: TeamMember[] = [
     roleTag: "CO-FOUNDER & CEO",
     image:
       "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800",
-    hoverBg: "hover:bg-[#FADBCB]",
+    hoverBg: "hover:bg-[#ff9966]",
     subline: "UK · Founder mindset",
     bio: [
       "I care deeply about making collaboration simple and human. Building products that feel calm, intuitive, and delightful is my thing.",
@@ -202,14 +202,13 @@ export default function MeetTheTeamSection() {
               type="button"
               onClick={() => setOpenId(m.id)}
               className={[
-                "group relative rounded-2xl border border-transparent p-6 text-left transition-all",
-                "focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/40",
-                m.hoverBg,
-                "hover:border-neutral-900/30 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)]",
+                "group relative rounded-md border-2 border-transparent p-6 py-8 text-center transition-all",
+                "focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/40 hover:bg-[#ff9966]",
+                "hover:border-gray-900 hover:shadow-[5px_5px_5px_rgba(0,0,0,0.9)]",
               ].join(" ")}
             >
               {/* avatar */}
-              <div className="relative h-28 w-28 overflow-hidden rounded-full bg-neutral-200">
+              <div className="relative h-40 w-40 mx-auto overflow-hidden rounded-full bg-neutral-200">
                 <Image
                   src={m.image}
                   alt={m.name}
@@ -220,14 +219,14 @@ export default function MeetTheTeamSection() {
               </div>
 
               {/* pill */}
-              <div className="mt-5 inline-flex rounded-md bg-sky-400 px-2 py-1 text-2.5 font-semibold tracking-wide text-neutral-900">
+              <div className="mt-5 inline-flex rounded-md mx-auto text-center bg-sky-400 px-2 py-1 text-2.5 font-semibold tracking-wide text-neutral-900">
                 {m.roleTag}
               </div>
 
               {/* name + arrow */}
-              <div className="mt-3 flex items-center justify-between gap-3">
+              <div className="relative mt-3 flex items-center justify-center gap-3 mx-auto">
                 <div className="font-serif text-xl text-neutral-900">{m.name}</div>
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full transition-transform group-hover:translate-x-0.5">
+                <span className="absolute -bottom-1 right-0 inline-flex h-8 w-8 items-center justify-center rounded-full transition-transform group-hover:translate-x-0.5">
                   <Icon icon="mdi:arrow-right" className="text-neutral-900" width="18" height="18" />
                 </span>
               </div>

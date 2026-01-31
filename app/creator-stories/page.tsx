@@ -16,14 +16,21 @@ export default function CreatorStoriesPage() {
             <Header />
             <CreatorGalleryStatsSection />
             <div className="relative">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0,rgba(255,255,255,0)_58%)]" />
+                <div className="pointer-events-none absolute inset-0 bg-white" />
                 <div className="relative mx-auto max-w-7xl px-6 md:px-10">
                     <CreatorCategorySection title="Gold Standard" theme={ORANGE} creators={GOLD_STANDARD} />
+                </div>
+            </div>
+            <div className="relative">
+                <div className="pointer-events-none absolute inset-0 bg-[#f6f2e8]" />
+                <div className="relative mx-auto max-w-7xl px-6 md:px-10">
                     <CreatorCategorySection title="Marketing & Design" theme={BLUE} creators={MARKETING_DESIGN} />
-                    {/* <CreatorCategorySection title="Productivity & Personal Development" theme={GREEN} creators={PRODUCTIVITY} /> */}
-                    <CreatorCategorySection title="Tech & Business" theme={PINK} creators={TECH_BUSINESS} />
-                    {/* <CreatorCategorySection title="Artificial Intelligence" theme={PURPLE} creators={AI_CREATORS} /> */}
-                    {/* <CreatorCategorySection title="Froot Salad!" theme={CYAN} creators={FROOT_SALAD} /> */}
+                </div>
+            </div>
+            <div className="relative">
+                <div className="pointer-events-none absolute inset-0 bg-white" />
+                <div className="relative mx-auto max-w-7xl px-6 md:px-10">
+                 <CreatorCategorySection title="Tech & Business" theme={PINK} creators={TECH_BUSINESS} />
                 </div>
             </div>
             <FooterLikeSupreme />

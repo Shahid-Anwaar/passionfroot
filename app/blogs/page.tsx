@@ -5,17 +5,14 @@ import AllPostsSection from "@/components/BlogSections/AllBlogs";
 import { getAllPosts } from "@/data/data";
 import FaqSection from "@/components/LandingSections/Faqs";
 import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
+import BlogHero from "@/components/BlogSections/BlogHero";
 
 export default function AllBlogPage() {
   const posts = getAllPosts();
   return (
     <div>
       <Header />
-      <AboutIntroSection
-        imageSrc="https://images.pexels.com/photos/3184633/pexels-photo-3184633.jpeg?auto=compress&cs=tinysrgb&w=900"
-        title={"Passionfroot Blogs"}
-        subtitle="Practical content for creators and brands—campaign strategy, partnerships, and monetization tips."
-      />
+      <BlogHero />
       <AllPostsSection posts={posts} />
       <FaqSection />
       {/* <ClickUpFooter /> */}

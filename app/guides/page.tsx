@@ -7,13 +7,13 @@ import FaqSection from "@/components/LandingSections/Faqs";
 import FooterLikeSupreme from "@/components/LandingSections/FooterSupreme";
 import BlogHero from "@/components/BlogSections/BlogHero";
 
-export default function StoriesPage() {
+export default function GuidesPage() {
   const posts = getAllPosts();
   return (
     <div>
       <Header />
-      <BlogHero title="passionfroot" subtitle="Stories" />
-      <AllPostsSection path="/stories/" title="All Stories" posts={posts} />
+      <BlogHero title="passionfroot" subtitle="Guidess" />
+      <AllPostsSection path="" title="All Guides" posts={posts} />
       <FaqSection />
       {/* <ClickUpFooter /> */}
       <FooterLikeSupreme />

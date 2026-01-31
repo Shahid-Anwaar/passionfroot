@@ -22,23 +22,23 @@ fueling modern brand growth`,
   "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
 }: Props) {
   return (
-    <section className="bg-[#F6F2E8] py-10 md:py-14">
+    <section className="bg-[#FF9E74] py-10 md:py-14">
       {/* Orange card */}
       <div className="mx-auto max-w-8xl px-4 md:px-10">
-        <div className="relative overflow-hidden rounded-2xl bg-[#FF9E74] px-6 py-10 md:px-12 md:py-14">
+        <div className="relative overflow-hidden px-6 py-10 md:px-12 md:py-14">
           {/* “hand-drawn” top/bottom edge */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-3 bg-[radial-gradient(circle_at_10px_0px,rgba(246,242,232,1)_0_7px,transparent_8px)] bg-size-[18px_18px] opacity-70" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3 bg-[radial-gradient(circle_at_10px_18px,rgba(246,242,232,1)_0_7px,transparent_8px)] bg-size-[18px_18px] opacity-70" />
+          {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-3 bg-[radial-gradient(circle_at_10px_0px,rgba(246,242,232,1)_0_7px,transparent_8px)] bg-size-[18px_18px] opacity-70" /> */}
+          {/* <div className="pointer-events-none absolute inset-x-0 bottom-0 h-3 bg-[radial-gradient(circle_at_10px_18px,rgba(246,242,232,1)_0_7px,transparent_8px)] bg-size-[18px_18px] opacity-70" /> */}
 
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
             {/* Left */}
-            <div className="flex flex-col justify-between">
-              <h2 className="whitespace-pre-line font-serif text-3xl leading-[1.06] tracking-tight text-neutral-900 sm:text-4xl md:text-5xl">
+            <div className="flex justify-start items-center">
+              <h2 className="whitespace-pre-line font-serif max-w-2xl text-3xl leading-[1.06] tracking-tight text-neutral-900 sm:text-5xl md:text-6xl">
                 {title}
               </h2>
 
               {/* Illustration */}
-              <div className="mt-8 flex items-end gap-4">
+              {/* <div className="mt-8 flex items-end gap-4">
                 <div className="relative h-23 w-40 sm:h27.5 sm:w-47.5">
                   <Image
                     src={imageSrc}
@@ -48,7 +48,7 @@ fueling modern brand growth`,
                     priority={false}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right */}

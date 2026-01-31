@@ -37,7 +37,7 @@ const PEOPLE: Person[] = [
 
 export default function PeopleBackingSection() {
   return (
-    <section className="bg-[#F6F2E8]">
+    <section className="bg-[#a8ebff]">
       <div className="mx-auto max-w-360 px-6 py-14 md:px-10 md:py-20">
         <h2 className="max-w-3xl font-serif text-4xl leading-[1.05] tracking-tight text-neutral-900 md:text-6xl">
           Proudly introducing the people

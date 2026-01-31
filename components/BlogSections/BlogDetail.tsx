@@ -1,5 +1,6 @@
 "use client"
 import { BlogBlock, BlogPost } from "@/data/types";
+import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,65 +19,121 @@ function renderBlock(block: BlogBlock, idx: number) {
         <h2
           key={idx}
           id={slugify(block.text)}
-          className="mt-10 scroll-mt-24 font-serif text-2xl leading-tight text-neutral-900 md:text-3xl"
+          className="
+            mt-14 scroll-mt-28
+            font-serif font-semibold
+            text-[30px] leading-[1.15] tracking-[-0.01em] text-neutral-900
+            md:mt-16 md:text-[44px] md:leading-[1.12]
+          "
         >
           {block.text}
         </h2>
       );
+
     case "h3":
       return (
         <h3
           key={idx}
           id={slugify(block.text)}
-          className="mt-8 scroll-mt-24 font-serif text-xl text-neutral-900 md:text-2xl"
+          className="
+            mt-10 scroll-mt-28
+            font-serif font-semibold
+            text-[22px] leading-[1.2] tracking-[-0.01em] text-neutral-900
+            md:mt-12 md:text-[32px] md:leading-[1.16]
+          "
         >
           {block.text}
         </h3>
       );
+
     case "p":
       return (
-        <p key={idx} className="mt-4 text-[15px] leading-7 text-neutral-800">
+        <p
+          key={idx}
+          className="
+            mt-6
+            text-[16px] leading-[30px] text-neutral-800
+            md:text-[18px] md:leading-[34px]
+          "
+        >
           {block.text}
         </p>
       );
+
     case "bullets":
       return (
-        <ul key={idx} className="mt-4 list-disc space-y-2 pl-5 text-[15px] leading-7 text-neutral-800">
+        <ul
+          key={idx}
+          className="
+            mt-6 list-decimal space-y-3 pl-6
+            text-[16px] leading-[30px] text-neutral-800
+            md:text-[18px] md:leading-[34px]
+          "
+        >
           {block.items.map((it, i) => (
-            <li key={i}>{it}</li>
+            <li key={i} className="pl-1">
+              {it}
+            </li>
           ))}
         </ul>
       );
+
     case "callout":
       return (
-        <div key={idx} className="mt-8 rounded-2xl border border-neutral-900/10 bg-white/60 p-6">
+        <div
+          key={idx}
+          className="
+            mt-10 rounded-2xl border border-neutral-900/10
+            bg-neutral-50/80 p-6
+            md:mt-12 md:p-8
+          "
+        >
           {block.title ? (
-            <div className="text-xs font-semibold tracking-wide text-neutral-900">{block.title}</div>
+            <div className="text-[12px] font-semibold uppercase tracking-[0.22em] text-neutral-700">
+              {block.title}
+            </div>
           ) : null}
-          <p className="mt-2 text-[15px] leading-7 text-neutral-800">{block.text}</p>
+
+          <p className="mt-4 text-[16px] leading-[30px] text-neutral-800 md:text-[18px] md:leading-[34px]">
+            {block.text}
+          </p>
         </div>
       );
+
     case "image":
       return (
-        <figure key={idx} className="mt-8">
-          <div className="relative overflow-hidden rounded-2xl shadow-[0_14px_40px_rgba(0,0,0,0.08)]">
+        <figure key={idx} className="mt-10 md:mt-12">
+          <div
+            className="
+              overflow-hidden rounded-[18px]
+              bg-neutral-100
+              shadow-[0_18px_55px_rgba(0,0,0,0.12)]
+            "
+          >
+            {/* keep aspect-video, but increase perceived size by spacing + container width on page */}
             <div className="relative aspect-video w-full">
               <Image src={block.src} alt={block.alt} fill className="object-cover" />
             </div>
           </div>
+
           {block.caption ? (
-            <figcaption className="mt-2 text-xs text-neutral-600">{block.caption}</figcaption>
+            <figcaption className="mt-3 text-[16px] leading-5 text-neutral-600">
+              {block.caption}
+            </figcaption>
           ) : null}
         </figure>
       );
+
     case "divider":
-      return <div key={idx} className="my-10 h-px w-full bg-neutral-900/10" />;
+      return <div key={idx} className="my-14 h-px w-full bg-neutral-900/10 md:my-16" />;
+
     default:
       return null;
   }
 }
 
-export default function BlogDetailSection({
+
+export default function BlogDetailhidenSection({
   post,
   related,
   path = "/blogs",
@@ -94,31 +151,47 @@ export default function BlogDetailSection({
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440] px-5 py-10 md:px-10 md:py-14 md:pt-24">
+      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-16 md:px-10 md:pt-24">
         {/* top bar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-neutral-600">
-          <Link href={path} className="hover:underline">← Back to {path === "/blogs" ? "Blogs" : "Stories"} </Link>
-          <span className="rounded-full bg-neutral-100 px-3 py-1 text-[13px] font-semibold text-neutral-700">
-            {post.category}
-          </span>
+        <div className="flex items-center gap-3 text-[12px] tracking-wide text-neutral-500">
+
+          <Link
+            href={path}
+            className="inline-flex items-center text-sm gap-2 uppercase hover:text-neutral-800"
+          >
+            <Icon icon="mdi:arrow-left" className="h-[18px] w-[18px]" />
+            Back to {path === "/blogs" ? "Blog" : "Stories"}
+          </Link>
         </div>
 
         {/* title */}
-        <h1 className="mt-6 font-serif text-3xl leading-[1.05] tracking-tight text-neutral-900 md:text-5xl">
+        <h1 className="mx-auto mt-10 max-w-[980px] text-center font-serif text-[44px] font-semibold leading-[1.03] tracking-[-0.02em] text-neutral-900 md:text-[74px]">
           {post.title}
         </h1>
 
         {/* meta */}
-        <div className="mt-3 text-sm text-neutral-600">
-          {post.date} · {post.readTime} · {post.author}
+        <div className="mt-8 text-center text-[12px] font-medium uppercase tracking-[0.22em] text-neutral-600">
+          {post.date} <span className="mx-3">•</span> {post.readTime}
+        </div>
+
+        {/* author */}
+        <div className="mt-6 text-center text-[12px] font-semibold uppercase tracking-[0.22em] text-neutral-700">
+          BY {post.author}
         </div>
 
         {/* cover */}
-        <div className="mt-8 overflow-hidden rounded-2xl shadow-[0_16px_55px_rgba(0,0,0,0.12)]">
-          <div className="relative aspect-16/7 w-full">
-            <Image src={post.cover} alt={post.title} fill className="object-cover" />
+        <div className="mt-10 overflow-hidden rounded-[18px] shadow-[0_18px_55px_rgba(0,0,0,0.14)]">
+          <div className="relative aspect-[16/7] w-full">
+            <Image
+              src={post.cover}
+              alt={post.title}
+              fill
+              priority
+              className="object-cover"
+            />
           </div>
         </div>
+
 
         {/* content + sidebar */}
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_320px]">

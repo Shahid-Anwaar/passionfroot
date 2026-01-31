@@ -1536,60 +1536,971 @@ export const TILES: TileCard[] = [
 
 
 export const BRAND_IMAGES: { imageSrc: string }[] = [
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/68b1b720e278d278fe3721f5_framer.avif",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcdbe5ac9f5bee12bbe_image%2080.avif",
-    },
-    // {
-    //   imageSrc:
-    //     "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67ab9dcd0f694616a4ad44bf_Ripplinglogo.avif",
-    // },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eec3da0554e7583437e50_Pika.png",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eec5afa92c45dcee063bd_Tavus.png",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcd1c59cbfc2851afc5_Frame-1.avif",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcd8f80679c4ad96f2c_Frame-2.avif",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/68b1b7401c894092087d3170_scale.avif",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eea556429202526d8f511_Figma.png",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcdd593d7389f1e48a8_image%2075.avif",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eec07687d8b7d9f92084d_GraphiteLogo-p-500.png",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eebe3e73220bad80bd9cf_ElevenLabs-p-500.png",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/68b1b6e9b75902ba3cf186b8_replit.avif",
-    },
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcd4133943d0ca43d21_Frame-4.avif",
-    },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/68b1b720e278d278fe3721f5_framer.avif",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcdbe5ac9f5bee12bbe_image%2080.avif",
+  },
+  // {
+  //   imageSrc:
+  //     "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/67ab9dcd0f694616a4ad44bf_Ripplinglogo.avif",
+  // },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eec3da0554e7583437e50_Pika.png",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eec5afa92c45dcee063bd_Tavus.png",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcd1c59cbfc2851afc5_Frame-1.avif",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcd8f80679c4ad96f2c_Frame-2.avif",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/68b1b7401c894092087d3170_scale.avif",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eea556429202526d8f511_Figma.png",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcdd593d7389f1e48a8_image%2075.avif",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eec07687d8b7d9f92084d_GraphiteLogo-p-500.png",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/691eebe3e73220bad80bd9cf_ElevenLabs-p-500.png",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/68b1b6e9b75902ba3cf186b8_replit.avif",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/6340255dae4cf91cdda9ff9f/66f4efcd4133943d0ca43d21_Frame-4.avif",
+  },
+];
+
+export const makePrivacyPolicyBlocks = (): BlogBlock[] => [
+  // =========================
+  // Preamble
+  // =========================
+  { type: "h2", text: "Preamble" },
+  {
+    type: "p",
+    text:
+      "This Privacy Policy explains what types of personal data (“Data”) we process, why we process it, and the scope of that processing.",
+  },
+  {
+    type: "p",
+    text:
+      "It applies to processing carried out in connection with our services — including our websites and our external online presences (for example, social media profiles).",
+  },
+  {
+    type: "callout",
+    title: "Last updated",
+    text: "13 June, 2025",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Controller
+  // =========================
+  { type: "h2", text: "Controller" },
+  { type: "p", text: "Passionfroot GmbH" },
+  { type: "p", text: "Chausseestraße 40A, 10115 Berlin" },
+  {
+    type: "p",
+    text:
+      "Email: support@passionfroot.me (use this contact for privacy-related questions as well).",
+  },
+  {
+    type: "p",
+    text:
+      "Legal notice (Impressum) is available on the company website.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Overview of processing operations
+  // =========================
+  { type: "h2", text: "Overview of processing operations" },
+
+  { type: "h3", text: "Categories of processed data" },
+  {
+    type: "bullets",
+    items: [
+      "Event Data (Facebook): data about interactions/actions (e.g., visits, clicks, purchases) used for audience building and ad measurement; not the actual comment content, login details, or direct contact info.",
+      "Content data: text inputs, photos, videos.",
+      "Contact data: email address, telephone number.",
+      "Meta/communication data: device details and IP address.",
+      "Usage data: pages visited, access times, interest in content.",
+    ],
+  },
+
+  { type: "h3", text: "Categories of data subjects" },
+  {
+    type: "bullets",
+    items: [
+      "Prospective customers",
+      "Customers",
+      "Communication partners (e.g., people contacting us or receiving messages)",
+      "Users / website visitors",
+    ],
+  },
+
+  { type: "h3", text: "Purposes of processing" },
+  {
+    type: "bullets",
+    items: [
+      "Providing and improving online services",
+      "Customer support and contractual delivery",
+      "Internal administration and organizational operations",
+      "Marketing and remarketing",
+      "Feedback collection",
+      "Contact requests and communication",
+      "Conversion tracking / measuring marketing effectiveness",
+      "Building user-related profiles for marketing (where applicable)",
+      "Custom Audiences for targeted advertising (where applicable)",
+    ],
+  },
+
+  {
+    type: "callout",
+    title: "Facebook retention note",
+    text:
+      "Event Data used for Facebook audiences is retained by Facebook up to a maximum period (as described in the policy).",
+  },
+
+  { type: "divider" },
+
+  // =========================
+  // Legal bases
+  // =========================
+  { type: "h2", text: "Legal bases for the processing" },
+  {
+    type: "p",
+    text:
+      "Processing is based on GDPR legal grounds depending on the context — and additional national rules (such as Germany’s BDSG) may also apply.",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Consent (GDPR Art. 6(1)(a)) — when you actively agree.",
+      "Contract / pre-contract steps (GDPR Art. 6(1)(b)) — to provide services or respond before a contract.",
+      "Legitimate interests (GDPR Art. 6(1)(f)) — for operating and improving services, security, and direct marketing (where permitted).",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Transmission of personal data
+  // =========================
+  { type: "h2", text: "Transmission of personal data" },
+  {
+    type: "p",
+    text:
+      "In some cases, data may be shared with recipients such as IT providers or embedded-content providers. Where required, appropriate contracts/agreements are used to protect the data.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Third countries
+  // =========================
+  { type: "h2", text: "Data processing in third countries" },
+  {
+    type: "p",
+    text:
+      "If data is processed outside the EU/EEA (or transferred to third parties outside those regions), it is done under applicable safeguards such as recognized adequacy decisions, standard contractual clauses, or comparable protections.",
+  },
+  {
+    type: "p",
+    text:
+      "You can contact the company to request information about the safeguards relevant to a specific transfer.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Erasure
+  // =========================
+  { type: "h2", text: "Erasure of data" },
+  {
+    type: "p",
+    text:
+      "Data is deleted when it is no longer needed for the stated purposes, unless legal obligations or legitimate reasons require longer retention (for example, to defend legal claims).",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Cookies
+  // =========================
+  { type: "h2", text: "Use of cookies" },
+  {
+    type: "p",
+    text:
+      "Cookies (and similar technologies) store information on your device to support website functions, remember settings, measure usage, and (where applicable) support marketing and personalization.",
+  },
+  {
+    type: "h3",
+    text: "Cookie types",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Session cookies: deleted when you close your browser.",
+      "Persistent cookies: remain for a longer period (e.g., to remember preferences).",
+      "First-party cookies: set by the website owner.",
+      "Third-party cookies: set by other providers (e.g., analytics/ads).",
+      "Essential cookies: required for site operation and security.",
+      "Statistics/marketing/personalization cookies: used for measurement and targeting (where consent is required).",
+    ],
+  },
+  {
+    type: "p",
+    text:
+      "Cookie processing may rely on consent (when prompted via a cookie banner) or legitimate interests (for essential functions and service improvements).",
+  },
+  {
+    type: "callout",
+    title: "Typical retention",
+    text:
+      "Unless stated otherwise, persistent cookie retention can be up to around two years (as described in the policy).",
+  },
+  {
+    type: "p",
+    text:
+      "Cookie consent can be managed and revoked through the cookie management solution (Cookiefirst / Usercentrics) as described in the policy.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Hosting & logs
+  // =========================
+  { type: "h2", text: "Provision of online services and web hosting" },
+  {
+    type: "p",
+    text:
+      "Web hosting is used to provide the website securely and efficiently. This can include infrastructure, storage, security services, and technical maintenance.",
+  },
+  {
+    type: "p",
+    text:
+      "Server log files may be collected for security and stability (e.g., to prevent abuse and ensure reliable performance). Logs can include visited pages/files, timestamps, data volume, browser/OS, referrer URL, IP address, and requesting provider.",
+  },
+  {
+    type: "callout",
+    title: "Hosting provider example",
+    text:
+      "Netlify is listed as a hosting provider in the policy.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Contact
+  // =========================
+  { type: "h2", text: "Contacting us" },
+  {
+    type: "p",
+    text:
+      "When you contact the company (e.g., via form, email, phone, or social media), your details and message content are processed to respond and handle the request.",
+  },
+  {
+    type: "p",
+    text:
+      "Legal basis is typically contract/pre-contract steps (when relevant) or legitimate interests in answering inquiries.",
+  },
+  {
+    type: "callout",
+    title: "Tooling example",
+    text:
+      "Notion is mentioned as a service provider used in this context.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Cloud services
+  // =========================
+  { type: "h2", text: "Cloud services" },
+  {
+    type: "p",
+    text:
+      "Cloud tools may be used for document storage, calendars, email delivery, spreadsheets, sharing documents, chats, and audio/video conferencing.",
+  },
+  {
+    type: "p",
+    text:
+      "Providers may process master/contact data and content as part of collaboration workflows. They may also process usage data/metadata for security and service optimization.",
+  },
+  {
+    type: "p",
+    text:
+      "If cloud tools are used to publish content or share documents externally, providers may store cookies for analytics or preferences, depending on legal requirements.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Newsletter
+  // =========================
+  { type: "h2", text: "Newsletter and electronic communications" },
+  {
+    type: "p",
+    text:
+      "Newsletters and similar messages may be sent to share information about the company, services, and promotions. In many cases, providing an email address is enough to subscribe, though additional fields may be requested (e.g., a name).",
+  },
+  {
+    type: "h3",
+    text: "Double opt-in",
+  },
+  {
+    type: "p",
+    text:
+      "Newsletter subscriptions typically use a double opt-in step: after signing up, you confirm via email to prevent misuse of someone else’s email address.",
+  },
+  {
+    type: "h3",
+    text: "Logging and retention",
+  },
+  {
+    type: "p",
+    text:
+      "To demonstrate consent and compliance, subscription timestamps and IP address may be logged. Unsubscribed email addresses may be retained for a limited period for evidence/defense purposes (as described in the policy).",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Online marketing
+  // =========================
+  { type: "h2", text: "Online marketing" },
+  {
+    type: "p",
+    text:
+      "Data may be processed for online marketing — including showing content/ads based on potential interests and measuring how effective campaigns are.",
+  },
+  {
+    type: "p",
+    text:
+      "This can involve building pseudonymous user profiles stored in cookies or similar technologies, using data such as pages visited, content viewed, and device/browser information.",
+  },
+  {
+    type: "callout",
+    title: "IP masking",
+    text:
+      "The policy describes using IP masking (shortening IP addresses) as a pseudonymization measure in some contexts.",
+  },
+  {
+    type: "h3",
+    text: "Facebook Pixel & Custom Audiences",
+  },
+  {
+    type: "p",
+    text:
+      "Facebook Pixel can be used to build target groups (Custom Audiences), show ads to relevant audiences (including via partner networks), and measure conversions (e.g., whether an ad led to a website action).",
+  },
+  {
+    type: "p",
+    text:
+      "The policy references special agreements and notes users can often exercise certain rights directly with the platform provider for platform-processed data.",
+  },
+  {
+    type: "h3",
+    text: "Analytics provider example",
+  },
+  {
+    type: "p",
+    text:
+      "Google Analytics is listed as a provider in the policy, with opt-out options described via provider tools/settings.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Social media
+  // =========================
+  { type: "h2", text: "Profiles in social networks (social media)" },
+  {
+    type: "p",
+    text:
+      "The company maintains social media profiles to communicate with users and share information. Social platforms may process data outside the EU/EEA, which can affect how rights are enforced depending on jurisdiction.",
+  },
+  {
+    type: "p",
+    text:
+      "Platforms often process usage behavior for research and advertising, potentially creating profiles and using cookies. Opt-out options are typically provided by the platform.",
+  },
+  {
+    type: "callout",
+    title: "Joint responsibility (limited scope)",
+    text:
+      "The policy describes joint responsibility with social media providers for the collection of certain page-visitor data (but not necessarily further processing).",
+  },
+  {
+    type: "p",
+    text:
+      "Listed platforms in the policy include Instagram, Facebook, LinkedIn, and also references to Twitter/X, TikTok, and YouTube.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Plugins / embedded content
+  // =========================
+  { type: "h2", text: "Plugins and embedded functions and content" },
+  {
+    type: "p",
+    text:
+      "Embedded content (like videos, graphics, or other widgets) can be loaded from third-party providers. To deliver that content, the provider typically needs your IP address.",
+  },
+  {
+    type: "p",
+    text:
+      "Third parties may also use pixel tags/web beacons and cookies for statistics or marketing, creating pseudonymous usage records.",
+  },
+  {
+    type: "callout",
+    title: "Provider examples",
+    text:
+      "The policy lists Google Fonts and Hotjar as examples of embedded/analytics-related services.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Changes
+  // =========================
+  { type: "h2", text: "Changes and updates to the privacy policy" },
+  {
+    type: "p",
+    text:
+      "The company may update this policy when processing practices change. Users are encouraged to review it periodically. If a change requires user action (such as new consent), users will be informed accordingly.",
+  },
+  {
+    type: "p",
+    text:
+      "Addresses and contact details of third-party companies may change over time — users should verify them before contacting those providers.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Rights
+  // =========================
+  { type: "h2", text: "Rights of data subjects" },
+  {
+    type: "p",
+    text:
+      "Under GDPR, you have rights related to your personal data. Key rights described in the policy include:",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Right to object (especially to processing based on legitimate interests, and always to direct marketing).",
+      "Right to withdraw consent at any time (where processing is based on consent).",
+      "Right of access (confirmation, details, and a copy of your data).",
+      "Right to rectification (fix inaccurate data or complete incomplete data).",
+      "Right to erasure or restriction (where legal conditions apply).",
+      "Right to data portability (receive your data in a structured format or transmit it to another controller).",
+      "Right to lodge a complaint with a supervisory authority.",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Terminology
+  // =========================
+  { type: "h2", text: "Terminology and definitions" },
+  {
+    type: "p",
+    text:
+      "The policy includes definitions to clarify terms used throughout (many drawn from GDPR). Examples include:",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Controller: the entity deciding why/how personal data is processed.",
+      "Conversion tracking: measuring whether marketing led to a desired action.",
+      "Custom Audiences / lookalikes: audience-building for ads based on behavior/interest signals.",
+      "IP masking: shortening IP addresses to pseudonymize processing.",
+      "Personal data: information linked to an identified/identifiable person.",
+      "Processing: any handling of data (collection, storage, transfer, deletion).",
+      "Remarketing: re-engaging users based on prior interactions (e.g., showing related ads later).",
+      "Profiles: automated processing to analyze or predict aspects like interests/behavior.",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Contact
+  // =========================
+  { type: "h2", text: "Contact us" },
+  {
+    type: "p",
+    text:
+      "For questions about the policy, you can contact the company by email (support@passionfroot.me).",
+  },
+];
+
+export const makeCookiePolicyBlocks = (): BlogBlock[] => [
+  // =========================
+  // Intro
+  // =========================
+  { type: "h2", text: "Cookie Policy" },
+  {
+    type: "p",
+    text:
+      "This Cookie Policy explains what cookies and similar technologies are, how we use them, and how you can manage your preferences when using our websites and online services.",
+  },
+  {
+    type: "p",
+    text:
+      "Depending on your location, certain cookies may only be placed with your consent (for example, analytics or marketing cookies). Essential cookies are usually required to provide core site functionality and security.",
+  },
+  {
+    type: "p",
+    text: "Last Update: 13 June, 2025",
+  },
+  { type: "divider" },
+
+  // =========================
+  // What are cookies
+  // =========================
+  { type: "h2", text: "What are cookies?" },
+  {
+    type: "p",
+    text:
+      "Cookies are small text files stored on your device (computer, phone, tablet) when you visit a website. They help websites recognize your device and remember certain information, such as your preferences or whether you’re logged in.",
+  },
+  {
+    type: "p",
+    text:
+      "We also use similar technologies (for example, pixels, tags, local storage, and SDKs). For simplicity, this policy refers to all of these as “cookies”.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Why we use cookies
+  // =========================
+  { type: "h2", text: "Why we use cookies" },
+  {
+    type: "p",
+    text:
+      "We use cookies to operate our services, keep them secure, understand usage, and improve performance. In some cases (where permitted), we also use cookies to personalize content and measure marketing effectiveness.",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Essential: required for site functionality, security, and fraud prevention.",
+      "Preferences: remember settings such as language or session choices.",
+      "Analytics: understand how visitors use the site to improve UX and performance.",
+      "Marketing: measure ad effectiveness and show relevant content (where applicable).",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Cookie types
+  // =========================
+  { type: "h2", text: "Types of cookies we use" },
+
+  { type: "h3", text: "1) Essential cookies" },
+  {
+    type: "p",
+    text:
+      "These cookies are necessary for the website to function and cannot be switched off in many systems. They are usually set in response to actions you make, such as setting privacy preferences, logging in, or filling in forms.",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Session management and authentication",
+      "Security (e.g., abuse prevention, rate limiting)",
+      "Load balancing and infrastructure stability",
+      "Remembering your cookie choices (where applicable)",
+    ],
+  },
+
+  { type: "h3", text: "2) Preference cookies" },
+  {
+    type: "p",
+    text:
+      "Preference cookies help the site remember choices you make to provide a more consistent experience (for example, language preferences).",
+  },
+
+  { type: "h3", text: "3) Analytics cookies" },
+  {
+    type: "p",
+    text:
+      "Analytics cookies help us measure traffic and understand how visitors move around the website. This helps us improve content, navigation, and performance. Where required, analytics cookies are only used with your consent.",
+  },
+
+  { type: "h3", text: "4) Marketing cookies" },
+  {
+    type: "p",
+    text:
+      "Marketing cookies may be used to measure advertising performance and help deliver relevant ads. These cookies may be set by us or by third-party providers. Where required, marketing cookies are only used with your consent.",
+  },
+
+  { type: "divider" },
+
+  // =========================
+  // First/third party + duration
+  // =========================
+  { type: "h2", text: "First-party and third-party cookies" },
+  {
+    type: "p",
+    text:
+      "First-party cookies are set by our website. Third-party cookies are set by providers whose tools we use (for example, analytics or embedded content). Third parties may process your data under their own policies.",
+  },
+
+  { type: "h3", text: "Session vs persistent cookies" },
+  {
+    type: "bullets",
+    items: [
+      "Session cookies: deleted when you close your browser.",
+      "Persistent cookies: remain for a set period or until you delete them.",
+    ],
+  },
+  {
+    type: "callout",
+    title: "Typical retention",
+    text:
+      "Retention depends on the cookie type. Some cookies expire at the end of the session; others may persist for weeks or months. Where applicable, our cookie banner or preference center shows more detail.",
+  },
+
+  { type: "divider" },
+
+  // =========================
+  // Legal basis (GDPR-friendly)
+  // =========================
+  { type: "h2", text: "Legal basis for using cookies" },
+  {
+    type: "p",
+    text:
+      "Where required by law, we rely on your consent for placing non-essential cookies (such as analytics or marketing cookies). Essential cookies are used based on legitimate interests (providing a secure and functional website) or where necessary to provide the service you request.",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Consent: for analytics/marketing cookies where legally required.",
+      "Legitimate interests: for security, fraud prevention, and essential operations.",
+      "Contract / requested service: where cookies are needed to provide features you use.",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Managing preferences
+  // =========================
+  { type: "h2", text: "How to manage your cookie preferences" },
+  {
+    type: "p",
+    text:
+      "You can manage cookies using (1) our cookie banner / preference center (if available), and (2) your browser settings. You can also delete cookies already stored on your device.",
+  },
+
+  { type: "h3", text: "Cookie banner / preference center" },
+  {
+    type: "p",
+    text:
+      "If our website provides a cookie banner or preference center, you can use it to accept, reject, or customize non-essential cookie categories. You can also change your choice later.",
+  },
+
+  { type: "h3", text: "Browser settings" },
+  {
+    type: "p",
+    text:
+      "Most browsers allow you to block or delete cookies and control site permissions. Blocking some cookies may affect website functionality (for example, login or preferences).",
+  },
+
+  { type: "divider" },
+
+  // =========================
+  // Common cookie purposes
+  // =========================
+  { type: "h2", text: "Common cookies and similar technologies" },
+  {
+    type: "p",
+    text:
+      "Below are examples of common technologies you may encounter. The exact tools can vary over time depending on what is used on the site.",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Analytics tools: help measure page views, sessions, and site performance.",
+      "Marketing pixels/tags: measure conversions and campaign performance.",
+      "Embedded media: video players or widgets may load cookies from providers.",
+      "Fraud/security tools: reduce spam, abuse, and account compromise attempts.",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Do Not Track
+  // =========================
+  { type: "h2", text: "Do Not Track" },
+  {
+    type: "p",
+    text:
+      "Some browsers offer a “Do Not Track” (DNT) signal. Because there is no consistent industry standard for interpreting DNT, we may not respond to DNT signals in a uniform way. You can still control cookies via the preference center (if available) and browser settings.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Updates
+  // =========================
+  { type: "h2", text: "Changes to this Cookie Policy" },
+  {
+    type: "p",
+    text:
+      "We may update this Cookie Policy when we change how cookies are used or when required by law. We encourage you to review this policy periodically.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Contact
+  // =========================
+  { type: "h2", text: "Contact us" },
+  {
+    type: "p",
+    text:
+      "If you have questions about this Cookie Policy or how we use cookies, contact us at support@passionfroot.me.",
+  },
+];
+
+export const makeTermsAndConditionsBlocks = (): BlogBlock[] => [
+  // =========================
+  // Intro
+  // =========================
+  { type: "h2", text: "Terms & Conditions" },
+  {
+    type: "p",
+    text:
+      "These Terms & Conditions (“Terms”) govern your access to and use of our websites, help center, and related online services (collectively, the “Services”). By accessing or using the Services, you agree to these Terms.",
+  },
+  {
+    type: "callout",
+    title: "Last updated",
+    text: "13 June, 2025",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Who we are
+  // =========================
+  { type: "h2", text: "Who we are" },
+  {
+    type: "p",
+    text:
+      "The Services are provided by Passionfroot GmbH (“we”, “us”, “our”). You can contact us at support@passionfroot.me for questions related to these Terms.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Eligibility
+  // =========================
+  { type: "h2", text: "Eligibility" },
+  {
+    type: "p",
+    text:
+      "You must be able to form a legally binding agreement to use the Services. If you use the Services on behalf of a company or another entity, you confirm that you have the authority to bind that entity to these Terms.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Accounts
+  // =========================
+  { type: "h2", text: "Accounts and access" },
+  {
+    type: "p",
+    text:
+      "Some parts of the Services may require an account. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Provide accurate account information and keep it updated.",
+      "Do not share your password or access tokens publicly.",
+      "Notify us promptly if you suspect unauthorized access.",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Acceptable use
+  // =========================
+  { type: "h2", text: "Acceptable use" },
+  {
+    type: "p",
+    text:
+      "You agree to use the Services lawfully and respectfully. You must not misuse the Services or attempt to harm the platform, other users, or third parties.",
+  },
+  {
+    type: "bullets",
+    items: [
+      "Do not violate applicable laws or third-party rights.",
+      "Do not attempt to access data or accounts that are not yours.",
+      "Do not introduce malware, abuse APIs, or overload infrastructure.",
+      "Do not scrape content in a way that violates our policies or applicable law.",
+      "Do not use the Services to send spam or fraudulent communications.",
+    ],
+  },
+  { type: "divider" },
+
+  // =========================
+  // Content
+  // =========================
+  { type: "h2", text: "Content and user submissions" },
+  {
+    type: "p",
+    text:
+      "You may be able to submit content through the Services (such as text, files, or messages). You retain ownership of your content, but you grant us the rights necessary to host, process, display, and deliver it as part of the Services.",
+  },
+  {
+    type: "p",
+    text:
+      "You are responsible for ensuring you have the rights to submit your content and that your content does not infringe third-party rights or violate law.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Intellectual property
+  // =========================
+  { type: "h2", text: "Intellectual property" },
+  {
+    type: "p",
+    text:
+      "We and our licensors own the Services, including software, design, branding, and all related intellectual property. Except as explicitly allowed, you may not copy, modify, distribute, sell, or lease any part of the Services.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Third-party services
+  // =========================
+  { type: "h2", text: "Third-party services and links" },
+  {
+    type: "p",
+    text:
+      "The Services may contain links to third-party websites or may integrate third-party tools (for example, embedded media). We are not responsible for third-party services, their content, or their policies.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Subscriptions / Fees
+  // =========================
+  { type: "h2", text: "Fees and subscriptions" },
+  {
+    type: "p",
+    text:
+      "Some features may require payment. If you purchase a paid plan, you agree to pay the fees and applicable taxes. Pricing, plan features, and billing terms will be shown to you at checkout or within your account.",
+  },
+  {
+    type: "p",
+    text:
+      "If a plan renews automatically, you can manage renewal settings from your account (where available).",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Termination
+  // =========================
+  { type: "h2", text: "Suspension and termination" },
+  {
+    type: "p",
+    text:
+      "We may suspend or terminate access to the Services if we reasonably believe you violated these Terms, caused risk or harm to the Services, or if required to comply with law.",
+  },
+  {
+    type: "p",
+    text:
+      "You may stop using the Services at any time. If you have a paid plan, cancellation and refund rules (if any) depend on the plan terms shown at purchase and applicable law.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Disclaimers
+  // =========================
+  { type: "h2", text: "Disclaimers" },
+  {
+    type: "p",
+    text:
+      "The Services are provided “as is” and “as available”. We do not guarantee that the Services will be uninterrupted, secure, or error-free, or that any specific results will be achieved through using the Services.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Limitation of liability
+  // =========================
+  { type: "h2", text: "Limitation of liability" },
+  {
+    type: "p",
+    text:
+      "To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenues, data, goodwill, or business opportunities.",
+  },
+  {
+    type: "p",
+    text:
+      "Where liability cannot be excluded, our liability will be limited to the extent allowed by applicable law.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Indemnity
+  // =========================
+  { type: "h2", text: "Indemnity" },
+  {
+    type: "p",
+    text:
+      "You agree to indemnify and hold harmless us and our affiliates, officers, employees, and agents from any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising from your use of the Services or violation of these Terms.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Privacy
+  // =========================
+  { type: "h2", text: "Privacy" },
+  {
+    type: "p",
+    text:
+      "Our processing of personal data is described in our Privacy Policy. Our use of cookies and similar technologies is described in our Cookie Policy. By using the Services, you acknowledge those policies.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Changes
+  // =========================
+  { type: "h2", text: "Changes to these Terms" },
+  {
+    type: "p",
+    text:
+      "We may update these Terms from time to time. If changes are material, we may provide additional notice (for example, via the Services). Continued use of the Services after changes become effective means you accept the updated Terms.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Governing law
+  // =========================
+  { type: "h2", text: "Governing law" },
+  {
+    type: "p",
+    text:
+      "These Terms are governed by applicable laws in the jurisdiction where the provider is established, unless mandatory consumer laws require otherwise. If you are a consumer, mandatory protections under your local law may still apply.",
+  },
+  { type: "divider" },
+
+  // =========================
+  // Contact
+  // =========================
+  { type: "h2", text: "Contact us" },
+  {
+    type: "p",
+    text:
+      "If you have questions about these Terms, contact us at support@passionfroot.me.",
+  },
 ];

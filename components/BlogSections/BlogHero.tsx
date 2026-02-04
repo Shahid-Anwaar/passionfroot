@@ -60,7 +60,7 @@ export default function BlogHero({
 }: BlogHeroProps) {
   return (
     <section className="bg-[#FF9966] py-10">
-      <div className="relative mx-auto w-full max-w-[1400px] px-6 pb-14 pt-16 text-[#0e0e0e]">
+      <div className="relative mx-auto w-full max-w-350 px-6 pb-14 pt-16 text-[#0e0e0e]">
         {/* heading */}
         <div className="text-center">
           <div className="relative inline-block font-serif text-[64px] font-extrabold leading-none tracking-[0.2px] md:text-[84px]">
@@ -85,7 +85,7 @@ export default function BlogHero({
               className="group flex flex-col overflow-hidden rounded-[10px] border-2 border-[#0e0e0e] bg-[#f5f3ea] p-4 hover:shadow-[3px_3px_0px_rgba(0,0,0,0.9)]"
             >
               {/* 1) Image */}
-              <div className="relative h-[230px] rounded-lg">
+              <div className="relative h-57.5 rounded-lg">
                 <Image
                   src={p.imageSrc}
                   alt={p.imageAlt}
@@ -111,7 +111,7 @@ export default function BlogHero({
               <div className="mt-auto flex justify-end pt-8">
                 <button
                   type="button"
-                  className="inline-flex items-center gap-2 rounded-lg border-2 border-[#0e0e0e] bg-[#FF9966] px-6 py-3 text-[14px] font-bold transition hover:translate-y-[-1px] group-hover:shadow-[3px_3px_0px_rgba(0,0,0,0.9)]"
+                  className="inline-flex items-center gap-2 rounded-lg border-2 border-[#0e0e0e] bg-[#FF9966] px-6 py-3 text-[14px] font-bold transition hover:-translate-y-px group-hover:shadow-[3px_3px_0px_rgba(0,0,0,0.9)]"
                 >
                   Read more <Icon icon="mdi:arrow-right" className="h-5 w-5" />
                 </button>

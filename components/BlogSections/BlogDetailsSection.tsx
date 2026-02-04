@@ -61,8 +61,8 @@ function renderBlock(block: BlogBlock, idx: number) {
           key={idx}
           className="
             mt-6
-            text-[16px] leading-[30px] text-neutral-800
-            md:text-[18px] md:leading-[34px]
+            text-[16px] leading-7.5 text-neutral-800
+            md:text-[18px] md:leading-8.5
           "
         >
           {(block as any).text}
@@ -75,8 +75,8 @@ function renderBlock(block: BlogBlock, idx: number) {
           key={idx}
           className="
             mt-6 list-decimal space-y-3 pl-6
-            text-[16px] leading-[30px] text-neutral-800
-            md:text-[18px] md:leading-[34px]
+            text-[16px] leading-7.5 text-neutral-800
+            md:text-[18px] md:leading-8.5
           "
         >
           {(block as any).items.map((it: string, i: number) => (
@@ -103,7 +103,7 @@ function renderBlock(block: BlogBlock, idx: number) {
             </div>
           ) : null}
 
-          <p className="mt-4 text-[16px] leading-[30px] text-neutral-800 md:text-[18px] md:leading-[34px]">
+          <p className="mt-4 text-[16px] leading-7.5 text-neutral-800 md:text-[18px] md:leading-8.5">
             {(block as any).text}
           </p>
         </div>
@@ -205,20 +205,20 @@ export default function BlogDetailSection({
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-16 md:px-10 md:pt-24">
+      <div className="mx-auto max-w-360 px-6 pb-16 pt-16 md:px-10 md:pt-24">
         {/* top bar */}
         <div className="flex items-center gap-3 text-[12px] tracking-wide text-neutral-500">
           <Link
             href={backHref}
             className="inline-flex items-center gap-2 text-sm uppercase hover:text-neutral-800"
           >
-            <Icon icon="mdi:arrow-left" className="h-[18px] w-[18px]" />
+            <Icon icon="mdi:arrow-left" className="h-4.5 w-4.5" />
             {backLabel}
           </Link>
         </div>
 
         {/* title */}
-        <h1 className="mx-auto mt-10 max-w-[980px] text-center font-serif text-[44px] font-semibold leading-[1.03] tracking-[-0.02em] text-neutral-900 md:text-[74px]">
+        <h1 className="mx-auto mt-10 max-w-245 text-center font-serif text-[44px] font-semibold leading-[1.03] tracking-[-0.02em] text-neutral-900 md:text-[74px]">
           {title}
         </h1>
 
@@ -233,18 +233,18 @@ export default function BlogDetailSection({
         </div>
 
         {/* cover */}
-        <div className="mx-auto mt-10 max-w-[1400px] overflow-hidden rounded-[18px] shadow-[0_18px_55px_rgba(0,0,0,0.14)]">
-          <div className="relative aspect-[16/7] w-full">
+        <div className="mx-auto mt-10 max-w-350 overflow-hidden rounded-[18px] shadow-[0_18px_55px_rgba(0,0,0,0.14)]">
+          <div className="relative aspect-16/7 w-full">
             <Image src={cover} alt={title} fill priority className="object-cover" />
           </div>
         </div>
 
         {/* content + sidebar */}
-        <div className="mx-auto mt-12 max-w-[1400px] grid gap-10 lg:grid-cols-[1fr_340px]">
+        <div className="mx-auto mt-12 max-w-350 grid gap-10 lg:grid-cols-[1fr_340px]">
           {/* main */}
           <article className="min-w-0">
             {excerpt ? (
-              <p className="text-[16px] leading-[30px] text-neutral-800 md:text-[18px] md:leading-[34px]">
+              <p className="text-[16px] leading-7.5 text-neutral-800 md:text-[18px] md:leading-8.5">
                 {excerpt}
               </p>
             ) : null}
@@ -262,7 +262,7 @@ export default function BlogDetailSection({
                   </div>
                 </div>
 
-                <div className="max-h-[560px] overflow-auto px-2 pb-4">
+                <div className="max-h-140 overflow-auto px-2 pb-4">
                   {toc.map((t) => {
                     const isActive = t.id === activeId;
                     return (
@@ -278,7 +278,7 @@ export default function BlogDetailSection({
                       >
                         <span
                           className={[
-                            "absolute left-0 top-0 h-full w-[2px] rounded-full",
+                            "absolute left-0 top-0 h-full w-0.5 rounded-full",
                             isActive
                               ? "bg-neutral-900"
                               : "bg-transparent group-hover:bg-neutral-200",

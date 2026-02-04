@@ -52,8 +52,8 @@ function renderBlock(block: BlogBlock, idx: number) {
           key={idx}
           className="
             mt-6
-            text-[16px] leading-[30px] text-neutral-800
-            md:text-[18px] md:leading-[34px]
+            text-[16px] leading-7.5 text-neutral-800
+            md:text-[18px] md:leading-8.5
           "
         >
           {block.text}
@@ -66,8 +66,8 @@ function renderBlock(block: BlogBlock, idx: number) {
           key={idx}
           className="
             mt-6 list-decimal space-y-3 pl-6
-            text-[16px] leading-[30px] text-neutral-800
-            md:text-[18px] md:leading-[34px]
+            text-[16px] leading-7.5 text-neutral-800
+            md:text-[18px] md:leading-8.5
           "
         >
           {block.items.map((it, i) => (
@@ -94,7 +94,7 @@ function renderBlock(block: BlogBlock, idx: number) {
             </div>
           ) : null}
 
-          <p className="mt-4 text-[16px] leading-[30px] text-neutral-800 md:text-[18px] md:leading-[34px]">
+          <p className="mt-4 text-[16px] leading-7.5 text-neutral-800 md:text-[18px] md:leading-8.5">
             {block.text}
           </p>
         </div>
@@ -151,7 +151,7 @@ export default function BlogDetailhidenSection({
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-6 pb-16 pt-16 md:px-10 md:pt-24">
+      <div className="mx-auto max-w-360 px-6 pb-16 pt-16 md:px-10 md:pt-24">
         {/* top bar */}
         <div className="flex items-center gap-3 text-[12px] tracking-wide text-neutral-500">
 
@@ -159,13 +159,13 @@ export default function BlogDetailhidenSection({
             href={path}
             className="inline-flex items-center text-sm gap-2 uppercase hover:text-neutral-800"
           >
-            <Icon icon="mdi:arrow-left" className="h-[18px] w-[18px]" />
+            <Icon icon="mdi:arrow-left" className="h-4.5 w-4.5" />
             Back to {path === "/blogs" ? "Blog" : "Stories"}
           </Link>
         </div>
 
         {/* title */}
-        <h1 className="mx-auto mt-10 max-w-[980px] text-center font-serif text-[44px] font-semibold leading-[1.03] tracking-[-0.02em] text-neutral-900 md:text-[74px]">
+        <h1 className="mx-auto mt-10 max-w-245 text-center font-serif text-[44px] font-semibold leading-[1.03] tracking-[-0.02em] text-neutral-900 md:text-[74px]">
           {post.title}
         </h1>
 
@@ -181,7 +181,7 @@ export default function BlogDetailhidenSection({
 
         {/* cover */}
         <div className="mt-10 overflow-hidden rounded-[18px] shadow-[0_18px_55px_rgba(0,0,0,0.14)]">
-          <div className="relative aspect-[16/7] w-full">
+          <div className="relative aspect-16/7 w-full">
             <Image
               src={post.cover}
               alt={post.title}

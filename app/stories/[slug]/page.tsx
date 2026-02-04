@@ -27,7 +27,7 @@ export default async function StoryDetailPage({ params }: { params: any }) {
       backHref="/stories"
       backLabel="Back to Stories"
     />
-    <div className="mt-10 mb-12 max-w-[1400px] mx-auto">
+    <div className="mt-10 mb-12 max-w-350 mx-auto">
       <h2 className="text-center font-serif text-3xl text-neutral-900 md:text-4xl">
         More Stories
       </h2>

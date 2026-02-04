@@ -42,7 +42,7 @@ function renderBlock(block: BlogBlock, idx: number) {
             return (
                 <p
                     key={idx}
-                    className="mt-4 text-[16px] leading-[30px] text-neutral-800 md:text-[17px] md:leading-[32px]"
+                    className="mt-4 text-[16px] leading-7.5 text-neutral-800 md:text-[17px] md:leading-8"
                 >
                     {(block as any).text}
                 </p>
@@ -52,7 +52,7 @@ function renderBlock(block: BlogBlock, idx: number) {
             return (
                 <ul
                     key={idx}
-                    className="mt-4 list-decimal space-y-2 pl-5 text-[16px] leading-[30px] text-neutral-800 md:text-[17px] md:leading-[32px]"
+                    className="mt-4 list-decimal space-y-2 pl-5 text-[16px] leading-7.5 text-neutral-800 md:text-[17px] md:leading-8"
                 >
                     {(block as any).items.map((it: string, i: number) => (
                         <li key={i} className="pl-1">
@@ -73,7 +73,7 @@ function renderBlock(block: BlogBlock, idx: number) {
                             {(block as any).title}
                         </div>
                     ) : null}
-                    <p className="mt-3 text-[16px] leading-[30px] text-neutral-800 md:text-[17px] md:leading-[32px]">
+                    <p className="mt-3 text-[16px] leading-7.5 text-neutral-800 md:text-[17px] md:leading-8">
                         {(block as any).text}
                     </p>
                 </div>
@@ -184,8 +184,8 @@ export default function HelpCenterArticle({
             <div className="relative bg-[#FF9966] ">
                 {/* doodle strip feel */}
                 <div className="pointer-events-none absolute inset-0 opacity-25">
-                    <div className="mx-auto max-w-[1400px] px-6">
-                        <div className="relative h-[140px]">
+                    <div className="mx-auto max-w-350 px-6">
+                        <div className="relative h-35">
                             <Icon icon="mdi:run-fast" className="absolute left-[58%] top-4 h-14 w-14 -rotate-6" />
                             <Icon icon="mdi:shopping-outline" className="absolute left-[66%] top-0 h-12 w-12 rotate-6" />
                             <Icon icon="mdi:hand-heart-outline" className="absolute left-[74%] top-6 h-12 w-12 -rotate-6" />
@@ -194,7 +194,7 @@ export default function HelpCenterArticle({
                     </div>
                 </div>
 
-                <div className="relative mx-auto max-w-[700px] px-6 pt-24 pb-10">
+                <div className="relative mx-auto max-w-175 px-6 pt-24 pb-10">
                     {/* top row */}
                     <div className="flex items-center justify-between">
                         <div className="text-[14px] font-semibold text-white/90">
@@ -238,7 +238,7 @@ export default function HelpCenterArticle({
             </div>
 
             {/* BODY */}
-            <div className="mx-auto max-w-[1400px] px-6 pb-20 pt-10">
+            <div className="mx-auto max-w-350 px-6 pb-20 pt-10">
                 {/* breadcrumbs */}
                 <div className="text-[13px] text-neutral-500">
                     {breadcrumbs.map((b, i) => (
@@ -293,7 +293,7 @@ export default function HelpCenterArticle({
                                     {/* (no heading in screenshot, but list starts immediately — keep subtle) */}
                                 </div>
 
-                                <div className="max-h-[620px] overflow-auto pb-4">
+                                <div className="max-h-155 overflow-auto pb-4">
                                     {toc.map((t) => {
                                         const isActive = t.id === activeId;
                                         return (
@@ -310,7 +310,7 @@ export default function HelpCenterArticle({
                                                 {/* left active bar like screenshot */}
                                                 <span
                                                     className={[
-                                                        "absolute left-0 top-0 h-full w-[2px]",
+                                                        "absolute left-0 top-0 h-full w-0.5",
                                                         isActive ? "bg-neutral-800" : "bg-transparent",
                                                     ].join(" ")}
                                                 />
